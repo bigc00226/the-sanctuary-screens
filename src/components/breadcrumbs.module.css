@@ -6,7 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2px 0;
+  /* 折り返したときも、押せる範囲が重ならないように（WCAG 2.5.8） */
+  gap: 4px 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -22,6 +23,9 @@
 }
 
 .link {
+  display: inline-block;
+  /* 押せる範囲の高さを 24px 以上に */
+  padding-block: 3px;
   color: var(--fg-2);
   text-decoration: underline;
   text-decoration-color: transparent;

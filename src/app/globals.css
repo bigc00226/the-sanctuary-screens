@@ -114,11 +114,20 @@ h4 {
   line-height: 1.5;
   letter-spacing: 0.06em;
   overflow-wrap: normal;
+  /* 見出しは言葉の区切りで折り返し、行の長さをそろえる（対応ブラウザのみ） */
   word-break: auto-phrase;
+  text-wrap: balance;
 }
 
 p {
   margin: 0;
+}
+
+/* 文章の最後の行に、1〜2文字だけが残らないようにする（対応ブラウザのみ） */
+p,
+li,
+dd {
+  text-wrap: pretty;
 }
 
 a {
@@ -198,6 +207,8 @@ summary {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--accent);
+  /* Cormorant の数字は高さがそろっていない形（01 が o1 に見える）のため、そろった形にする */
+  font-variant-numeric: lining-nums;
 }
 
 .serif {
@@ -360,6 +371,8 @@ summary {
 .tag-solid {
   border-color: transparent;
   background: rgb(184 146 90 / 0.16);
+  /* 薄いゴールドの背景の上でも読める濃さ（コントラスト比 5.6:1） */
+  color: #6f5124;
 }
 
 /* ---------- 下線のリンク ---------- */

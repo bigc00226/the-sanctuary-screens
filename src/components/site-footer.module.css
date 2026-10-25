@@ -125,6 +125,7 @@
 .no {
   font-family: var(--font-display);
   font-weight: 600;
+  font-variant-numeric: lining-nums;
   color: var(--gold);
 }
 
