@@ -1,0 +1,196 @@
+.section {
+  padding-top: var(--section-gap);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(14px, 1.8vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  min-width: 0;
+}
+
+/* ---------- 領域のカード（左に代表の画面、右に文字） ---------- */
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 2vw, 28px);
+  height: 100%;
+  padding: clamp(10px, 1.3vw, 16px);
+  padding-right: clamp(14px, 2vw, 28px);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.3s var(--ease-out),
+    translate 0.3s var(--ease-out);
+}
+
+.card:hover {
+  border-color: rgb(184 146 90 / 0.6);
+  box-shadow: var(--shadow);
+  translate: 0 -3px;
+}
+
+.card:focus-visible {
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+.frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgb(43 35 27 / 0.08);
+  border-radius: var(--radius-sm);
+  background: var(--canvas-2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: scale 0.7s var(--ease-out);
+}
+
+.card:hover .image {
+  scale: 1.03;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding-block: 4px;
+}
+
+.label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.no {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 1.1;
+  font-variant-numeric: lining-nums;
+}
+
+.en {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  transition: color var(--duration) ease;
+}
+
+.card:hover .title {
+  color: var(--accent);
+}
+
+.lead {
+  margin-top: 2px;
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  line-height: 1.85;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.counts {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: translate 0.3s var(--ease-out);
+}
+
+.card:hover .arrow {
+  translate: 4px 0;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 559px) {
+  .card {
+    grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .no {
+    font-size: 1.375rem;
+  }
+
+  .en {
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+  }
+
+  .title {
+    font-size: var(--text-md);
+  }
+
+  .lead {
+    font-size: var(--text-xs);
+    line-height: 1.75;
+  }
+
+  .foot {
+    margin-top: 6px;
+    padding-top: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    translate: none;
+  }
+
+  .card:hover .image {
+    scale: none;
+  }
+}

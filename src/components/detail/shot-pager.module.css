@@ -1,0 +1,251 @@
+.pager {
+  margin-top: clamp(64px, 9vw, 112px);
+}
+
+/* ---------- 見出しの行（前後の画面・何枚目か・キーのご案内） ---------- */
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 20px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.title {
+  font-size: var(--text-lg);
+  letter-spacing: 0.1em;
+}
+
+.position {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+.count {
+  margin-inline: 0.15em;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* キーボードで操作できる端末（マウスで操作する広い画面）だけに表示 */
+.hint {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 720px) and (hover: hover) and (pointer: fine) {
+  .hint {
+    display: inline-flex;
+  }
+}
+
+.key {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 24px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  color: var(--fg-2);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* ---------- 前後の画面のカード ---------- */
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  min-height: 104px;
+  padding: 14px 18px 14px 14px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out);
+}
+
+.card:hover {
+  border-color: rgb(184 146 90 / 0.65);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card:focus-visible {
+  border-radius: var(--radius);
+}
+
+.thumb,
+.endMark {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(88px, 22vw, 120px);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-xs);
+  background: var(--canvas-2);
+}
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s var(--ease-out);
+}
+
+/* スマートフォンの画面・画面の一部は、切らずに枠の中に収める */
+.card[data-device="sp"] .thumbImage,
+.card[data-capture="part"] .thumbImage {
+  padding: 4px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card:hover .thumbImage {
+  transform: scale(1.03);
+}
+
+.endMark {
+  display: grid;
+  place-items: center;
+  border-color: var(--noir);
+  background: var(--noir);
+  color: var(--gold-light);
+}
+
+.endMark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dir {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 6px;
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.card[data-dir="next"] .dir {
+  flex-direction: row-reverse;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.card[data-dir="prev"]:hover .arrow {
+  transform: translateX(-3px);
+}
+
+.card[data-dir="next"]:hover .arrow {
+  transform: translateX(3px);
+}
+
+.caption {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  color: var(--fg);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  color: var(--muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+}
+
+.section {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* 広い画面：2つ並べ、次の画面は左右を反対に */
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .card[data-dir="next"] {
+    flex-direction: row-reverse;
+    padding: 14px 14px 14px 18px;
+    text-align: right;
+  }
+
+  .card[data-dir="next"] .dir {
+    justify-self: end;
+  }
+
+  .card[data-dir="next"] .meta {
+    justify-content: flex-end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .card:hover .thumbImage,
+  .card:hover .arrow {
+    transform: none;
+  }
+}
+
+@media print {
+  .pager {
+    display: none;
+  }
+}

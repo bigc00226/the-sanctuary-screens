@@ -1,0 +1,123 @@
+.section {
+  padding-top: var(--section-gap);
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(52px, 7.5vw, 96px) clamp(20px, 5vw, 64px) clamp(36px, 5vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(70% 85% at 50% 0%, rgb(227 204 156 / 0.4) 0%, rgb(227 204 156 / 0) 70%),
+    var(--panel);
+  text-align: center;
+  isolation: isolate;
+}
+
+/* 内側の細い金色の枠 */
+.panel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 10px;
+  border: 1px solid rgb(184 146 90 / 0.35);
+  border-radius: calc(var(--radius) - 3px);
+  pointer-events: none;
+}
+
+.emblem {
+  position: absolute;
+  z-index: -2;
+  top: 46%;
+  left: 50%;
+  width: min(620px, 140%);
+  height: auto;
+  aspect-ratio: 1;
+  color: var(--gold);
+  opacity: 0.14;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+
+.title {
+  max-width: 22em;
+  font-size: var(--text-2xl);
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+.phrase {
+  display: inline-block;
+}
+
+.lead {
+  max-width: 34em;
+  margin-top: 18px;
+  color: var(--fg-2);
+  line-height: 2;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: clamp(28px, 3.4vw, 36px);
+}
+
+.pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 14px;
+  padding-inline: 8px;
+  color: var(--accent);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  text-decoration: underline;
+  text-decoration-color: rgb(129 95 44 / 0.4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color var(--duration) ease;
+}
+
+.pdf:hover {
+  text-decoration-color: currentColor;
+}
+
+.pdfIcon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 24px;
+  width: min(100%, 640px);
+  margin: clamp(24px, 3vw, 32px) 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line-soft);
+  list-style: none;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  line-height: 1.8;
+}
+
+@media (max-width: 559px) {
+  .actions {
+    align-self: stretch;
+    flex-direction: column;
+  }
+}

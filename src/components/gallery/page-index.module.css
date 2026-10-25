@@ -1,0 +1,179 @@
+.index {
+  padding-top: clamp(20px, 3.5vw, 40px);
+  padding-bottom: clamp(16px, 2.5vw, 28px);
+}
+
+/* PC で表示する見出し（スマートフォンでは、開閉のボタンが見出しの代わり） */
+.heading {
+  display: none;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: var(--text-md);
+  letter-spacing: 0.12em;
+}
+
+.headingCount {
+  margin-left: 12px;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.heading .headingCount {
+  margin-left: 0;
+}
+
+.details {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: rgb(252 249 244 / 0.7);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 16px;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  list-style: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summaryText {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.chevron {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: transform var(--duration) ease;
+}
+
+.details[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.list {
+  margin: 0;
+  padding: 4px 16px 12px;
+  border-top: 1px solid var(--line-soft);
+  list-style: none;
+}
+
+.item {
+  break-inside: avoid;
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--fg);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  transition: color var(--duration) ease;
+}
+
+.item:last-child .link {
+  border-bottom: 0;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.no {
+  flex-shrink: 0;
+  min-width: 1.5em;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+}
+
+.count {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * PC：常に開いた状態で並べる。閉じた <details> の中身を、CSS で表示する（::details-content に対応したブラウザだけ。
+ * 対応していないブラウザでは、スマートフォンと同じく押して開く形になります）。
+ */
+@supports selector(::details-content) {
+  @media (min-width: 900px) {
+    .heading {
+      display: flex;
+    }
+
+    .summary {
+      display: none;
+    }
+
+    .details {
+      border: 0;
+      background: none;
+    }
+
+    .details::details-content {
+      display: block;
+      content-visibility: visible;
+    }
+
+    .list {
+      columns: 2;
+      column-gap: 40px;
+      padding: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .link {
+      min-height: 40px;
+      padding: 8px 2px;
+    }
+
+    .item:last-child .link {
+      border-bottom: 1px solid var(--line-soft);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .list {
+      columns: 3;
+    }
+  }
+}
+
+@media print {
+  .index {
+    display: none;
+  }
+}

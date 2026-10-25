@@ -1,0 +1,40 @@
+/* ---------- 画像の下に説明（PC の最初の画面・ページ全体・幅の広い画面の一部） ---------- */
+
+.figure {
+  padding-top: clamp(24px, 4vw, 48px);
+}
+
+.below {
+  padding-top: clamp(28px, 4vw, 48px);
+}
+
+/* ---------- 画像の横に説明（スマートフォンの画面・幅の狭い画面の一部） ---------- */
+
+.split {
+  display: grid;
+  gap: clamp(28px, 4vw, 48px);
+  padding-top: clamp(24px, 4vw, 48px);
+}
+
+.aside {
+  min-width: 0;
+}
+
+/* 幅 1024px 以上：画像を左、説明を右に（説明はスクロールしても見える位置に） */
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 56px;
+  }
+
+  .aside {
+    align-self: start;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 640px) {
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+}

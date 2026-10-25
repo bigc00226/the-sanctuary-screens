@@ -1,0 +1,184 @@
+.panel {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: var(--text-md);
+  letter-spacing: 0.12em;
+}
+
+.title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--line), rgb(217 201 178 / 0));
+}
+
+/* ---------- 項目（見出しを左・内容を右に） ---------- */
+
+.list {
+  display: grid;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 7.5em minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 11px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.term {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  line-height: 1.95;
+  letter-spacing: 0.1em;
+}
+
+/* 日本語は、文節の切れ目で折り返す */
+.value {
+  min-width: 0;
+  margin: 0;
+  color: var(--fg);
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  word-break: auto-phrase;
+}
+
+.no {
+  margin-right: 0.45em;
+  font-family: var(--font-display);
+  font-size: 1.0625em;
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.04em;
+}
+
+.note {
+  display: block;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+}
+
+.code {
+  color: var(--fg-2);
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* ---------- ボタン ---------- */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.button {
+  flex: 1 1 auto;
+}
+
+/* 指で操作する端末・幅の狭い画面では、押しやすい高さに */
+@media (pointer: coarse), (max-width: 640px) {
+  .actions .button {
+    --btn-h: 44px;
+  }
+}
+
+/* ---------- 画像の横に置くとき（幅 1024px 以上）：項目の見出しを内容の上に ---------- */
+
+@media (min-width: 1024px) {
+  .panel[data-layout="split"] .item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    padding-block: 12px;
+  }
+
+  .panel[data-layout="split"] .item:first-child {
+    padding-top: 0;
+  }
+
+  .panel[data-layout="split"] .actions {
+    padding-top: 2px;
+  }
+}
+
+/* ---------- 画像の下に置くとき（広い画面）：見出しとボタンを左、項目を3列に ---------- */
+
+@media (min-width: 900px) {
+  .panel[data-layout="stacked"] {
+    grid-template-columns: minmax(200px, 232px) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "title list"
+      "actions list";
+    gap: 20px clamp(32px, 4.5vw, 64px);
+    padding: 32px clamp(28px, 3vw, 40px);
+  }
+
+  .panel[data-layout="stacked"] .title {
+    grid-area: title;
+  }
+
+  .panel[data-layout="stacked"] .list {
+    grid-area: list;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(24px, 3vw, 40px);
+  }
+
+  .panel[data-layout="stacked"] .item {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 2px;
+    padding-block: 14px;
+  }
+
+  .panel[data-layout="stacked"] .item:nth-child(-n + 3) {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .panel[data-layout="stacked"] .actions {
+    grid-area: actions;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-self: start;
+  }
+
+  .panel[data-layout="stacked"] .button {
+    flex: 0 0 auto;
+  }
+}
+
+@media print {
+  .actions {
+    display: none;
+  }
+}

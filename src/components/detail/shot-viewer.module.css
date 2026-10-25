@@ -1,0 +1,279 @@
+.viewer {
+  min-width: 0;
+}
+
+/* ---------- 画像を押すと元の画像を開く ---------- */
+
+.zoom {
+  position: relative;
+  display: block;
+  cursor: zoom-in;
+}
+
+.zoom img {
+  display: block;
+}
+
+/* 枠の外側は切り取られるため、ピントの枠は内側に描く（:has() が使えるブラウザーでは、下で枠全体を囲む） */
+.zoom:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+  border-radius: 0;
+}
+
+@supports selector(:has(*)) {
+  .zoom:focus-visible {
+    outline: none;
+  }
+
+  .browser:has(.zoom:focus-visible),
+  .phone:has(.zoom:focus-visible),
+  .partFrame:has(.zoom:focus-visible),
+  .fullFrame:has(.zoom:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+}
+
+/* 画面の上部（ヘッダーのボタンなど）を隠さないよう、右下に。縦に長いページ全体だけは右上に */
+.zoomHint {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px 5px 10px;
+  border-radius: 99px;
+  background: rgb(31 26 21 / 0.82);
+  box-shadow: 0 6px 18px -8px rgb(31 26 21 / 0.6);
+  color: var(--cream);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--duration) ease,
+    transform 0.3s var(--ease-out);
+  pointer-events: none;
+}
+
+.zoomIcon {
+  width: 13px;
+  height: 13px;
+  color: var(--gold-light);
+}
+
+.viewer[data-kind="sp-view"] .zoomHint {
+  right: 20px;
+  bottom: 22px;
+}
+
+.viewer[data-kind="full"] .zoomHint {
+  top: 14px;
+  bottom: auto;
+  transform: translateY(-4px);
+}
+
+/* （位置の指定より後に書き、表示のときは必ずこちらが効くように） */
+@media (hover: hover) and (pointer: fine) {
+  .zoom:hover .zoomHint {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.zoom:focus-visible .zoomHint {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 最初の画面（PC・スマートフォン） ---------- */
+
+/*
+ * PC は、ブラウザの窓の全体が一度に画面に収まる大きさに（広い画面では、撮影したときと同じ幅 1,440px まで）。
+ * 窓の高さ = アドレスバー 34px + 幅 × 900 / 1440 なので、幅 = (使える高さ − 34px) × 1.6
+ */
+.browser {
+  width: min(100%, max(560px, calc((100svh - var(--header-h) - 82px) * 1.6)));
+  margin-inline: auto;
+}
+
+/*
+ * スマートフォンは、本体の全体が一度に画面に収まる大きさに（幅は 400px まで）。
+ * 本体の高さ ≒ (幅 − 枠 20px) × 844 / 390 + 枠 20px なので、幅 ≒ 高さ × 0.4621 + 10.8px
+ * --room：画面の高さのうち、本体の上下に空けておく分（サイトの上部を除く）
+ */
+.phone {
+  --room: 40px;
+  width: min(100%, 400px, max(300px, calc((100svh - var(--header-h) - var(--room)) * 0.4621 + 10.8px)));
+  margin-inline: auto;
+}
+
+/* スマートフォンの後ろの飾り（横に並べるときの台の上だけ） */
+.halo {
+  display: none;
+}
+
+/* ---------- 画面の一部 ---------- */
+
+.partFrame {
+  width: min(100%, var(--shot-w));
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- ページ全体 ---------- */
+
+.fullNote {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 20px;
+  width: min(100%, var(--shot-w));
+  margin: 0 auto 12px;
+}
+
+.fullText {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  word-break: auto-phrase;
+}
+
+.fullIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: 0.25em;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.number {
+  font-variant-numeric: tabular-nums;
+}
+
+.skip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 36px;
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-decoration-color: rgb(129 95 44 / 0.4);
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color var(--duration) ease;
+}
+
+.skip:hover {
+  text-decoration-color: currentColor;
+}
+
+.skipIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.fullFrame {
+  width: min(100%, var(--shot-w));
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.fullEnd {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* 指で操作する端末・幅の狭い画面では、押しやすい高さに */
+@media (pointer: coarse), (max-width: 640px) {
+  .skip {
+    min-height: 44px;
+  }
+
+  .toTop {
+    --btn-h: 44px;
+  }
+}
+
+/* ---------- 横に並べるとき：画像の後ろに明るい台を敷く ---------- */
+
+@media (min-width: 1024px) {
+  .viewer[data-layout="split"] {
+    display: grid;
+    align-content: center;
+    min-height: 100%;
+    padding: clamp(32px, 3.6vw, 52px);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-lg);
+    background:
+      radial-gradient(56% 46% at 50% 44%, rgb(255 253 249 / 0.9) 0%, rgb(255 253 249 / 0) 100%),
+      linear-gradient(to bottom, rgb(236 226 210 / 0.45), rgb(236 226 210 / 0.85));
+  }
+
+  .viewer[data-layout="split"][data-kind="full"] {
+    align-content: start;
+  }
+
+  /* 幅の狭いページ全体（スマートフォン）は、ご案内の文を台の幅で中央に */
+  .viewer[data-layout="split"] .fullNote {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .viewer[data-layout="split"] .phone {
+    --room: 128px;
+  }
+
+  .viewer[data-layout="split"][data-kind="sp-view"] {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .viewer[data-layout="split"] .halo {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: min(92%, 640px);
+    height: auto;
+    aspect-ratio: 1;
+    color: var(--gold);
+    opacity: 0.26;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .viewer[data-layout="split"] .partFrame {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@media print {
+  .zoomHint,
+  .skip,
+  .fullEnd {
+    display: none;
+  }
+}

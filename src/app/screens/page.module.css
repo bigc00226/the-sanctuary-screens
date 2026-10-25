@@ -1,0 +1,22 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 4px;
+}
+
+.tourLink {
+  color: var(--accent);
+}
+
+.tourLink svg {
+  transition: transform var(--duration) var(--ease-out);
+}
+
+.tourLink:hover {
+  color: var(--accent);
+}
+
+.tourLink:hover svg {
+  transform: translateX(3px);
+}

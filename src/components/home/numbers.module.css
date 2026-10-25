@@ -1,0 +1,153 @@
+/* 最初の黒の帯の下の端に、半分ほど重ねる */
+.band {
+  --overlap: clamp(56px, 5.5vw, 72px);
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--overlap) * -1);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+  margin: 0;
+  padding: clamp(22px, 2.4vw, 30px) 0;
+  list-style: none;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--field) 0%, var(--panel) 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 6px clamp(14px, 2vw, 28px);
+  text-align: center;
+}
+
+/* 金色の細い区切り線 */
+.item + .item::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, rgb(184 146 90 / 0), rgb(184 146 90 / 0.75) 50%, rgb(184 146 90 / 0));
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: clamp(2.625rem, 1.9rem + 2.2vw, 3.75rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  font-variant-numeric: lining-nums;
+}
+
+.label {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+}
+
+/* PC とスマートフォンの内訳 */
+.devices {
+  align-items: stretch;
+  gap: 8px;
+}
+
+.device {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 260px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold);
+  stroke-width: 1.6;
+}
+
+.deviceLabel {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.deviceValue {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 2.125rem;
+  font-weight: 500;
+  line-height: 1.05;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.unit {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- スマートフォン：1行目に全体の数、2行目に領域とページ、3行目に内訳 ---------- */
+
+@media (max-width: 719px) {
+  .card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .item {
+    padding: 20px 16px;
+  }
+
+  .item + .item::before {
+    display: none;
+  }
+
+  .total {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+
+  .total .value {
+    font-size: 3.5rem;
+  }
+
+  .sections,
+  .pages {
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .pages {
+    border-left: 1px solid var(--line-soft);
+  }
+
+  .devices {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .device {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,202 @@
+/* 少し濃いベージュの帯 */
+.section {
+  margin-top: var(--section-gap);
+  padding-block: var(--section-gap);
+  border-block: 1px solid var(--line-soft);
+  background:
+    radial-gradient(60% 80% at 0% 100%, rgb(227 204 156 / 0.26) 0%, rgb(227 204 156 / 0) 60%),
+    var(--canvas-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  padding: clamp(14px, 1.6vw, 18px);
+  padding-bottom: clamp(24px, 2.6vw, 30px);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- 文字（読み上げでは、説明のあとに画面の例が続く順） ---------- */
+
+.text {
+  display: grid;
+  gap: 12px;
+  padding-inline: clamp(4px, 0.8vw, 10px);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid rgb(184 146 90 / 0.45);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 26%, var(--field), var(--canvas));
+  color: var(--accent);
+}
+
+.icon svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.6;
+}
+
+.title {
+  font-size: var(--text-md);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.body {
+  color: var(--fg-2);
+  font-size: 0.875rem;
+  line-height: 1.95;
+}
+
+/* ---------- 画面の例（カードの上に表示） ---------- */
+
+/* 高さは横幅から決め（16:7）、画面の例はその内側にぴったり収める */
+.tray {
+  position: relative;
+  order: -1;
+  aspect-ratio: 16 / 7;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(150deg, #f1e8db 0%, var(--canvas-2) 100%);
+  box-shadow: inset 0 0 0 1px rgb(43 35 27 / 0.05);
+}
+
+.tiles {
+  position: absolute;
+  inset: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tiles[data-layout="mosaic"] {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tiles[data-layout="mosaic"] > :first-child {
+  grid-row: 1 / 3;
+}
+
+.tiles[data-layout="pair"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tiles[data-layout="single"] {
+  display: grid;
+}
+
+.tiles[data-layout="lineup"] {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tiles[data-layout="lineup"] > [data-device="sp"] {
+  flex: none;
+  height: 100%;
+  aspect-ratio: 390 / 844;
+}
+
+.tiles[data-layout="lineup"] > [data-device="pc"] {
+  flex: 1 1 0;
+}
+
+.tile {
+  min-width: 0;
+  min-height: 0;
+}
+
+.tileLink {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(43 35 27 / 0.1);
+  border-radius: 3px;
+  background: var(--panel);
+  box-shadow:
+    0 1px 2px rgb(43 35 27 / 0.06),
+    0 8px 18px -10px rgb(43 35 27 / 0.35);
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.3s var(--ease-out),
+    translate 0.3s var(--ease-out);
+}
+
+.tile[data-device="sp"] .tileLink {
+  border-radius: 6px;
+}
+
+.tileLink:hover {
+  border-color: rgb(184 146 90 / 0.75);
+  box-shadow:
+    0 1px 2px rgb(43 35 27 / 0.06),
+    0 14px 24px -12px rgb(43 35 27 / 0.45);
+  translate: 0 -3px;
+}
+
+.tileLink:focus-visible {
+  outline-offset: 2px;
+}
+
+.tileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* 画面の一部（横長の切り出し）は、切らずに枠の中に収める */
+.tile[data-capture="part"] .tileImage {
+  padding: 6%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tileLink:hover {
+    translate: none;
+  }
+}

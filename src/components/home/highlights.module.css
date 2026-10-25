@@ -1,0 +1,196 @@
+/* 少し濃いベージュの帯 */
+.section {
+  margin-top: var(--section-gap);
+  padding-block: var(--section-gap);
+  border-block: 1px solid var(--line-soft);
+  background:
+    radial-gradient(70% 90% at 100% 0%, rgb(227 204 156 / 0.28) 0%, rgb(227 204 156 / 0) 60%),
+    var(--canvas-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(32px, 3.4vw, 48px) clamp(16px, 2.2vw, 32px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: inherit;
+}
+
+.frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgb(43 35 27 / 0.1);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.35s var(--ease-out),
+    translate 0.35s var(--ease-out);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: scale 0.7s var(--ease-out);
+}
+
+.card:hover .frame {
+  border-color: rgb(184 146 90 / 0.6);
+  box-shadow: var(--shadow-lg);
+  translate: 0 -4px;
+}
+
+.card:hover .image {
+  scale: 1.02;
+}
+
+.card:focus-visible {
+  outline: none;
+}
+
+.card:focus-visible .frame {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.no {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  font-variant-numeric: lining-nums;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+  line-height: 1.4;
+}
+
+.chapterEn {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.chapterTitle {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  /* 日本語の文節の切れ目で改行する（対応しているブラウザ） */
+  word-break: auto-phrase;
+  text-wrap: pretty;
+  transition: color var(--duration) ease;
+}
+
+.card:hover .title {
+  color: var(--accent);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマートフォン：画像を左に、文字を右に並べる */
+@media (max-width: 599px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .frame {
+    flex: 0 0 44%;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .body {
+    gap: 6px;
+  }
+
+  .meta {
+    gap: 10px;
+  }
+
+  .no {
+    font-size: 1.75rem;
+  }
+
+  .chapter {
+    padding-left: 10px;
+  }
+
+  /* 幅が狭いので、英字の章の名前は省き、日本語の章の名前だけにする */
+  .chapterEn {
+    display: none;
+  }
+
+  .title {
+    font-size: var(--text-sm);
+    line-height: 1.65;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .frame {
+    translate: none;
+  }
+
+  .card:hover .image {
+    scale: none;
+  }
+}
