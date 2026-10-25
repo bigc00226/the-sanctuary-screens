@@ -1,0 +1,12 @@
+/* 表示のしかたの初期値（:where で優先度を 0 にして、使う側の className の指定を優先する） */
+:where(.emblem) {
+  display: block;
+  aspect-ratio: 1;
+}
+
+/* 図形（public/emblem.svg）の線の部分だけに、文字の色（currentColor）を塗る */
+.emblem {
+  background-color: currentColor;
+  -webkit-mask: url("/emblem.svg") center / contain no-repeat;
+  mask: url("/emblem.svg") center / contain no-repeat;
+}

@@ -22,7 +22,7 @@ const ROLES: Role[] = [
     en: "Members",
     title: "会員様",
     icon: UserRound,
-    text: "入会のお申し込みのあとは、マイページから、ご予約とお支払い、セッションのお部屋への入室、ご感想の送信までを行えます。",
+    text: "入会のお申し込みと審査のあとは、マイページから、ご予約とお支払い、セッションのお部屋への入室、ご感想の送信までを行えます。",
     items: ["入会のお申し込み", "ご予約とお支払い", "セッション", "ご感想"],
     link: "マイページの画面",
   },
@@ -63,7 +63,7 @@ export function Overview({ counts }: Props) {
           lead={
             <p>
               {"THE SANCTUARY は、完全会員制・オンライン専用のヒーリングサロンです。"}
-              {"この Web システムには、サロンを利用する会員様、セッションを担当するヒーラー、サロンを運営する管理者の、3つの立場の画面があります。"}
+              {`この Web システムには、どなたでもご覧いただける公開ページのほかに、サロンを利用する会員様、セッションを担当するヒーラー、サロンを運営する管理者の、${ROLES.length}つの立場の画面があります。`}
             </p>
           }
         />
@@ -74,22 +74,27 @@ export function Overview({ counts }: Props) {
             const count = counts[role.section];
             return (
               <li key={role.section} className={styles.role}>
-                <div className={styles.head}>
-                  <span className={styles.icon} aria-hidden>
-                    <Icon />
-                  </span>
-                  <span className={styles.no} aria-hidden>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                {/* タブレットでは、左に立場の名前、右に説明を並べる */}
+                <div className={styles.intro}>
+                  <div className={styles.head}>
+                    <span className={styles.icon} aria-hidden>
+                      <Icon />
+                    </span>
+                    <span className={styles.no} aria-hidden>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <p className={styles.en}>{role.en}</p>
+                  <h3 className={styles.title}>{role.title}</h3>
                 </div>
-                <p className={styles.en}>{role.en}</p>
-                <h3 className={styles.title}>{role.title}</h3>
-                <p className={styles.text}>{role.text}</p>
-                <ul className={styles.items} aria-label={`${role.title}の主な画面`}>
-                  {role.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                <div className={styles.detail}>
+                  <p className={styles.text}>{role.text}</p>
+                  <ul className={styles.items} aria-label={`${role.title}の主な画面`}>
+                    {role.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
                 <Link href={sectionHref(role.section)} className={styles.more}>
                   <span>
                     {role.link}

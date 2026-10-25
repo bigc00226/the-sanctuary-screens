@@ -1,20 +1,40 @@
 import type { Metadata, Viewport } from "next";
-import { Shippori_Mincho_B1, Zen_Kaku_Gothic_New } from "next/font/google";
+// 全体の CSS は、ほかの部品の CSS より先に読み込む（部品の CSS で、全体の決まりを上書きできるように）
+import "./globals.css";
 import localFont from "next/font/local";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/data/site";
 import { HIGHLIGHTS } from "@/data/highlights";
 import { getPdf, getSections, getStats } from "@/lib/catalog";
-import "./globals.css";
 
 /*
- * 文字の種類は、THE SANCTUARY の画面と同じものを使います。
- * 日本語の文字は先読み（preload）しません。文字の範囲ごとに百数十個のファイルに分かれているため、
- * 先読みすると全ページで多くのファイルを読み込んでしまいます（先読みしなくても、使う範囲のファイルだけが読み込まれます）。
+ * 文字の種類は、THE SANCTUARY の画面と同じものを使います（ライセンス：SIL Open Font License・fonts/OFL-*.txt）。
+ * 日本語の文字のファイルは、サイトで使う文字だけに絞ったものです（scripts/subset-fonts.mjs・`npm run fonts` で作り直せます）。
+ * 見出し（しっぽり明朝 B1）は、すべてのページの最初の見出しで使うため、先読み（preload）します。
  */
-const zen = Zen_Kaku_Gothic_New({ weight: ["400", "500", "700"], preload: false, variable: "--font-zen", display: "swap" });
-const shippori = Shippori_Mincho_B1({ weight: ["500", "600", "700"], preload: false, variable: "--font-shippori", display: "swap" });
+const zen = localFont({
+  src: [
+    { path: "./fonts/zen-kaku-gothic-new-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/zen-kaku-gothic-new-500.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/zen-kaku-gothic-new-700.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-zen",
+  // 本文は、最初に表示した文字の種類のまま入れ替えない（読み込みが遅い回線で、表示のあとに文章が組み直されないように）。
+  // 読み込みが間に合わなかったページでは端末の文字で表示し、次のページからは保存したこの文字で表示します
+  display: "optional",
+  preload: false,
+  // 代わりの文字（読み込むまでの間）は、英字も日本語も端末の日本語の文字で表示する（--font-sans の続き）。
+  // Arial を代わりに使うと、1行の中で英字と日本語の文字の種類が混ざり、行の高さが変わってしまう（読み込んだときに画面がずれる）ため
+  adjustFontFallback: false,
+});
+const shippori = localFont({
+  src: [{ path: "./fonts/shippori-mincho-b1-600.woff2", weight: "600", style: "normal" }],
+  variable: "--font-shippori",
+  display: "swap",
+  // 本文と同じ理由で、代わりの文字は端末の明朝体にする（--font-serif の続き）
+  adjustFontFallback: false,
+});
 
 /* 英字の見出し用（Cormorant Garamond・ラテン文字のみ）。ライセンス：SIL Open Font License（fonts/OFL-cormorant-garamond.txt） */
 const cormorant = localFont({
@@ -24,6 +44,8 @@ const cormorant = localFont({
   ],
   variable: "--font-cormorant",
   display: "swap",
+  // 英字の見出しは小さな文字が中心のため、先読みはしない（代わりの文字の大きさは adjustFontFallback で合わせている）
+  preload: false,
   adjustFontFallback: "Times New Roman",
 });
 

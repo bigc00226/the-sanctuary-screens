@@ -46,7 +46,7 @@ function NeighborCard({ dir, neighbor }: { dir: Direction; neighbor: Neighbor })
           width={shot.thumb.width}
           height={shot.thumb.height}
           alt=""
-          unoptimized
+          sizes="120px"
           loading="lazy"
           decoding="async"
           className={styles.thumbImage}

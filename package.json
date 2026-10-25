@@ -8,6 +8,7 @@
   },
   "scripts": {
     "prepare-media": "node scripts/prepare-media.mjs",
+    "fonts": "node scripts/subset-fonts.mjs",
     "predev": "node scripts/prepare-media.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/prepare-media.mjs",

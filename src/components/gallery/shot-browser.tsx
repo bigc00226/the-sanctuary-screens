@@ -198,17 +198,20 @@ export function ShotBrowser({ mode, rows, sections, pages }: Props) {
   const [draft, setDraft] = useState<string | null>(null);
   const queryInput = draft ?? filters.q;
   const queryTimer = useRef<number | undefined>(undefined);
+  /** 入力したあと、まだアドレスに書いていない言葉（待っている間だけ） */
+  const pendingQuery = useRef<string | null>(null);
 
   const writeQuery = useCallback(
-    (value: string) => {
+    (value: string, { reveal = true }: { reveal?: boolean } = {}) => {
       window.clearTimeout(queryTimer.current);
+      pendingQuery.current = null;
       const params = currentParams();
       const before = params.get("q") ?? "";
       if (value.trim()) params.set("q", value);
       else params.delete("q");
       if ((params.get("q") ?? "") !== before) {
         writeSearch(orderParams(params));
-        revealResults();
+        if (reveal) revealResults();
       }
       setDraft(null);
     },
@@ -220,12 +223,17 @@ export function ShotBrowser({ mode, rows, sections, pages }: Props) {
       setDraft(value);
       window.clearTimeout(queryTimer.current);
       // かな漢字の変換中は、確定するまで待つ
-      if (!composing) queryTimer.current = window.setTimeout(() => writeQuery(value), QUERY_DELAY);
+      if (composing) return;
+      pendingQuery.current = value;
+      queryTimer.current = window.setTimeout(() => writeQuery(value), QUERY_DELAY);
     },
     [writeQuery],
   );
 
   useEffect(() => () => window.clearTimeout(queryTimer.current), []);
+
+  const onQueryCommit = useCallback(() => writeQuery(queryInput), [writeQuery, queryInput]);
+  const onQueryClear = useCallback(() => writeQuery(""), [writeQuery]);
 
   const onFacetChange = useCallback(
     (facet: Facet, value: string) => {
@@ -240,6 +248,7 @@ export function ShotBrowser({ mode, rows, sections, pages }: Props) {
 
   const clearAll = useCallback(() => {
     window.clearTimeout(queryTimer.current);
+    pendingQuery.current = null;
     const params = currentParams();
     for (const key of FILTER_KEYS) params.delete(key);
     writeSearch(orderParams(params));
@@ -285,14 +294,19 @@ export function ShotBrowser({ mode, rows, sections, pages }: Props) {
 
   // ---------- 拡大表示 ----------
 
-  const openShot = useCallback((shot: Shot) => {
-    openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    setWideSlug(null);
-    const params = currentParams();
-    params.set("shot", shot.slug);
-    // 開くときは履歴を積む（ブラウザの「戻る」で閉じられるように）
-    writeSearch(orderParams(params), { push: true });
-  }, []);
+  const openShot = useCallback(
+    (shot: Shot) => {
+      openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      // 入力したばかりの言葉は、先に今の履歴に書いておく（閉じて「戻る」で戻ったときに、言葉が消えないように）
+      if (pendingQuery.current !== null) writeQuery(pendingQuery.current, { reveal: false });
+      setWideSlug(null);
+      const params = currentParams();
+      params.set("shot", shot.slug);
+      // 開くときは履歴を積む（ブラウザの「戻る」で閉じられるように）
+      writeSearch(orderParams(params), { push: true });
+    },
+    [writeQuery],
+  );
 
   const showShot = useCallback(
     (shot: Shot) => {
@@ -372,8 +386,8 @@ export function ShotBrowser({ mode, rows, sections, pages }: Props) {
         hasFilter={barHasFilter}
         visibleCount={now.visible.length}
         onQueryInput={onQueryInput}
-        onQueryCommit={() => writeQuery(queryInput)}
-        onQueryClear={() => writeQuery("")}
+        onQueryCommit={onQueryCommit}
+        onQueryClear={onQueryClear}
         onFacetChange={onFacetChange}
         onClearAll={clearAll}
         barRef={barRef}

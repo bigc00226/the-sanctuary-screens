@@ -9,7 +9,6 @@ import { Overview } from "@/components/home/overview";
 import { TechPanel } from "@/components/home/tech";
 import { FEATURES, TECH } from "@/data/features";
 import { CHAPTERS, type ChapterId } from "@/data/highlights";
-import { site } from "@/data/site";
 import { getHighlights, getPdf, getSections, getStats, requireShot } from "@/lib/catalog";
 import styles from "./page.module.css";
 
@@ -67,7 +66,7 @@ export default function HomePage() {
       />
       <FeatureGrid features={FEATURES.map((f) => ({ ...f, shots: f.shots.map((slug) => requireShot(slug)) }))} />
       <TechPanel items={TECH} />
-      <ClosingBand total={stats.total} highlights={highlights.length} pdf={getPdf()} notes={site.notes} />
+      <ClosingBand total={stats.total} highlights={highlights.length} pdf={getPdf()} />
     </div>
   );
 }

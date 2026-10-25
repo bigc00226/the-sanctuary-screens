@@ -16,6 +16,8 @@
     var(--panel);
   text-align: center;
   isolation: isolate;
+  /* 見出しの文字の大きさを、この枠の幅に合わせるため（下の .title） */
+  container-type: inline-size;
 }
 
 /* 内側の細い金色の枠 */
@@ -50,6 +52,11 @@
 .title {
   max-width: 22em;
   font-size: var(--text-2xl);
+  /*
+   * 幅の狭いスマートフォンでは、いちばん長いまとまり「PC とスマートフォンで」（文字の大きさのおよそ 12 倍の幅）が
+   * 1行に収まるように、少し小さくする（「PC と」だけが1行になるのを防ぐ）
+   */
+  font-size: min(var(--text-2xl), 100cqi / 12.4);
   line-height: 1.6;
   letter-spacing: 0.1em;
 }
@@ -63,6 +70,8 @@
   margin-top: 18px;
   color: var(--fg-2);
   line-height: 2;
+  /* 中央にそろえた文なので、言葉の区切りで改行する（対応しているブラウザ） */
+  word-break: auto-phrase;
 }
 
 .actions {
@@ -100,20 +109,6 @@
   flex-shrink: 0;
 }
 
-.notes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px 24px;
-  width: min(100%, 640px);
-  margin: clamp(24px, 3vw, 32px) 0 0;
-  padding: 18px 0 0;
-  border-top: 1px solid var(--line-soft);
-  list-style: none;
-  color: var(--muted);
-  font-size: var(--text-xs);
-  line-height: 1.8;
-}
 
 @media (max-width: 559px) {
   .actions {

@@ -2,6 +2,13 @@
   padding-top: var(--section-gap);
 }
 
+/* 見出しの横の「すべての画面」。タッチ操作・スマートフォンでは、押しやすい高さ（44px）にする */
+@media (pointer: coarse), (max-width: 640px) {
+  a.action {
+    --btn-h: 44px;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -106,6 +113,9 @@
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  /* 「セッションのお / 部屋」のように、言葉の途中で改行しないようにする（対応しているブラウザ） */
+  word-break: auto-phrase;
+  text-wrap: balance;
   transition: color var(--duration) ease;
 }
 
@@ -118,6 +128,7 @@
   color: var(--fg-2);
   font-size: var(--text-sm);
   line-height: 1.85;
+  word-break: auto-phrase;
 }
 
 .foot {
@@ -161,8 +172,9 @@
     align-items: start;
   }
 
+  /* 金色の文字は、24px 以上（大きな文字のコントラスト比の基準）にする */
   .no {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 
   .en {

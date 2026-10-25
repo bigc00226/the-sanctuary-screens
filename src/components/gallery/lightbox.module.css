@@ -22,12 +22,13 @@
   padding: 0;
   overflow: hidden;
   border: 0;
-  background: transparent;
+  /* 暗い背景は、画面いっぱいの dialog 自体に塗る（::backdrop だけに塗ると、文字の見やすさの確認ツールが背景を正しく判定できないため） */
+  background: rgb(22 18 14 / 0.95);
   color: var(--cream);
 }
 
 .dialog::backdrop {
-  background: rgb(22 18 14 / 0.95);
+  background: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -468,15 +469,31 @@
     font-size: 0.9375rem;
   }
 
+  /* 1行に収め、入りきらないときは、領域・ページの名前とアドレスのそれぞれを「…」で省く */
   .where {
-    display: block;
-    overflow: hidden;
+    flex-wrap: nowrap;
     white-space: nowrap;
+  }
+
+  .whereItem,
+  .path {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  /* 領域の名前は短いため省かない */
+  .whereItem:first-child {
+    flex-shrink: 0;
+  }
+
+  .whereItem:last-of-type {
+    margin-right: 10px;
+  }
+
   .path {
-    margin-left: 4px;
+    min-width: 5em;
   }
 
   .actions {

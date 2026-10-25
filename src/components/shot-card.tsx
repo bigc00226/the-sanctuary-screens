@@ -19,14 +19,29 @@ type Props = {
   kicker?: string;
   /** 小さいカード（関連する画面の一覧など）。説明は2行まで */
   size?: "md" | "sm";
+  /** 縮小画像を表示する幅（img の sizes）。省略すると、カードの大きさと端末から決めます（一覧の並べ方に合わせた値） */
+  sizes?: string;
   className?: string;
 };
 
+/** 一覧の並べ方（PC は1行に3枚・スマートフォンは1行に6〜7枚まで）に合わせた、縮小画像の表示の幅 */
+const THUMB_SIZES = {
+  md: {
+    pc: "(min-width: 1240px) 380px, (min-width: 640px) 46vw, 92vw",
+    sp: "(min-width: 1240px) 180px, (min-width: 640px) 24vw, 46vw",
+  },
+  sm: {
+    pc: "(min-width: 1240px) 280px, (min-width: 640px) 32vw, 46vw",
+    sp: "(min-width: 1240px) 140px, (min-width: 640px) 18vw, 30vw",
+  },
+} as const;
+
 /**
  * 画面のカード（縮小画像・端末と範囲のラベル・説明）。押すと、その画面の詳しいページへ移動します。
+ * 縮小画像（幅 720px・360px の JPEG）は、表示する幅に合わせた WebP に変換して配信します（静的なファイルとして書き出したときは、そのまま）。
  * 縮小画像の枠の形は、PC は 16:10、スマートフォンは 390:844 にそろえています（並べたときに高さがそろうように）。
  */
-export function ShotCard({ shot, title, onOpen, eager = false, kicker, size = "md", className }: Props) {
+export function ShotCard({ shot, title, onOpen, eager = false, kicker, size = "md", sizes, className }: Props) {
   const handleClick = onOpen
     ? (e: MouseEvent<HTMLAnchorElement>) => {
         if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -52,7 +67,7 @@ export function ShotCard({ shot, title, onOpen, eager = false, kicker, size = "m
           width={shot.thumb.width}
           height={shot.thumb.height}
           alt=""
-          unoptimized
+          sizes={sizes ?? THUMB_SIZES[size][shot.device]}
           loading={eager ? "eager" : "lazy"}
           decoding="async"
           className={styles.image}

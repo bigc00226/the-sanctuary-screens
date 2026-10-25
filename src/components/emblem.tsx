@@ -1,44 +1,15 @@
 /* THE SANCTUARY のロゴの印と、神聖幾何学の飾り（本番のサイトと同じ図形） */
-const C = 200;
-const r2 = (n: number) => Math.round(n * 100) / 100;
-const at = (radius: number, deg: number) => {
-  const a = (deg * Math.PI) / 180;
-  return { x: r2(C + radius * Math.cos(a)), y: r2(C + radius * Math.sin(a)) };
-};
-const triangle = (radius: number, offset: number) =>
-  [0, 120, 240]
-    .map((d) => at(radius, d + offset))
-    .map((p) => `${p.x},${p.y}`)
-    .join(" ");
+import styles from "./emblem.module.css";
 
-const RAYS = Array.from({ length: 36 }, (_, i) => ({ from: at(150, i * 10), to: at(i % 3 === 0 ? 178 : 166, i * 10) }));
-const PETALS = Array.from({ length: 6 }, (_, i) => at(58, i * 60));
-const STARS = Array.from({ length: 8 }, (_, i) => at(150, i * 45 + 22.5));
-
-/** 円と星をかたどった装飾（神聖幾何学のモチーフ） */
+/**
+ * 円と星をかたどった大きな飾り（神聖幾何学のモチーフ）。
+ * 図形は public/emblem.svg（すべてのページで同じファイルを使い回す）を CSS の mask で切り抜いて表示し、
+ * 色は color（currentColor）に従います。大きさ・位置・色・透明度は className で指定してください
+ * （高さを指定しない場合は、幅と同じ高さになります）。
+ * public/emblem.svg の図形は、下の EmblemMark と同じく、円・六芒星・中心の点からできています。
+ */
 export function Emblem({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 400 400" fill="none" stroke="currentColor" strokeWidth={0.8} className={className} aria-hidden>
-      <circle cx={C} cy={C} r={196} strokeOpacity={0.35} />
-      <circle cx={C} cy={C} r={188} strokeOpacity={0.18} />
-      {RAYS.map((r, i) => (
-        <line key={i} x1={r.from.x} y1={r.from.y} x2={r.to.x} y2={r.to.y} strokeOpacity={0.35} />
-      ))}
-      <circle cx={C} cy={C} r={150} strokeOpacity={0.5} />
-      <polygon points={triangle(128, -90)} strokeOpacity={0.45} />
-      <polygon points={triangle(128, 90)} strokeOpacity={0.45} />
-      <circle cx={C} cy={C} r={118} strokeOpacity={0.28} />
-      {PETALS.map((p, i) => (
-        <circle key={i} cx={p.x} cy={p.y} r={58} strokeOpacity={0.3} />
-      ))}
-      <circle cx={C} cy={C} r={58} strokeOpacity={0.55} />
-      <circle cx={C} cy={C} r={20} strokeOpacity={0.6} />
-      {STARS.map((p, i) => (
-        <circle key={i} cx={p.x} cy={p.y} r={2.2} fill="currentColor" stroke="none" fillOpacity={0.8} />
-      ))}
-      <circle cx={C} cy={C} r={3.5} fill="currentColor" stroke="none" />
-    </svg>
-  );
+  return <span aria-hidden className={className ? `${styles.emblem} ${className}` : styles.emblem} />;
 }
 
 /** ロゴの横に置く小さな印 */

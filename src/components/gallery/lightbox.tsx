@@ -218,7 +218,7 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
 
         <div className={styles.actions}>
           <Link href={shot.href} prefetch={false} className={`btn btn-outline-light btn-sm ${styles.action}`}>
-            詳しいページ
+            くわしいページ
             <ArrowRight aria-hidden />
           </Link>
           <a href={shot.src} target="_blank" rel="noopener noreferrer" className={`btn btn-sm ${styles.action} ${styles.actionGhost}`}>

@@ -32,10 +32,10 @@ export type Counts = {
   full: number;
 };
 
-export type Section = SectionData & {
+export type Section = Omit<SectionData, "cover"> & {
   pages: Page[];
   counts: Counts;
-  /** 一覧の代表の画面（PC の最初の画面のうち、いちばん前のもの） */
+  /** 一覧の代表の画面（src/data/sections.ts の cover） */
   cover: Shot;
 };
 
@@ -191,7 +191,10 @@ const PAGE_LIST: Page[] = (() => {
 const SECTION_LIST: Section[] = SECTIONS.map((meta) => {
   const pages = PAGE_LIST.filter((p) => p.section === meta.id);
   const shots = SHOTS.filter((s) => s.section === meta.id);
-  const cover = shots.find((s) => s.device === "pc" && s.capture === "view") ?? shots[0];
+  const cover = BY_SLUG.get(meta.cover);
+  if (!cover || cover.section !== meta.id || cover.device !== "pc" || cover.capture !== "view") {
+    throw new Error(`領域の代表の画面（src/data/sections.ts の cover）は、その領域の PC の「最初の画面」にしてください: ${meta.id} → ${meta.cover}`);
+  }
   return { ...meta, pages, counts: countsOf(shots), cover };
 });
 

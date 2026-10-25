@@ -1,7 +1,7 @@
 "use client";
 
 import { RotateCcw, Search, SlidersHorizontal, X } from "lucide-react";
-import { useId, useRef, useState, type ChangeEvent, type CompositionEvent, type ReactNode, type Ref } from "react";
+import { memo, useId, useRef, useState, type ChangeEvent, type CompositionEvent, type ReactNode, type Ref } from "react";
 import { CAPTURES, CAPTURE_HINT, CAPTURE_LABEL, DEVICES, DEVICE_LABEL } from "@/lib/shots";
 import type { Facet, Filters } from "./filters";
 import { MAX_QUERY_LENGTH } from "./filters";
@@ -36,8 +36,9 @@ type Option = { value: string; label: ReactNode; count: number; hint?: string };
 /**
  * 絞り込みの帯。PC では画面の上部に固定し、すべての条件を並べます。
  * スマートフォンでは、検索欄と「絞り込み」ボタンだけの細い帯にし、ボタンを押すと条件の一覧が開きます。
+ * （拡大表示で前後の画面へ移動するたびに描き直さないよう、渡すものが変わったときだけ描き直します）
  */
-export function FilterBar({
+export const FilterBar = memo(function FilterBar({
   mode,
   filters,
   counts,
@@ -209,7 +210,7 @@ export function FilterBar({
       </form>
     </div>
   );
-}
+});
 
 function ChoiceGroup({
   legend,

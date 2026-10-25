@@ -2,13 +2,20 @@
   padding-top: var(--section-gap);
 }
 
+/* PC は3枚を横に並べる。それより狭い画面では1列にする（2枚と1枚に分かれないように） */
 .roles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(16px, 2vw, 24px);
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 960px) {
+  .roles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* ---------- 立場のカード（カード全体を押すと、領域のページへ移動） ---------- */
@@ -45,9 +52,22 @@
   translate: 0 -3px;
 }
 
-.role:has(.more:focus-visible) {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+/* キーボードで選んだときは、カード全体に枠を表示する（:has() に対応していないブラウザでは、リンクの文字に枠を表示） */
+@supports selector(:has(*)) {
+  .role:has(.more:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .more:focus-visible {
+    outline: none;
+  }
+}
+
+/* 立場の名前（アイコン・番号・英字・見出し）と、説明（文章・主な画面） */
+.intro,
+.detail {
+  min-width: 0;
 }
 
 .head {
@@ -142,10 +162,6 @@
   letter-spacing: 0.08em;
 }
 
-.more:focus-visible {
-  outline: none;
-}
-
 /* カード全体を押せるように、リンクの範囲をカードの大きさに広げる */
 .more::after {
   content: "";
@@ -168,6 +184,36 @@
 
 .role:hover .arrow {
   translate: 4px 0;
+}
+
+/* ---------- タブレット：1列にして、左に立場の名前、右に説明と主な画面を並べる ---------- */
+
+@media (min-width: 600px) and (max-width: 959px) {
+  .role {
+    display: grid;
+    grid-template-columns: minmax(0, 12em) minmax(0, 1fr);
+    align-items: start;
+    column-gap: clamp(28px, 5vw, 48px);
+  }
+
+  /* 番号は、アイコンのすぐ右に置く */
+  .head {
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .text {
+    margin-top: 0;
+  }
+
+  .items {
+    margin-bottom: 0;
+  }
+
+  .more {
+    grid-column: 1 / -1;
+    margin-top: 24px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

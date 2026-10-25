@@ -3,8 +3,12 @@
 .chapter {
   padding-top: clamp(40px, 5vw, 64px);
   padding-bottom: clamp(80px, 9.5vw, 128px);
-  /* 章の一覧の帯から移動したとき、帯に隠れないように */
-  scroll-margin-top: var(--tour-bar-h, 53px);
+  /*
+   * 章の一覧の帯から移動したとき、章の始まりを帯のすぐ下にそろえる
+   * （html の scroll-padding-top に含まれる 16px の余白は、章の上の余白と重なるため引く。
+   * 帯と章の間に、前の章の地やページの最初の帯がのぞかないように）
+   */
+  scroll-margin-top: calc(var(--tour-bar-h, 53px) - 16px);
 }
 
 /* 章ごとに交互に、少し濃いベージュの帯にする */
@@ -66,7 +70,8 @@
   align-items: baseline;
   justify-self: end;
   gap: 4px;
-  color: var(--muted);
+  /* 右上は、帯のゴールドのぼかしが重なって少し濃くなるため、注記の色（--muted）より濃い色に */
+  color: var(--fg-2);
   font-size: var(--text-sm);
   letter-spacing: 0.08em;
   white-space: nowrap;

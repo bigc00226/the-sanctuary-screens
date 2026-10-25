@@ -37,7 +37,7 @@ export function HighlightsPreview({ items, total, chapters }: Props) {
             </p>
           }
           action={
-            <Link href="/tour" className="btn btn-outline btn-sm">
+            <Link href="/tour" className={`btn btn-outline btn-sm ${styles.action}`}>
               {total}枚をすべて見る
               <ArrowRight aria-hidden />
             </Link>
@@ -49,11 +49,11 @@ export function HighlightsPreview({ items, total, chapters }: Props) {
             <li key={item.no} className={styles.item}>
               <Link href={`/tour#h-${item.no}`} className={styles.card}>
                 <span className={styles.frame}>
-                  <Thumb shot={item.shot} className={styles.image} />
+                  <Thumb shot={item.shot} sizes="(min-width: 1024px) 380px, (min-width: 640px) 46vw, 92vw" className={styles.image} />
                 </span>
                 <span className={styles.body}>
                   <span className={styles.meta}>
-                    <span className={`gold-text ${styles.no}`} aria-hidden>
+                    <span className={styles.no} aria-hidden>
                       {String(item.no).padStart(2, "0")}
                     </span>
                     <span className={styles.chapter}>

@@ -8,11 +8,13 @@ type Props = {
   total: number;
   highlights: number;
   pdf: { href: string; bytes: number; downloadName: string } | null;
-  notes: readonly string[];
 };
 
-/** ページの最後の案内（すべての画面・主な画面・PDF） */
-export function ClosingBand({ total, highlights, pdf, notes }: Props) {
+/**
+ * ページの最後の案内（すべての画面・主な画面・PDF）。
+ * 画面の撮影についての注記（架空の見本データ・伏せ字）は、すぐ下のサイトの下部に表示しているため、ここには出しません。
+ */
+export function ClosingBand({ total, highlights, pdf }: Props) {
   return (
     <section className={styles.section} aria-labelledby="closing">
       <div className="container">
@@ -43,11 +45,6 @@ export function ClosingBand({ total, highlights, pdf, notes }: Props) {
               画面一覧の PDF をダウンロード（{formatBytes(pdf.bytes)}）
             </a>
           )}
-          <ul className={styles.notes} aria-label="画面の撮影について">
-            {notes.map((note) => (
-              <li key={note}>{note}</li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

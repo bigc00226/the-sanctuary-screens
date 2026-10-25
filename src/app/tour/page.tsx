@@ -18,8 +18,12 @@ const highlights = getHighlights();
 const TITLE = "主な画面";
 const DESCRIPTION = `${site.productTagline}「${site.product}」の Web システムの主な画面を、${highlights.length}枚でご紹介します。サロンを知るところから、ご入会、ご予約とお支払い、オンラインのセッション、ヒーラーと管理者の画面まで、${CHAPTERS.length}つの章に分けて、画面ごとにできることを説明しています。`;
 
-/** 共有したときに表示する画像（1枚目の画面：トップページの最初の画面） */
-const cover = highlights[0].shot;
+/**
+ * 共有したときに表示する画像（1枚目の画面：トップページの最初の画面。領域のページの代表の画面と同じ扱い）。
+ * ここで openGraph を書くと、サイト全体の共有の設定（app/opengraph-image の画像を含む）はすべて置き換わるため、画像も必ず指定する
+ */
+const cover = highlights.at(0)?.shot;
+if (!cover) throw new Error("主な画面がありません（src/data/highlights.ts の HIGHLIGHTS）");
 const shareImage = { url: cover.src, width: cover.width, height: cover.height, alt: cover.caption };
 
 export const metadata: Metadata = {
@@ -47,13 +51,24 @@ export const metadata: Metadata = {
 const CHAPTER_LEADS: Record<ChapterId, string> = {
   join: "どなたでもご覧いただける公開ページから、入会のお申し込みまでの画面です。",
   mypage: "ログインした会員様の画面です。",
-  booking: "メニューを選んでから、ご予約が確定するまでと、キャンセルの画面です。",
+  booking: "メニューを選んでからご予約が確定するまでの画面と、キャンセルの画面です。",
   session: "ブラウザだけで使える、ビデオ通話の画面です。",
   healer: "セッションを担当するヒーラーの画面です。",
   admin: "サロンを運営する管理者の画面です。",
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");
+
+/**
+ * 主な画面は、ブラウザの窓の枠に入れて大きく表示するため、PC の「最初の画面」に限ります
+ * （ページ全体や画面の一部・スマートフォンの画面を選ぶと、枠に合わずに縦に長く表示されてしまうため）
+ */
+function checkShot(no: number, shot: Shot): Shot {
+  if (shot.device !== "pc" || shot.capture !== "view") {
+    throw new Error(`主な画面には、PC の最初の画面を選んでください（src/data/highlights.ts の ${no}枚目: ${shot.slug}）`);
+  }
+  return shot;
+}
 
 /** 同じページのほかの画面へのリンク（ほかの画面がないページは、その領域のページへ） */
 function moreLinkOf(shot: Shot): TourItemData["more"] {
@@ -68,9 +83,9 @@ function moreLinkOf(shot: Shot): TourItemData["more"] {
 }
 
 export default function TourPage() {
-  const chapters = CHAPTERS.map((chapter, i) => ({
+  // 画面のない章は表示しない（章の番号は、表示する章だけで数える）
+  const chapters = CHAPTERS.map((chapter) => ({
     ...chapter,
-    no: pad(i + 1),
     lead: CHAPTER_LEADS[chapter.id],
     items: highlights
       .filter((h) => h.chapter === chapter.id)
@@ -79,11 +94,13 @@ export default function TourPage() {
           no: h.no,
           title: h.title,
           description: h.description,
-          shot: h.shot,
+          shot: checkShot(h.no, h.shot),
           more: moreLinkOf(h.shot),
         }),
       ),
-  })).filter((chapter) => chapter.items.length > 0);
+  }))
+    .filter((chapter) => chapter.items.length > 0)
+    .map((chapter, i) => ({ ...chapter, no: pad(i + 1) }));
 
   const areas = getSections().map((section) => ({
     id: section.id,
@@ -101,10 +118,10 @@ export default function TourPage() {
         crumbs={[{ label: "トップ", href: "/" }, { label: TITLE }]}
         lead={
           <>
-            <p>
+            <p className={styles.leadText}>
               {`サロンを知るところから、ご入会、ご予約とお支払い、オンラインのセッション、ヒーラーと管理者の画面まで、主な流れを${highlights.length}枚でご紹介します。`}
             </p>
-            <p>画像を押すと、その画面のくわしいページが開きます。</p>
+            <p className={styles.leadText}>画像を押すと、その画面のくわしいページが開きます。</p>
           </>
         }
       >

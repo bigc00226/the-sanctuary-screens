@@ -56,6 +56,14 @@
   letter-spacing: 0.08em;
   white-space: nowrap;
   transition: color var(--duration) ease;
+  /*
+   * キーボードで項目を移ったときに、ページが動かないように。
+   * html の scroll-padding-top（サイトの上部の高さ ＋ 16px。globals.css）は、上部のすぐ下に固定したこの帯にもかかるため、
+   * そのままでは、項目を移るたびにブラウザが帯を見せようとして、ページを 16px ずつ上へ動かしてしまう
+   */
+  scroll-margin-top: -16px;
+  /* スマートフォン：帯の中を横に動かして項目を見せるとき、右の端のうすくした部分にかからないように */
+  scroll-margin-inline-end: 24px;
 }
 
 /* 今の章の下線 */
@@ -130,6 +138,13 @@
   .list {
     -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 36px), transparent 100%);
     mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 36px), transparent 100%);
+  }
+
+  /* 最後の章まで動かしたときに、その文字と下線が、うすくした部分にかからないように */
+  .list::after {
+    content: "";
+    flex: none;
+    width: 24px;
   }
 }
 

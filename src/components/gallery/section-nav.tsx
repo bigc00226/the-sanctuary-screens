@@ -41,10 +41,10 @@ function SectionCard({ item, direction }: { item: SectionNavItem; direction: "pr
     <Link href={item.href} className={styles.card} data-direction={direction}>
       <span className={styles.thumb}>
         {/*
-          表示は最大 240px のため、一覧のカードと同じ縮小画像（幅 720px の JPEG）をそのまま使う。
+          表示は最大 240px のため、一覧のカードと同じ縮小画像（幅 720px の JPEG）から作る（表示の幅に合わせた WebP に変換）。
           ShotImage は元の画像から作るため、静的なファイルとして書き出したときは、元の PNG（約1MB）を読み込んでしまいます
         */}
-        <Image src={item.cover.src} width={item.cover.width} height={item.cover.height} alt="" unoptimized />
+        <Image src={item.cover.src} width={item.cover.width} height={item.cover.height} alt="" sizes="240px" />
       </span>
       <span className={styles.text}>
         <span className={styles.direction}>

@@ -77,9 +77,10 @@ export function TourItem({ item, side, preload = false, reveal = true }: Props) 
       </div>
 
       <div className={styles.media}>
-        <Link href={shot.href} prefetch={false} className={styles.mediaLink} aria-label={`${title}のくわしいページ`}>
+        {/* リンクの名前は画像の説明（alt）から付く（aria-label を使うと、見えている文字と名前が食い違うため） */}
+        <Link href={shot.href} prefetch={false} className={styles.mediaLink}>
           <DeviceFrame device="pc" address={addressOf(shot.path)} className={styles.frame}>
-            <ShotImage shot={shot} sizes={SIZES} fit="fill" preload={preload} />
+            <ShotImage shot={shot} sizes={SIZES} fit="fill" preload={preload} alt={`${title}のくわしいページ`} />
           </DeviceFrame>
         </Link>
       </div>

@@ -32,10 +32,13 @@ type Props = {
 };
 
 /**
- * 画面の画像（大きく表示するとき）。縮小画像を下に敷いておき、読み込みが終わるまでの間も形が分かるようにします。
+ * 画面の画像（大きく表示するとき）。すぐに読み込む画像（preload・loading="eager"）は、縮小画像を下に敷いて、
+ * 読み込みが終わるまでの間も形が分かるようにします。
  * 一覧のカードでは ShotCard を使ってください（縮小画像だけを読み込みます）。
  */
 export function ShotImage({ shot, sizes, preload = false, loading, fetchPriority, fit = "natural", alt, className, style }: Props) {
+  // 縮小画像を下に敷くのは、すぐに読み込む画像だけ（CSS の背景の画像は、画面の外にあっても読み込まれてしまうため）
+  const placeholder = preload || loading === "eager";
   return (
     <Image
       src={shot.src}
@@ -54,10 +57,14 @@ export function ShotImage({ shot, sizes, preload = false, loading, fetchPriority
         height: "auto",
         maxWidth: fit === "natural" ? cssWidthOf(shot) : undefined,
         backgroundColor: "var(--canvas-2)",
-        backgroundImage: `url(${shot.thumb.src})`,
-        backgroundSize: "100% auto",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top center",
+        ...(placeholder
+          ? {
+              backgroundImage: `url(${shot.thumb.src})`,
+              backgroundSize: "100% auto",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "top center",
+            }
+          : {}),
         ...style,
       }}
     />

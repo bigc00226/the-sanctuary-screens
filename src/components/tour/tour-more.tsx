@@ -34,8 +34,8 @@ export function TourMore({ total, highlights, areas }: Props) {
             <span className={styles.phrase}>ご覧いただけます</span>
           </h2>
           <p className={styles.lead}>
-            {"入力エラーの表示や、会員様の状態ごとのマイページなども、PC とスマートフォンで収録しています。"}
-            {"領域・端末・範囲で絞り込んだり、言葉で探したりできます。"}
+            <span className={styles.sentence}>入力エラーの表示や、会員様の状態ごとのマイページなども、PC とスマートフォンで収録しています。</span>
+            <span className={styles.sentence}>領域・端末・範囲で絞り込んだり、言葉で探したりできます。</span>
           </p>
           <Link href="/screens" className={`btn btn-gold btn-lg ${styles.button}`}>
             すべての画面（{total}枚）を見る

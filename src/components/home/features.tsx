@@ -72,7 +72,7 @@ export function FeatureGrid({ features }: { features: FeatureItem[] }) {
                     {shots.map((shot) => (
                       <li key={shot.slug} className={styles.tile} data-device={shot.device} data-capture={shot.capture}>
                         <Link href={shot.href} prefetch={false} className={styles.tileLink}>
-                          <Thumb shot={shot} alt={shot.caption} className={styles.tileImage} />
+                          <Thumb shot={shot} sizes="(min-width: 1024px) 140px, 30vw" alt={shot.caption} className={styles.tileImage} />
                         </Link>
                       </li>
                     ))}

@@ -41,7 +41,7 @@ export function AreaList({ areas, total }: Props) {
             </p>
           }
           action={
-            <Link href="/screens" className="btn btn-outline btn-sm">
+            <Link href="/screens" className={`btn btn-outline btn-sm ${styles.action}`}>
               すべての画面（{total}枚）
               <ArrowRight aria-hidden />
             </Link>
@@ -53,7 +53,7 @@ export function AreaList({ areas, total }: Props) {
             <li key={area.id} className={styles.item}>
               <Link href={sectionHref(area.id)} className={styles.card}>
                 <span className={styles.frame}>
-                  <Thumb shot={area.cover} className={styles.image} />
+                  <Thumb shot={area.cover} sizes="(min-width: 1024px) 380px, (min-width: 640px) 46vw, 92vw" className={styles.image} />
                 </span>
                 <span className={styles.body}>
                   <span className={styles.label}>

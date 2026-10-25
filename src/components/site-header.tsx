@@ -48,12 +48,14 @@ export function SiteHeader({ sections, total, highlights }: { sections: NavSecti
   return (
     <header className={styles.header}>
       <div className={`container-wide ${styles.bar}`}>
-        <Link href="/" className={styles.brand} aria-label="THE SANCTUARY 画面一覧 トップへ">
+        {/* リンクの名前は、見えている文字（THE SANCTUARY 画面一覧）に「トップへ」を添えたもの */}
+        <Link href="/" className={styles.brand}>
           <EmblemMark className={styles.mark} />
           <span className={styles.wordmark}>
-            <span className={styles.product}>THE SANCTUARY</span>
+            <span className={styles.product}>THE SANCTUARY</span>{" "}
             <span className={styles.label}>画面一覧</span>
           </span>
+          <span className="visually-hidden">（トップへ）</span>
         </Link>
 
         <nav className={styles.nav} aria-label="サイトのメニュー">

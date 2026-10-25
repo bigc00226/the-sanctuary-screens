@@ -8,6 +8,13 @@
     var(--canvas-2);
 }
 
+/* 見出しの横の「18枚をすべて見る」。タッチ操作・スマートフォンでは、押しやすい高さ（44px）にする */
+@media (pointer: coarse), (max-width: 640px) {
+  a.action {
+    --btn-h: 44px;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -83,8 +90,16 @@
   gap: 14px;
 }
 
+/*
+ * 番号（金色のグラデーションの文字）。この帯の背景（少し濃いベージュ）の上では、共通の .gold-text の明るい端の色が
+ * 薄すぎる（コントラスト比 2.5:1）ため、少し濃いゴールドにする（どの部分も 3.4:1 以上）
+ */
 .no {
   flex-shrink: 0;
+  background: linear-gradient(120deg, #8d6a35 0%, #6f5124 50%, #946f3a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 500;
@@ -103,17 +118,18 @@
   line-height: 1.4;
 }
 
+/* 小さな文字のため、帯の右上の金色の光の上でもコントラスト比 4.5:1 以上になる濃さにする */
 .chapterEn {
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #6f5124;
 }
 
 .chapterTitle {
-  color: var(--muted);
+  color: var(--fg-2);
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
 }
@@ -182,6 +198,20 @@
   .title {
     font-size: var(--text-sm);
     line-height: 1.65;
+  }
+}
+
+/* 幅 390px より狭い画面：章の名前（「オンラインセッション」など）が途中で折り返さないように、番号の下に置く */
+@media (max-width: 389px) {
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .chapter {
+    padding-left: 0;
+    border-left: 0;
   }
 }
 

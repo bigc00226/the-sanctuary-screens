@@ -56,6 +56,8 @@
 .eyebrow {
   color: var(--gold-light);
   letter-spacing: 0.34em;
+  /* 1行に収まらないときは、2行の長さをそろえる */
+  text-wrap: balance;
 }
 
 .title {
@@ -94,8 +96,14 @@
   color: var(--cream-2);
   font-size: var(--text-base);
   line-height: 2.05;
+  /* 言葉の途中（「画 / 面」など）で改行しないようにする（対応しているブラウザ） */
+  word-break: auto-phrase;
 }
 
+/*
+ * 2つのボタン。1行に収まるときは文字に合わせた幅で並べ、収まらないとき（スマートフォン・幅 1024〜1199px）は
+ * それぞれを列の幅いっぱいにして、同じ幅で縦に並べる（枠の幅は中身に合わせ、折り返したときだけ広がる）
+ */
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +113,7 @@
 
 /* 2つのボタンが1行に収まるように、左右の余白を少しだけ詰める */
 .actions > a {
+  flex: 1 1 auto;
   padding-inline: 1.5em;
 }
 
@@ -259,14 +268,6 @@
 /* ---------- スマートフォン ---------- */
 
 @media (max-width: 559px) {
-  .actions {
-    align-self: stretch;
-  }
-
-  .actions > * {
-    flex: 1 1 auto;
-  }
-
   .visual {
     aspect-ratio: 100 / 84;
   }
@@ -277,5 +278,12 @@
 
   .sp {
     width: 31%;
+  }
+}
+
+/* 幅 320px ほどの画面でも、英字の小見出しが1行に収まるように字間を少し詰める */
+@media (max-width: 359px) {
+  .eyebrow {
+    letter-spacing: 0.26em;
   }
 }

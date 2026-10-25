@@ -26,13 +26,14 @@ export function SiteFooter({
       <Emblem className={styles.emblem} />
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <Link href="/" className={styles.logo} aria-label="THE SANCTUARY 画面一覧 トップへ">
+          <Link href="/" className={styles.logo} prefetch={false}>
             <EmblemMark className={styles.mark} />
             <span className={styles.logoText}>
               <span className={styles.tagline}>{site.productTagline}</span>
               <span className={styles.product}>{site.product}</span>
               <span className={styles.subtitle}>{site.productSubtitle}</span>
             </span>
+            <span className="visually-hidden">（トップへ）</span>
           </Link>
           <p className={styles.lead}>
             入会のお申し込みからご予約・事前決済、ビデオ通話のセッション、ヒーラー画面、管理画面まで。

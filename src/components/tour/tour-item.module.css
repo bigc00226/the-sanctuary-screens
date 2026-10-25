@@ -7,8 +7,11 @@
     "head"
     "media"
     "body";
-  /* ページの中のリンク（#h-1 など）で移動したとき、上部の章の帯に隠れないように */
-  scroll-margin-top: var(--tour-bar-h, 53px);
+  /*
+   * ページの中のリンク（#h-1 など。トップページの「主な画面」から）で移動したとき、上部の章の帯に隠れないように。
+   * 大きな番号が帯に詰まって見えないよう、帯の下に 32px（html の scroll-padding-top の 16px ＋ 16px）あける
+   */
+  scroll-margin-top: calc(var(--tour-bar-h, 53px) + 16px);
 }
 
 /* ---------- 番号・見出し ---------- */
@@ -84,6 +87,12 @@
 .mediaLink {
   display: block;
   border-radius: 10px;
+}
+
+/* キーボードで上へ戻りながらリンクを選んだとき、上部に固定した章の一覧の帯に隠れないように */
+.mediaLink,
+.link {
+  scroll-margin-top: var(--tour-bar-h, 53px);
 }
 
 .frame {

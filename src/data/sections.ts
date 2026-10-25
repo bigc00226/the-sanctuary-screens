@@ -1,10 +1,13 @@
 /**
  * 画面の6つの領域（元の画像のフォルダ 01_public〜06_admin に対応）。
  * 並び順は、この配列の順です。
+ * `cover` は領域の代表の画面（トップページの領域のカード・前後の領域への案内・共有したときの画像に使う）で、
+ * その領域の PC の「最初の画面」の画像の名前を書きます。
  */
 export const SECTIONS = [
   {
     id: "public",
+    cover: "01_top_pc_view",
     folder: "01_public",
     no: "01",
     title: "公開ページ",
@@ -16,6 +19,7 @@ export const SECTIONS = [
   },
   {
     id: "member",
+    cover: "01_mypage_pc_view",
     folder: "02_member",
     no: "02",
     title: "マイページ",
@@ -27,6 +31,7 @@ export const SECTIONS = [
   },
   {
     id: "booking",
+    cover: "02_book-datetime_pc_view",
     folder: "03_booking",
     no: "03",
     title: "ご予約",
@@ -38,6 +43,7 @@ export const SECTIONS = [
   },
   {
     id: "session",
+    cover: "03_call-split_pc_view",
     folder: "04_session",
     no: "04",
     title: "セッションのお部屋",
@@ -49,6 +55,7 @@ export const SECTIONS = [
   },
   {
     id: "healer",
+    cover: "01_healer-home_pc_view",
     folder: "05_healer",
     no: "05",
     title: "ヒーラー画面",
@@ -60,6 +67,7 @@ export const SECTIONS = [
   },
   {
     id: "admin",
+    cover: "04_sales_pc_view",
     folder: "06_admin",
     no: "06",
     title: "管理画面",

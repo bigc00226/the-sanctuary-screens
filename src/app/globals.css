@@ -23,7 +23,8 @@
   --accent: #815f2c; /* 文字で使うゴールド（ベージュの上でも読める濃さ） */
   --gold-band: linear-gradient(120deg, #dcc08a 0%, #c4a064 50%, #a88246 100%);
   --gold-button: linear-gradient(120deg, #dcc08a 0%, #c29c5e 52%, #a47c42 100%);
-  --gold-text: linear-gradient(120deg, #a47b40 0%, #815f2c 50%, #b08a52 100%);
+  /* 明るいベージュ（--canvas-2）の上でも、大きな文字の基準（3:1）を満たす濃さ */
+  --gold-text: linear-gradient(120deg, #9a7238 0%, #815f2c 50%, #9c7841 100%);
   --gold-text-light: linear-gradient(120deg, #f1ddb3 0%, #d4b173 50%, #b8925a 100%);
 
   /* 黒（アクセント） */
@@ -35,8 +36,9 @@
   --brown: #5c4330; /* 濃い茶色のボタン */
 
   /* 文字の種類 */
-  --font-sans: var(--font-zen), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-  --font-serif: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  /* 読み込むまでの間は、端末の日本語の文字（Mac・iPhone：ヒラギノ、Windows：游ゴシック・メイリオ、Android：Noto）で表示する */
+  --font-sans: var(--font-zen), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
+  --font-serif: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", serif;
   --font-display: var(--font-cormorant), var(--font-shippori), "Times New Roman", serif;
 
   /* 文字の大きさ（画面の幅に合わせて少しずつ変わる） */
@@ -197,8 +199,12 @@ summary {
   border: 0;
 }
 
-/** 見出しの上に添える英字（例：PUBLIC PAGES） */
-.eyebrow {
+/**
+ * 見出しの上に添える英字（例：PUBLIC PAGES）。
+ * :where で優先度を 0 にして、部品の CSS で色や大きさを変えたときに、読み込みの順にかかわらずそちらが使われるようにしています
+ * （下の .tag・.gold-text も同じ）。
+ */
+:where(.eyebrow) {
   display: inline-block;
   font-family: var(--font-display);
   font-size: 0.8125rem;
@@ -224,14 +230,14 @@ summary {
 }
 
 /** ゴールドのグラデーションの文字（ベージュの上・黒の上） */
-.gold-text {
+:where(.gold-text) {
   background: var(--gold-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.gold-text-light {
+:where(.gold-text-light) {
   background: var(--gold-text-light);
   -webkit-background-clip: text;
   background-clip: text;
@@ -353,7 +359,7 @@ summary {
 
 /* ---------- 小さなラベル（PC・最初の画面 など） ---------- */
 
-.tag {
+:where(.tag) {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
@@ -368,7 +374,7 @@ summary {
   white-space: nowrap;
 }
 
-.tag-solid {
+:where(.tag-solid) {
   border-color: transparent;
   background: rgb(184 146 90 / 0.16);
   /* 薄いゴールドの背景の上でも読める濃さ（コントラスト比 5.6:1） */
@@ -388,6 +394,157 @@ summary {
 
 .link:hover {
   text-decoration-color: currentColor;
+}
+
+/* ---------- ページが見つからないとき（src/app/not-found.tsx） ----------
+ * 404 のページの見た目は、CSS Modules ではなく、ここ（すべてのページで読み込む CSS）に書きます。
+ * 404 のページの CSS を別のファイルにすると、Next.js がすべてのページで先読み（preload）してしまい、
+ * 「先読みしたが使わなかった」という警告がブラウザに出るためです。
+ */
+
+.nf-wrap {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgb(227 204 156 / 0.4) 0%, rgb(227 204 156 / 0) 70%),
+    linear-gradient(to bottom, var(--canvas), var(--canvas-2));
+  isolation: isolate;
+}
+
+.nf-emblem {
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  left: 50%;
+  width: min(760px, 140vw);
+  height: auto;
+  aspect-ratio: 1;
+  color: var(--gold);
+  opacity: 0.28;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.nf-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-top: clamp(56px, 9vw, 112px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+  text-align: center;
+}
+
+.nf-code {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 3.5rem + 7vw, 9rem);
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  line-height: 0.9;
+  letter-spacing: 0.08em;
+  background: var(--gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nf-title {
+  font-size: var(--text-2xl);
+  letter-spacing: 0.1em;
+}
+
+.nf-lead {
+  max-width: 38em;
+  color: var(--fg-2);
+  line-height: 2;
+}
+
+.nf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.nf-sections {
+  width: 100%;
+  max-width: 920px;
+  margin-top: clamp(32px, 6vw, 56px);
+}
+
+.nf-sections-title {
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+
+.nf-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nf-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: rgb(252 249 244 / 0.8);
+  text-align: left;
+  transition:
+    border-color var(--duration) ease,
+    background-color var(--duration) ease,
+    box-shadow var(--duration) ease;
+}
+
+.nf-link:hover {
+  border-color: rgb(184 146 90 / 0.6);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+}
+
+.nf-no {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  color: var(--accent);
+}
+
+.nf-name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.nf-count {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.nf-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--gold);
+  transition: transform var(--duration) ease;
+}
+
+.nf-link:hover .nf-arrow {
+  transform: translateX(3px);
 }
 
 /* ---------- 動きを減らす設定の方 ---------- */
@@ -411,6 +568,10 @@ summary {
 
   body {
     background: #fff;
+  }
+
+  .skip-link {
+    display: none;
   }
 }
 

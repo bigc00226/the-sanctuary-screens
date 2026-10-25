@@ -14,6 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { collectChars } from "./font-chars.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MEDIA = path.join(ROOT, "public", "media");
@@ -207,4 +208,23 @@ function main() {
   );
 }
 
+/**
+ * 日本語の文字のファイル（src/app/fonts）に入っていない文字が、文章に増えていないかを確かめる。
+ * 増えていても表示はできる（その文字だけ、端末にある文字の種類で表示される）ため、お知らせだけにする。
+ */
+function checkFontChars() {
+  const listFile = path.join(ROOT, "src", "app", "fonts", "subset-chars.txt");
+  if (!fs.existsSync(listFile)) return;
+  const included = new Set(fs.readFileSync(listFile, "utf8"));
+  const missing = [...collectChars(ROOT)].filter((ch) => !included.has(ch));
+  if (missing.length > 0) {
+    console.warn(
+      `[prepare-media] 日本語の文字のファイルに入っていない文字が ${missing.length} 文字あります（${missing.slice(0, 20).join("")}${
+        missing.length > 20 ? "…" : ""
+      }）。\`npm run fonts\` で作り直してください（作り直すまでは、端末にある文字の種類で表示されます）。`,
+    );
+  }
+}
+
 main();
+checkFontChars();

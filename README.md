@@ -43,6 +43,7 @@ npm run build       # 本番用のビルド（すべてのページを、あら�
 npm start           # ビルドしたものを配信
 npm run lint        # コードの確認
 npm run typecheck   # 型の確認
+npm run fonts       # 日本語の文字のファイルを作り直す（文章を変えて、新しい漢字が増えたとき。下の「文字の種類」）
 ```
 
 `npm run dev`・`npm run build` の前には、`scripts/prepare-media.mjs` が自動で実行されます（次の「画面の画像のしくみ」）。
@@ -89,7 +90,7 @@ npm run typecheck   # 型の確認
 | ファイル | 内容 |
 | --- | --- |
 | `src/data/site.ts` | サイト名・説明・公開するアドレス・検索エンジンへの公開・ページの下部の注記 |
-| `src/data/sections.ts` | 6つの領域の名前と説明 |
+| `src/data/sections.ts` | 6つの領域の名前・説明・代表の画面（`cover`。トップページの領域のカードなどに使う、PC の「最初の画面」） |
 | `src/data/pages.ts` | ページの名前（領域ごと・番号ごと） |
 | `src/data/highlights.ts` | 主な画面（18枚）の選び方と説明 |
 | `src/data/features.ts` | トップページの「できること」と「使用技術」 |
@@ -125,14 +126,33 @@ STATIC_EXPORT=1 npm run build   # out/ に書き出します
 ```
 
 `out/` を、そのまま Web サーバーに置けます（アドレスの最後に「/」が付く形です）。この場合は、画像の変換
-（WebP への変換・大きさの調整）を行わず、元の PNG をそのまま配信します。
+（WebP への変換・大きさの調整）を行わず、大きな画像は元の PNG、一覧は縮小画像の JPEG をそのまま配信します。
 
 ## 画像の変換と保存
 
 - 大きく表示する画像は、見ている端末に合った大きさの WebP に変換して配信します（画質 90）。変換した画像は31日間保存します。
-- 一覧の縮小画像は、変換せずにそのまま配信します。
+- 一覧の縮小画像（`_thumbs` の JPEG）も、表示する幅に合わせた WebP に変換して配信します。
 - 画像・縮小画像・PDF（`/media/…`）は、ブラウザに1日保存してもらいます。
 - 縦に非常に長い画像（高さ 16,000px を超えるもの）は、WebP の大きさの上限を超えるため、元の PNG をそのまま配信します。
+
+## 文字の種類
+
+THE SANCTUARY の画面と同じく、見出しに「しっぽり明朝 B1」、本文に「Zen 角ゴシック New」、英字の見出しに「Cormorant Garamond」を
+使っています（いずれも SIL Open Font License。`src/app/fonts/OFL-*.txt`）。
+
+日本語の文字のファイルは、そのままでは1つ数 MB あるため、サイトで使う文字（約 960 文字。ひらがな・カタカナ・英数字・記号は
+すべて）だけに絞ったもの（1つ約 90〜180KB）を `src/app/fonts/` に置いています。文章を変えて新しい漢字が増えたときは、
+`npm run build` のときに「日本語の文字のファイルに入っていない文字があります」と表示されます。次のように作り直してください
+（作り直すまでの間も、その文字だけ端末にある文字の種類で表示されるため、読めなくなることはありません）。
+
+```bash
+pip install fonttools brotli   # 初回だけ（Python の道具を使います）
+npm run fonts
+```
+
+元の文字のファイルは、Google Fonts のリポジトリから初回だけダウンロードします。本文の文字は、表示したあとに入れ替えない設定
+（`display: optional`）です。読み込みが間に合わなかったページでは端末の文字で表示し、次のページからはこの文字で表示します
+（表示のあとに文章が組み直されて、画面がずれないようにするためです）。
 
 ## 共有したときの画像（OG 画像）
 
@@ -160,10 +180,14 @@ node scripts/make-og-image.mjs
 ├── index.html・一覧.pdf・the-sanctuary/   以前の一覧（そのまま）
 ├── scripts/
 │   ├── prepare-media.mjs     画像の用意と、画面の一覧のデータの作成（dev・build の前に自動で実行）
+│   ├── subset-fonts.mjs      日本語の文字のファイルの作成（npm run fonts）
+│   ├── font-chars.mjs        サイトで使う文字の一覧（上の2つで使う）
 │   └── make-og-image.mjs     共有したときの画像の作成
-├── public/media/             （自動で作成）配信する画像・縮小画像・PDF
+├── public/
+│   ├── emblem.svg            飾りの図形（円と星。すべてのページで使い回す）
+│   └── media/                （自動で作成）配信する画像・縮小画像・PDF
 └── src/
-    ├── app/                  ページ（/・/tour・/screens・/screens/<領域>・/screens/<領域>/<画像の名前>）
+    ├── app/                  ページ（/・/tour・/screens・/screens/<領域>・/screens/<領域>/<画像の名前>）と、fonts/（文字のファイル）
     ├── components/           部品（gallery：一覧と拡大表示・detail：1枚ごとのページ・home：トップページ・tour：主な画面）
     ├── data/                 文章と設定・画面の一覧のデータ（shots.json は自動で作成）
     └── lib/                  画面のデータの読み込み・並べ替え・表示の名前
