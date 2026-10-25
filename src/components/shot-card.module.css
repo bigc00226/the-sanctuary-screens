@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  color: inherit;
+}
+
+.frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: var(--canvas-2);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out);
+}
+
+.card[data-device="pc"] .frame {
+  aspect-ratio: 16 / 10;
+}
+
+.card[data-device="sp"] .frame {
+  aspect-ratio: 390 / 844;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s var(--ease-out);
+}
+
+/* 画面の一部（横長・縦長いろいろ）は、切らずに枠の中に収める */
+.card[data-capture="part"] .image {
+  padding: 6%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ページ全体は、上の部分を見せて、下に向かって薄くする */
+.fade {
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(to bottom, rgb(252 249 244 / 0), rgb(252 249 244 / 0.92));
+  pointer-events: none;
+}
+
+.card:hover .frame {
+  border-color: rgb(184 146 90 / 0.65);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.card:hover .image {
+  transform: scale(1.015);
+}
+
+.card:focus-visible {
+  outline: none;
+}
+
+.card:focus-visible .frame {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.kicker {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.caption {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.card[data-device="sp"] .caption {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  font-size: 0.78125rem;
+}
+
+.card[data-size="sm"] .caption {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 0.78125rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .frame,
+  .card:hover .image {
+    transform: none;
+  }
+}

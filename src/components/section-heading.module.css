@@ -1,0 +1,55 @@
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.text {
+  display: grid;
+  gap: 10px;
+  max-width: 46em;
+}
+
+.heading[data-align="center"] {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading[data-align="center"] .text {
+  justify-items: center;
+}
+
+.title {
+  position: relative;
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+}
+
+.lead {
+  display: grid;
+  gap: 0.5em;
+  color: var(--fg-2);
+  line-height: 2;
+}
+
+.action {
+  flex-shrink: 0;
+}
+
+.heading[data-tone="dark"] .title {
+  color: var(--cream);
+}
+
+.heading[data-tone="dark"] .eyebrow {
+  color: var(--gold-light);
+}
+
+.heading[data-tone="dark"] .lead {
+  color: var(--cream-2);
+}

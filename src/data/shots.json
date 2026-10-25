@@ -1,0 +1,5916 @@
+{
+ "pdf": {
+  "file": "the-sanctuary-screens.pdf",
+  "bytes": 10782691
+ },
+ "shots": [
+  {
+   "file": "01_public/01_top-concept_pc_view.png",
+   "caption": "トップページ：コンセプト（最初の章を開いた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 3649,
+   "bytes": 415851,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/01_top-flow_pc_view.png",
+   "caption": "トップページ：オンラインで完結する、ご利用の流れ（開いた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1305,
+   "bytes": 169541,
+   "thumb": {
+    "width": 720,
+    "height": 326
+   }
+  },
+  {
+   "file": "01_public/01_top-footer_pc_view.png",
+   "caption": "フッター（サイトの下部・全ページ共通）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 795,
+   "bytes": 97796,
+   "thumb": {
+    "width": 720,
+    "height": 199
+   }
+  },
+  {
+   "file": "01_public/01_top-guide_sp_view.png",
+   "caption": "トップページ：くわしいご案内（ページ内の各章・メニュー・料金へのボタン）",
+   "url": "/",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 666,
+   "bytes": 59559,
+   "thumb": {
+    "width": 360,
+    "height": 205
+   }
+  },
+  {
+   "file": "01_public/01_top-healers-photo_pc_view.png",
+   "caption": "トップページ：ヒーラーのご紹介（写真と紹介文の冒頭・開いた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1605,
+   "bytes": 1487638,
+   "thumb": {
+    "width": 720,
+    "height": 401
+   }
+  },
+  {
+   "file": "01_public/01_top-healers_pc_view.png",
+   "caption": "トップページ：ヒーラーのご紹介（開いた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 2797,
+   "bytes": 1613579,
+   "thumb": {
+    "width": 720,
+    "height": 699
+   }
+  },
+  {
+   "file": "01_public/01_top-healers_sp_view.png",
+   "caption": "トップページ：ヒーラーのご紹介（開いた状態）",
+   "url": "/",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 4971,
+   "bytes": 1542120,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/01_top-menu_sp_view.png",
+   "caption": "トップページ：スマートフォンのメニュー（≡）を開いた状態",
+   "url": "/",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 278154,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/01_top-open_pc_full.png",
+   "caption": "トップページ（全体・章をすべて開いた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 12921,
+   "bytes": 1781633,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/01_top-open_sp_full.png",
+   "caption": "トップページ（全体・章をすべて開いた状態）",
+   "url": "/",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 28842,
+   "bytes": 2899493,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/01_top-pricing_pc_view.png",
+   "caption": "トップページ：メニュー・料金の見出し（押すとメニュー・料金のページへ）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 1280,
+   "height": 535,
+   "bytes": 19849,
+   "thumb": {
+    "width": 720,
+    "height": 301
+   }
+  },
+  {
+   "file": "01_public/01_top_pc_full.png",
+   "caption": "トップページ（全体・章を閉じた状態）",
+   "url": "/",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 5081,
+   "bytes": 737114,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/01_top_pc_view.png",
+   "caption": "トップページ（最初の画面）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1207428,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/01_top_sp_full.png",
+   "caption": "トップページ（全体・章を閉じた状態）",
+   "url": "/",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 10382,
+   "bytes": 1342086,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/01_top_sp_view.png",
+   "caption": "トップページ（最初の画面）",
+   "url": "/",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 1248449,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/02_menu_pc_full.png",
+   "caption": "メニュー・料金（全体）",
+   "url": "/menu",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2498,
+   "bytes": 255750,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/02_menu_pc_view.png",
+   "caption": "メニュー・料金（最初の画面）",
+   "url": "/menu",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 280542,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/02_menu_sp_full.png",
+   "caption": "メニュー・料金（全体）",
+   "url": "/menu",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5844,
+   "bytes": 501335,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/02_menu_sp_view.png",
+   "caption": "メニュー・料金（最初の画面）",
+   "url": "/menu",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 266307,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/03_news_pc_full.png",
+   "caption": "お知らせの一覧（全体・まだ記事がない状態）",
+   "url": "/news",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 996,
+   "bytes": 109793,
+   "thumb": {
+    "width": 720,
+    "height": 498
+   }
+  },
+  {
+   "file": "01_public/03_news_pc_view.png",
+   "caption": "お知らせの一覧（最初の画面・まだ記事がない状態）",
+   "url": "/news",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 282950,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/03_news_sp_full.png",
+   "caption": "お知らせの一覧（全体・まだ記事がない状態）",
+   "url": "/news",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2424,
+   "bytes": 172258,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/03_news_sp_view.png",
+   "caption": "お知らせの一覧（最初の画面・まだ記事がない状態）",
+   "url": "/news",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 253337,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/04_column_pc_full.png",
+   "caption": "コラムの一覧（全体・まだ記事がない状態）",
+   "url": "/column",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 996,
+   "bytes": 107981,
+   "thumb": {
+    "width": 720,
+    "height": 498
+   }
+  },
+  {
+   "file": "01_public/04_column_pc_view.png",
+   "caption": "コラムの一覧（最初の画面・まだ記事がない状態）",
+   "url": "/column",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 279066,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/04_column_sp_full.png",
+   "caption": "コラムの一覧（全体・まだ記事がない状態）",
+   "url": "/column",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2424,
+   "bytes": 169474,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/04_column_sp_view.png",
+   "caption": "コラムの一覧（最初の画面・まだ記事がない状態）",
+   "url": "/column",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 249092,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/05_apply-errors_pc_full.png",
+   "caption": "入会のお申し込み：手順1 未入力のまま「次へ進む」を押したときの入力エラー表示（全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2073,
+   "bytes": 203869,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-errors_sp_full.png",
+   "caption": "入会のお申し込み：手順1 未入力のまま「次へ進む」を押したときの入力エラー表示（全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5540,
+   "bytes": 394836,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply-filled_pc_full.png",
+   "caption": "入会のお申し込み：手順1 基本情報を入力した状態（架空の入力例・全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1970,
+   "bytes": 191163,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-filled_sp_full.png",
+   "caption": "入会のお申し込み：手順1 基本情報を入力した状態（架空の入力例・全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5140,
+   "bytes": 358714,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply-invalid_pc_full.png",
+   "caption": "入会のお申し込み：手順1 入力内容に誤りがあるときのエラー表示（20歳未満・メールアドレスの形式・パスワードの不一致・全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1977,
+   "bytes": 192824,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-invalid_sp_full.png",
+   "caption": "入会のお申し込み：手順1 入力内容に誤りがあるときのエラー表示（20歳未満・メールアドレスの形式・パスワードの不一致・全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5218,
+   "bytes": 362159,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply-referral-detail_pc_view.png",
+   "caption": "入会のお申し込み：手順2 きっかけで「その他」を選ぶと表示される入力欄",
+   "url": "/apply",
+   "device": "pc",
+   "full": false,
+   "width": 1372,
+   "height": 802,
+   "bytes": 56138,
+   "thumb": {
+    "width": 720,
+    "height": 421
+   }
+  },
+  {
+   "file": "01_public/05_apply-referral-detail_sp_view.png",
+   "caption": "入会のお申し込み：手順2 きっかけで「その他」を選ぶと表示される入力欄",
+   "url": "/apply",
+   "device": "sp",
+   "full": false,
+   "width": 1044,
+   "height": 1221,
+   "bytes": 84149,
+   "thumb": {
+    "width": 360,
+    "height": 421
+   }
+  },
+  {
+   "file": "01_public/05_apply-step2-errors_pc_full.png",
+   "caption": "入会のお申し込み：手順2 未入力のまま「次へ進む」を押したときの入力エラー表示（全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2925,
+   "bytes": 239650,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-step2-errors_sp_full.png",
+   "caption": "入会のお申し込み：手順2 未入力のまま「次へ進む」を押したときの入力エラー表示（全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6736,
+   "bytes": 445173,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply-step2_pc_full.png",
+   "caption": "入会のお申し込み：手順2 ご利用について（入力した状態・全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2849,
+   "bytes": 267524,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-step2_sp_full.png",
+   "caption": "入会のお申し込み：手順2 ご利用について（入力した状態・全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6630,
+   "bytes": 512505,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply-step3_pc_full.png",
+   "caption": "入会のお申し込み：手順3 入力内容の確認と確認事項（すべてチェックした状態・送信前・全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2645,
+   "bytes": 291827,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply-step3_sp_full.png",
+   "caption": "入会のお申し込み：手順3 入力内容の確認と確認事項（すべてチェックした状態・送信前・全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6976,
+   "bytes": 584252,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply_pc_full.png",
+   "caption": "入会のお申し込み：手順1 基本情報（未入力・全体）",
+   "url": "/apply",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1970,
+   "bytes": 191118,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/05_apply_pc_view.png",
+   "caption": "入会のお申し込み：手順1 基本情報（最初の画面）",
+   "url": "/apply",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 306354,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/05_apply_sp_full.png",
+   "caption": "入会のお申し込み：手順1 基本情報（未入力・全体）",
+   "url": "/apply",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5140,
+   "bytes": 357875,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/05_apply_sp_view.png",
+   "caption": "入会のお申し込み：手順1 基本情報（最初の画面）",
+   "url": "/apply",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 280753,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/06_login-password-changed_pc_full.png",
+   "caption": "ログイン：パスワードを変更したあとの案内（全体）",
+   "url": "/login?reset=1",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1382,
+   "bytes": 131383,
+   "thumb": {
+    "width": 720,
+    "height": 691
+   }
+  },
+  {
+   "file": "01_public/06_login-password-changed_pc_view.png",
+   "caption": "ログイン：パスワードを変更したあとの案内",
+   "url": "/login?reset=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 268292,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/06_login-password-changed_sp_full.png",
+   "caption": "ログイン：パスワードを変更したあとの案内（全体）",
+   "url": "/login?reset=1",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3130,
+   "bytes": 229211,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/06_login-password-changed_sp_view.png",
+   "caption": "ログイン：パスワードを変更したあとの案内",
+   "url": "/login?reset=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 284588,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/06_login_pc_full.png",
+   "caption": "ログイン（全体）",
+   "url": "/login",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1280,
+   "bytes": 124697,
+   "thumb": {
+    "width": 720,
+    "height": 640
+   }
+  },
+  {
+   "file": "01_public/06_login_pc_view.png",
+   "caption": "ログイン（最初の画面）",
+   "url": "/login",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 254730,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/06_login_sp_full.png",
+   "caption": "ログイン（全体）",
+   "url": "/login",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2928,
+   "bytes": 217323,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/06_login_sp_view.png",
+   "caption": "ログイン（最初の画面）",
+   "url": "/login",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 266347,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password-expired_pc_full.png",
+   "caption": "パスワードの再設定：リンクの有効期限切れ・使用済みのときの案内（全体）",
+   "url": "/forgot-password?expired=1",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1303,
+   "bytes": 146431,
+   "thumb": {
+    "width": 720,
+    "height": 652
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password-expired_pc_view.png",
+   "caption": "パスワードの再設定：リンクの有効期限切れ・使用済みのときの案内",
+   "url": "/forgot-password?expired=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 305220,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password-expired_sp_full.png",
+   "caption": "パスワードの再設定：リンクの有効期限切れ・使用済みのときの案内（全体）",
+   "url": "/forgot-password?expired=1",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3016,
+   "bytes": 264292,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password-expired_sp_view.png",
+   "caption": "パスワードの再設定：リンクの有効期限切れ・使用済みのときの案内",
+   "url": "/forgot-password?expired=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 332649,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password_pc_full.png",
+   "caption": "パスワードの再設定（メールアドレスの入力・全体）",
+   "url": "/forgot-password",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1201,
+   "bytes": 135384,
+   "thumb": {
+    "width": 720,
+    "height": 601
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password_pc_view.png",
+   "caption": "パスワードの再設定（メールアドレスの入力）",
+   "url": "/forgot-password",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 302902,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password_sp_full.png",
+   "caption": "パスワードの再設定（メールアドレスの入力・全体）",
+   "url": "/forgot-password",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2768,
+   "bytes": 234752,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/07_forgot-password_sp_view.png",
+   "caption": "パスワードの再設定（メールアドレスの入力）",
+   "url": "/forgot-password",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 317713,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/08_reset-password_pc_view.png",
+   "caption": "新しいパスワードの設定（ログイン前に開いたとき：リンクの有効期限切れの案内）",
+   "url": "/reset-password",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 309449,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/08_reset-password_sp_full.png",
+   "caption": "新しいパスワードの設定（ログイン前に開いたとき：リンクの有効期限切れの案内・全体）",
+   "url": "/reset-password",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2286,
+   "bytes": 194271,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/08_reset-password_sp_view.png",
+   "caption": "新しいパスワードの設定（ログイン前に開いたとき：リンクの有効期限切れの案内）",
+   "url": "/reset-password",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 292240,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/09_welcome_pc_view.png",
+   "caption": "パスワードの設定（招待リンクなしで開いたとき：リンクが無効の案内）",
+   "url": "/welcome",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 307127,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/09_welcome_sp_full.png",
+   "caption": "パスワードの設定（招待リンクなしで開いたとき：リンクが無効の案内・全体）",
+   "url": "/welcome",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2330,
+   "bytes": 195416,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/09_welcome_sp_view.png",
+   "caption": "パスワードの設定（招待リンクなしで開いたとき：リンクが無効の案内）",
+   "url": "/welcome",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 292739,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/10_terms_pc_full.png",
+   "caption": "会員規約（全体）",
+   "url": "/terms",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3068,
+   "bytes": 447326,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/10_terms_pc_view.png",
+   "caption": "会員規約（最初の画面）",
+   "url": "/terms",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 379933,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/10_terms_sp_full.png",
+   "caption": "会員規約（全体）",
+   "url": "/terms",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 8606,
+   "bytes": 988384,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/10_terms_sp_view.png",
+   "caption": "会員規約（最初の画面）",
+   "url": "/terms",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 342209,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/11_legal_pc_full.png",
+   "caption": "特定商取引法に基づく表記（全体・事業者情報は伏せ字）",
+   "url": "/legal",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2746,
+   "bytes": 339227,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/11_legal_pc_view.png",
+   "caption": "特定商取引法に基づく表記（最初の画面・事業者情報は伏せ字）",
+   "url": "/legal",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 298910,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/11_legal_sp_full.png",
+   "caption": "特定商取引法に基づく表記（全体・事業者情報は伏せ字）",
+   "url": "/legal",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7284,
+   "bytes": 690754,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/11_legal_sp_view.png",
+   "caption": "特定商取引法に基づく表記（最初の画面・事業者情報は伏せ字）",
+   "url": "/legal",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 214709,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/12_privacy_pc_full.png",
+   "caption": "個人情報の取り扱い（全体・事業者情報は伏せ字）",
+   "url": "/privacy",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3081,
+   "bytes": 411187,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "01_public/12_privacy_pc_view.png",
+   "caption": "個人情報の取り扱い（最初の画面・事業者情報は伏せ字）",
+   "url": "/privacy",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 379828,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/12_privacy_sp_full.png",
+   "caption": "個人情報の取り扱い（全体・事業者情報は伏せ字）",
+   "url": "/privacy",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 8416,
+   "bytes": 878711,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/12_privacy_sp_view.png",
+   "caption": "個人情報の取り扱い（最初の画面・事業者情報は伏せ字）",
+   "url": "/privacy",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 351808,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/13_not-found-article_pc_full.png",
+   "caption": "記事が見つからないとき（404・サイトの上部と下部つき・全体）",
+   "url": "/news/00000000-0000-0000-0000-000000000000",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1372,
+   "bytes": 122275,
+   "thumb": {
+    "width": 720,
+    "height": 686
+   }
+  },
+  {
+   "file": "01_public/13_not-found-article_pc_view.png",
+   "caption": "記事が見つからないとき（404・サイトの上部と下部つき）",
+   "url": "/news/00000000-0000-0000-0000-000000000000",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 239768,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/13_not-found-article_sp_full.png",
+   "caption": "記事が見つからないとき（404・サイトの上部と下部つき・全体）",
+   "url": "/news/00000000-0000-0000-0000-000000000000",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3142,
+   "bytes": 204159,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "01_public/13_not-found-article_sp_view.png",
+   "caption": "記事が見つからないとき（404・サイトの上部と下部つき）",
+   "url": "/news/00000000-0000-0000-0000-000000000000",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 231889,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "01_public/13_not-found_pc_view.png",
+   "caption": "ページが見つからないとき（404）",
+   "url": "/this-page-does-not-exist",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 82567,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "01_public/13_not-found_sp_view.png",
+   "caption": "ページが見つからないとき（404）",
+   "url": "/this-page-does-not-exist",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 111338,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/01_mypage-cancel_pc_view.png",
+   "caption": "マイページ：キャンセルの前に、今キャンセルした場合の返金額を確認",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1692,
+   "height": 644,
+   "bytes": 90426,
+   "thumb": {
+    "width": 720,
+    "height": 274
+   }
+  },
+  {
+   "file": "02_member/01_mypage-cancel_sp_view.png",
+   "caption": "マイページ：キャンセルの前に、今キャンセルした場合の返金額を確認",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1068,
+   "height": 1311,
+   "bytes": 150277,
+   "thumb": {
+    "width": 360,
+    "height": 442
+   }
+  },
+  {
+   "file": "02_member/01_mypage-feedback-prompt_pc_view.png",
+   "caption": "マイページ：直近のセッションのご感想をお願いするご案内",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 234,
+   "bytes": 35852,
+   "thumb": {
+    "width": 720,
+    "height": 99
+   }
+  },
+  {
+   "file": "02_member/01_mypage-guide_pc_view.png",
+   "caption": "マイページ：サロンのご案内（ログイン後もサロンの説明へすぐ移動できる）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 402,
+   "bytes": 24740,
+   "thumb": {
+    "width": 720,
+    "height": 171
+   }
+  },
+  {
+   "file": "02_member/01_mypage-notifications_pc_view.png",
+   "caption": "マイページ：ご予約・お手続きのお知らせ（未読の件数と、すべて既読にするボタン）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 4610,
+   "bytes": 472925,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/01_mypage-posts_pc_view.png",
+   "caption": "マイページ：サロンからのお知らせ・コラム（会員限定・NEW の印つき）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 844,
+   "bytes": 110245,
+   "thumb": {
+    "width": 720,
+    "height": 358
+   }
+  },
+  {
+   "file": "02_member/01_mypage-reservations_pc_view.png",
+   "caption": "マイページ：今後のご予約とこれまでのご予約（延長・返金額・ご感想の状況つき）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 3488,
+   "bytes": 394509,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/01_mypage_pc_full.png",
+   "caption": "マイページ（ご利用中の会員様・全体：ご予約・ご感想のお願い・記事・お知らせ）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 5262,
+   "bytes": 532856,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/01_mypage_pc_view.png",
+   "caption": "マイページ（ご利用中の会員様・最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 372991,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/01_mypage_sp_full.png",
+   "caption": "マイページ（ご利用中の会員様・全体：ご予約・ご感想のお願い・記事・お知らせ）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 13868,
+   "bytes": 1139337,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/01_mypage_sp_view.png",
+   "caption": "マイページ（ご利用中の会員様・最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 332451,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/02_mypage-instant_pc_view.png",
+   "caption": "マイページ：ヒーラーが「今すぐヒーリング」を受付中のときのご案内",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 395774,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/02_mypage-instant_sp_view.png",
+   "caption": "マイページ：ヒーラーが「今すぐヒーリング」を受付中のときのご案内",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 361586,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/03_mypage-enter_pc_view.png",
+   "caption": "マイページ：開始の10分前から「セッションのお部屋に入室する」を表示",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 399525,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/03_mypage-enter_sp_view.png",
+   "caption": "マイページ：開始の10分前から「セッションのお部屋に入室する」を表示",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 391313,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked-pending_pc_view.png",
+   "caption": "ご予約のお支払いを確認しているときのご案内",
+   "url": "/mypage?booked=pending",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 378666,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked-pending_sp_view.png",
+   "caption": "ご予約のお支払いを確認しているときのご案内",
+   "url": "/mypage?booked=pending",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 339998,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked-taken_pc_view.png",
+   "caption": "お支払いの間に時間が埋まったときのご案内（全額を返金）",
+   "url": "/mypage?booked=taken",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 382310,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked-taken_sp_view.png",
+   "caption": "お支払いの間に時間が埋まったときのご案内（全額を返金）",
+   "url": "/mypage?booked=taken",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 347952,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked_pc_view.png",
+   "caption": "ご予約が確定した直後のご案内",
+   "url": "/mypage?booked=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 380618,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/04_mypage-booked_sp_view.png",
+   "caption": "ご予約が確定した直後のご案内",
+   "url": "/mypage?booked=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 349231,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/04_mypage-canceled_pc_view.png",
+   "caption": "キャンセルが完了したときのご案内（返金額の表示）",
+   "url": "/mypage?reservation_canceled=0e29388c-26d8-4b67-8de3-bb8ed8ac7dfe",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 385222,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/04_mypage-canceled_sp_view.png",
+   "caption": "キャンセルが完了したときのご案内（返金額の表示）",
+   "url": "/mypage?reservation_canceled=0e29388c-26d8-4b67-8de3-bb8ed8ac7dfe",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 352424,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special-welcome_pc_view.png",
+   "caption": "特別会員がパスワードを設定した直後のご案内",
+   "url": "/mypage?welcome=special",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 340164,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special-welcome_sp_view.png",
+   "caption": "特別会員がパスワードを設定した直後のご案内",
+   "url": "/mypage?welcome=special",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 317811,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special_pc_full.png",
+   "caption": "特別会員のマイページ（全体）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2804,
+   "bytes": 295584,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special_pc_view.png",
+   "caption": "特別会員のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 349510,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special_sp_full.png",
+   "caption": "特別会員のマイページ（全体）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7770,
+   "bytes": 598307,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/05_mypage-special_sp_view.png",
+   "caption": "特別会員のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 331127,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new-paid_pc_view.png",
+   "caption": "入会金・月会費のお支払いが完了した直後のご案内",
+   "url": "/mypage?paid=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 351096,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new-paid_sp_view.png",
+   "caption": "入会金・月会費のお支払いが完了した直後のご案内",
+   "url": "/mypage?paid=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 317490,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new_pc_full.png",
+   "caption": "ご入会直後のマイページ（全体・まだご予約がない状態）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2223,
+   "bytes": 252778,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new_pc_view.png",
+   "caption": "ご入会直後のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 365150,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new_sp_full.png",
+   "caption": "ご入会直後のマイページ（全体・まだご予約がない状態）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6466,
+   "bytes": 502833,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/06_mypage-new_sp_view.png",
+   "caption": "ご入会直後のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 305541,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending-applied_pc_view.png",
+   "caption": "入会のお申し込み直後のご案内",
+   "url": "/mypage?welcome=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 351600,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending-applied_sp_view.png",
+   "caption": "入会のお申し込み直後のご案内",
+   "url": "/mypage?welcome=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 304630,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending_pc_full.png",
+   "caption": "審査中の方のマイページ（全体・ご入会までの流れ）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1860,
+   "bytes": 212493,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending_pc_view.png",
+   "caption": "審査中の方のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 352325,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending_sp_full.png",
+   "caption": "審査中の方のマイページ（全体・ご入会までの流れ）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5488,
+   "bytes": 406882,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/07_mypage-pending_sp_view.png",
+   "caption": "審査中の方のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 298059,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved-canceled_pc_view.png",
+   "caption": "お支払いの画面から戻ったときのご案内",
+   "url": "/mypage?checkout=canceled",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 389668,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved-canceled_sp_view.png",
+   "caption": "お支払いの画面から戻ったときのご案内",
+   "url": "/mypage?checkout=canceled",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 315594,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved-paid-pending_pc_view.png",
+   "caption": "お支払いの反映を確認しているときのご案内",
+   "url": "/mypage?paid=pending",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 393110,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved-paid-pending_sp_view.png",
+   "caption": "お支払いの反映を確認しているときのご案内",
+   "url": "/mypage?paid=pending",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 320465,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved_pc_full.png",
+   "caption": "審査を通過した方のマイページ（全体・入会金と月会費のお支払いの確認）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2520,
+   "bytes": 306160,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved_pc_view.png",
+   "caption": "審査を通過した方のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 410511,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved_sp_full.png",
+   "caption": "審査を通過した方のマイページ（全体・入会金と月会費のお支払いの確認）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7570,
+   "bytes": 654144,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/08_mypage-approved_sp_view.png",
+   "caption": "審査を通過した方のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 303327,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/09_mypage-payment-issue_pc_full.png",
+   "caption": "月会費のお支払いが確認できない会員様のマイページ（全体・新しいご予約は停止）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3156,
+   "bytes": 348712,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/09_mypage-payment-issue_pc_view.png",
+   "caption": "月会費のお支払いが確認できない会員様のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 363502,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/09_mypage-payment-issue_sp_full.png",
+   "caption": "月会費のお支払いが確認できない会員様のマイページ（全体・新しいご予約は停止）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 8746,
+   "bytes": 748168,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/09_mypage-payment-issue_sp_view.png",
+   "caption": "月会費のお支払いが確認できない会員様のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 365822,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/10_mypage-lapsed_pc_full.png",
+   "caption": "月会費を停止した会員様のマイページ（全体・入会金なしで再開できる）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3711,
+   "bytes": 404053,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/10_mypage-lapsed_pc_view.png",
+   "caption": "月会費を停止した会員様のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 432334,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/10_mypage-lapsed_sp_full.png",
+   "caption": "月会費を停止した会員様のマイページ（全体・入会金なしで再開できる）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 10244,
+   "bytes": 867083,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/10_mypage-lapsed_sp_view.png",
+   "caption": "月会費を停止した会員様のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 302887,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/11_mypage-rejected_pc_full.png",
+   "caption": "入会審査の結果（お見送り）のマイページ（全体）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1918,
+   "bytes": 227140,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/11_mypage-rejected_pc_view.png",
+   "caption": "入会審査の結果（お見送り）のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 370522,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/11_mypage-rejected_sp_full.png",
+   "caption": "入会審査の結果（お見送り）のマイページ（全体）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5746,
+   "bytes": 446715,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/11_mypage-rejected_sp_view.png",
+   "caption": "入会審査の結果（お見送り）のマイページ（最初の画面）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 307809,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership-approved_pc_full.png",
+   "caption": "お支払い前の会員資格（全体：金額・時期・方法・停止・返金の確認事項）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1709,
+   "bytes": 221526,
+   "thumb": {
+    "width": 720,
+    "height": 855
+   }
+  },
+  {
+   "file": "02_member/12_membership-approved_pc_view.png",
+   "caption": "お支払い前の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 418206,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership-approved_sp_full.png",
+   "caption": "お支払い前の会員資格（全体：金額・時期・方法・停止・返金の確認事項）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4780,
+   "bytes": 460028,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/12_membership-approved_sp_view.png",
+   "caption": "お支払い前の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 322946,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership-lapsed_pc_full.png",
+   "caption": "月会費を停止した会員様の会員資格（全体・再開のご案内）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2169,
+   "bytes": 272274,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/12_membership-lapsed_pc_view.png",
+   "caption": "月会費を停止した会員様の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 436711,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership-lapsed_sp_full.png",
+   "caption": "月会費を停止した会員様の会員資格（全体・再開のご案内）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5886,
+   "bytes": 563385,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/12_membership-lapsed_sp_view.png",
+   "caption": "月会費を停止した会員様の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 318867,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership-new_pc_view.png",
+   "caption": "ご入会直後の会員資格",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 300873,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership-new_sp_view.png",
+   "caption": "ご入会直後の会員資格",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 262910,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership-payment-issue_pc_full.png",
+   "caption": "月会費が未納のときの会員資格（全体）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1610,
+   "bytes": 201601,
+   "thumb": {
+    "width": 720,
+    "height": 805
+   }
+  },
+  {
+   "file": "02_member/12_membership-payment-issue_pc_view.png",
+   "caption": "月会費が未納のときの会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 371750,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership-payment-issue_sp_full.png",
+   "caption": "月会費が未納のときの会員資格（全体）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4286,
+   "bytes": 405225,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/12_membership-payment-issue_sp_view.png",
+   "caption": "月会費が未納のときの会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 396525,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership-special_pc_full.png",
+   "caption": "特別会員の会員資格（全体：入会金・月会費なし、割引率の表示）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1478,
+   "bytes": 177301,
+   "thumb": {
+    "width": 720,
+    "height": 739
+   }
+  },
+  {
+   "file": "02_member/12_membership-special_pc_view.png",
+   "caption": "特別会員の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 330172,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership-special_sp_full.png",
+   "caption": "特別会員の会員資格（全体：入会金・月会費なし、割引率の表示）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4114,
+   "bytes": 327338,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/12_membership-special_sp_view.png",
+   "caption": "特別会員の会員資格（最初の画面）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 268243,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/12_membership_pc_full.png",
+   "caption": "会員資格とお支払いの履歴（全体：月会費・セッション・延長・返金・領収書）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2609,
+   "bytes": 282499,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/12_membership_pc_view.png",
+   "caption": "会員資格（ご利用中・最初の画面）",
+   "url": "/mypage/membership",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 312036,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/12_membership_sp_full.png",
+   "caption": "会員資格とお支払いの履歴（全体：月会費・セッション・延長・返金・領収書）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6958,
+   "bytes": 570155,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/12_membership_sp_view.png",
+   "caption": "会員資格（ご利用中・最初の画面）",
+   "url": "/mypage/membership",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 262117,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/13_profile-news-off_pc_view.png",
+   "caption": "登録情報：お知らせメールを受け取らない設定",
+   "url": "/mypage/profile#mail",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 504,
+   "bytes": 55205,
+   "thumb": {
+    "width": 720,
+    "height": 214
+   }
+  },
+  {
+   "file": "02_member/13_profile-password-errors_pc_view.png",
+   "caption": "登録情報：パスワードの変更の入力エラー",
+   "url": "/mypage/profile",
+   "device": "pc",
+   "full": false,
+   "width": 1696,
+   "height": 1154,
+   "bytes": 62249,
+   "thumb": {
+    "width": 720,
+    "height": 490
+   }
+  },
+  {
+   "file": "02_member/13_profile-password-errors_sp_view.png",
+   "caption": "登録情報：パスワードの変更の入力エラー",
+   "url": "/mypage/profile",
+   "device": "sp",
+   "full": false,
+   "width": 1074,
+   "height": 1731,
+   "bytes": 88086,
+   "thumb": {
+    "width": 360,
+    "height": 580
+   }
+  },
+  {
+   "file": "02_member/13_profile_pc_full.png",
+   "caption": "登録情報（全体：お住まい・メールの受け取り・パスワードの変更）",
+   "url": "/mypage/profile",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2059,
+   "bytes": 188846,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/13_profile_pc_view.png",
+   "caption": "登録情報（最初の画面）",
+   "url": "/mypage/profile",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 299963,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/13_profile_sp_full.png",
+   "caption": "登録情報（全体：お住まい・メールの受け取り・パスワードの変更）",
+   "url": "/mypage/profile",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5294,
+   "bytes": 352860,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/13_profile_sp_view.png",
+   "caption": "登録情報（最初の画面）",
+   "url": "/mypage/profile",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 263703,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback-closed_pc_view.png",
+   "caption": "ご感想：受付期間を過ぎた、送信済みのご感想",
+   "url": "/mypage/feedback/a5fb3073-7f33-47aa-ad1c-e979ef936be3",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 294962,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback-closed_sp_view.png",
+   "caption": "ご感想：受付期間を過ぎた、送信済みのご感想",
+   "url": "/mypage/feedback/a5fb3073-7f33-47aa-ad1c-e979ef936be3",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 243193,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback-edit_pc_view.png",
+   "caption": "ご感想：送信済みのご感想を変更する",
+   "url": "/mypage/feedback/7e84450c-37c7-47bc-a257-ada292be1517",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 347399,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback-edit_sp_view.png",
+   "caption": "ご感想：送信済みのご感想を変更する",
+   "url": "/mypage/feedback/7e84450c-37c7-47bc-a257-ada292be1517",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 283535,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback-expired_pc_view.png",
+   "caption": "ご感想：受付期間（30日）を過ぎたときの表示",
+   "url": "/mypage/feedback/1083c408-0e09-4f7e-be38-6ddc24bb32fb",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 318719,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback-expired_sp_view.png",
+   "caption": "ご感想：受付期間（30日）を過ぎたときの表示",
+   "url": "/mypage/feedback/1083c408-0e09-4f7e-be38-6ddc24bb32fb",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 250879,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback-filled_pc_view.png",
+   "caption": "ご感想：満足度とご感想を入力したところ（送信前）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 341813,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback-filled_sp_view.png",
+   "caption": "ご感想：満足度とご感想を入力したところ（送信前）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 275856,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback-sent_pc_view.png",
+   "caption": "ご感想：送信済みのご感想（30日間は変更できる）",
+   "url": "/mypage/feedback/7e84450c-37c7-47bc-a257-ada292be1517",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 316731,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback-sent_sp_view.png",
+   "caption": "ご感想：送信済みのご感想（30日間は変更できる）",
+   "url": "/mypage/feedback/7e84450c-37c7-47bc-a257-ada292be1517",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 283449,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/14_feedback_pc_full.png",
+   "caption": "ご感想の入力（全体）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1408,
+   "bytes": 149878,
+   "thumb": {
+    "width": 720,
+    "height": 704
+   }
+  },
+  {
+   "file": "02_member/14_feedback_pc_view.png",
+   "caption": "ご感想の入力（最初の画面）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 299335,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/14_feedback_sp_full.png",
+   "caption": "ご感想の入力（全体）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3742,
+   "bytes": 270820,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/14_feedback_sp_view.png",
+   "caption": "ご感想の入力（最初の画面）",
+   "url": "/mypage/feedback/8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 219044,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite-errors_pc_view.png",
+   "caption": "特別会員のパスワードの設定：入力エラー",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 307832,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite-errors_sp_view.png",
+   "caption": "特別会員のパスワードの設定：入力エラー",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 337494,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite_pc_full.png",
+   "caption": "特別会員のパスワードの設定（全体）",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1318,
+   "bytes": 142689,
+   "thumb": {
+    "width": 720,
+    "height": 659
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite_pc_view.png",
+   "caption": "特別会員のパスワードの設定（ご案内メールのリンクから）",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 295415,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite_sp_full.png",
+   "caption": "特別会員のパスワードの設定（全体）",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3004,
+   "bytes": 253980,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/15_welcome-invite_sp_view.png",
+   "caption": "特別会員のパスワードの設定（ご案内メールのリンクから）",
+   "url": "/welcome?token=tywUOQhYN0I7ua_m49LWvX7b5y0belARjMZTxyA6-xY",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 314489,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/16_reset-password-logged-in_pc_view.png",
+   "caption": "新しいパスワードの設定：ログイン中に開いたときのご案内",
+   "url": "/reset-password",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 305965,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/16_reset-password-logged-in_sp_view.png",
+   "caption": "新しいパスワードの設定：ログイン中に開いたときのご案内",
+   "url": "/reset-password",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 288644,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/17_menu-logged-in_sp_view.png",
+   "caption": "ログイン中のスマートフォンのメニュー（≡）",
+   "url": "/mypage",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 298965,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/17_top-logged-in_pc_view.png",
+   "caption": "ログイン中のトップページ（「マイページへ」のボタン）",
+   "url": "/",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1191360,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/17_top-logged-in_sp_view.png",
+   "caption": "ログイン中のトップページ（「マイページへ」のボタン）",
+   "url": "/",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 1228444,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_column-article_pc_full.png",
+   "caption": "コラムの記事（全体：見出し・本文・アイキャッチ）",
+   "url": "/column/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1966,
+   "bytes": 256395,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/18_column-article_pc_view.png",
+   "caption": "コラムの記事（最初の画面）",
+   "url": "/column/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 371715,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_column-article_sp_full.png",
+   "caption": "コラムの記事（全体：見出し・本文・アイキャッチ）",
+   "url": "/column/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4506,
+   "bytes": 450435,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_column-article_sp_view.png",
+   "caption": "コラムの記事（最初の画面）",
+   "url": "/column/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 362924,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_column-list_pc_full.png",
+   "caption": "コラムの一覧（全体・アイキャッチ画像つき）",
+   "url": "/column",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1763,
+   "bytes": 262295,
+   "thumb": {
+    "width": 720,
+    "height": 882
+   }
+  },
+  {
+   "file": "02_member/18_column-list_pc_view.png",
+   "caption": "コラムの一覧（最初の画面）",
+   "url": "/column",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 446421,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_column-list_sp_full.png",
+   "caption": "コラムの一覧（全体・アイキャッチ画像つき）",
+   "url": "/column",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5736,
+   "bytes": 560661,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_column-list_sp_view.png",
+   "caption": "コラムの一覧（最初の画面）",
+   "url": "/column",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 328626,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_column-members-gate_pc_full.png",
+   "caption": "会員限定のコラム：本文の代わりのご案内（全体）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1569,
+   "bytes": 164763,
+   "thumb": {
+    "width": 720,
+    "height": 785
+   }
+  },
+  {
+   "file": "02_member/18_column-members-gate_pc_view.png",
+   "caption": "会員限定のコラム：会員資格が有効でない方には、本文の代わりにご案内を表示",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 320370,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_column-members-gate_sp_full.png",
+   "caption": "会員限定のコラム：本文の代わりのご案内（全体）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3274,
+   "bytes": 250338,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_column-members-gate_sp_view.png",
+   "caption": "会員限定のコラム：会員資格が有効でない方には、本文の代わりにご案内を表示",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 290770,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_column-members_pc_full.png",
+   "caption": "会員限定のコラム（全体）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1932,
+   "bytes": 229531,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "02_member/18_column-members_pc_view.png",
+   "caption": "会員限定のコラム（ご利用中の会員様は本文を読める・最初の画面）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 330115,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_column-members_sp_full.png",
+   "caption": "会員限定のコラム（全体）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4250,
+   "bytes": 398254,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_column-members_sp_view.png",
+   "caption": "会員限定のコラム（ご利用中の会員様は本文を読める・最初の画面）",
+   "url": "/column/d9b58350-de5f-4e36-9a77-33991e30b342",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 345537,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_news-article_pc_full.png",
+   "caption": "お知らせの記事（全体）",
+   "url": "/news/b23c6469-62b6-4731-a9ed-1625ec5367a9",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1686,
+   "bytes": 202635,
+   "thumb": {
+    "width": 720,
+    "height": 843
+   }
+  },
+  {
+   "file": "02_member/18_news-article_pc_view.png",
+   "caption": "お知らせの記事（最初の画面）",
+   "url": "/news/b23c6469-62b6-4731-a9ed-1625ec5367a9",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 351923,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_news-article_sp_full.png",
+   "caption": "お知らせの記事（全体）",
+   "url": "/news/b23c6469-62b6-4731-a9ed-1625ec5367a9",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3632,
+   "bytes": 319411,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_news-article_sp_view.png",
+   "caption": "お知らせの記事（最初の画面）",
+   "url": "/news/b23c6469-62b6-4731-a9ed-1625ec5367a9",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 324902,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "02_member/18_news-list_pc_full.png",
+   "caption": "お知らせの一覧（全体）",
+   "url": "/news",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1087,
+   "bytes": 125435,
+   "thumb": {
+    "width": 720,
+    "height": 544
+   }
+  },
+  {
+   "file": "02_member/18_news-list_pc_view.png",
+   "caption": "お知らせの一覧（最初の画面）",
+   "url": "/news",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 300984,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "02_member/18_news-list_sp_full.png",
+   "caption": "お知らせの一覧（全体）",
+   "url": "/news",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2840,
+   "bytes": 210661,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "02_member/18_news-list_sp_view.png",
+   "caption": "お知らせの一覧（最初の画面）",
+   "url": "/news",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 247021,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-instant_pc_view.png",
+   "caption": "今すぐヒーリングの受付中：すぐに受けられるメニューに印を表示",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 328667,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-instant_sp_view.png",
+   "caption": "今すぐヒーリングの受付中：すぐに受けられるメニューに印を表示",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 313022,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-special_pc_full.png",
+   "caption": "特別会員の料金の表示（全体）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1707,
+   "bytes": 186947,
+   "thumb": {
+    "width": 720,
+    "height": 854
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-special_pc_view.png",
+   "caption": "特別会員の料金の表示（通常の料金に取り消し線・割引後の料金）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 315287,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-special_sp_full.png",
+   "caption": "特別会員の料金の表示（全体）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4346,
+   "bytes": 343493,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu-special_sp_view.png",
+   "caption": "特別会員の料金の表示（通常の料金に取り消し線・割引後の料金）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 276668,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu_pc_full.png",
+   "caption": "ご予約 手順1：メニューを選ぶ（全体：カテゴリーの説明・料金・延長料金）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1707,
+   "bytes": 176128,
+   "thumb": {
+    "width": 720,
+    "height": 854
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu_pc_view.png",
+   "caption": "ご予約 手順1：メニューを選ぶ（最初の画面）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 303007,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu_sp_full.png",
+   "caption": "ご予約 手順1：メニューを選ぶ（全体：カテゴリーの説明・料金・延長料金）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4076,
+   "bytes": 316581,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "03_booking/01_book-menu_sp_view.png",
+   "caption": "ご予約 手順1：メニューを選ぶ（最初の画面）",
+   "url": "/mypage/book?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 258933,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime-instant_pc_view.png",
+   "caption": "今すぐヒーリング：すぐに始められる時間（約10分後から15分ごと）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 304304,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime-instant_sp_view.png",
+   "caption": "今すぐヒーリング：すぐに始められる時間（約10分後から15分ごと）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 294379,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime_pc_full.png",
+   "caption": "ご予約 手順2：日時を選ぶ（全体：ヒーラーの選択・空き枠・準備の時間を空けた開始時刻）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1634,
+   "bytes": 153560,
+   "thumb": {
+    "width": 720,
+    "height": 817
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime_pc_view.png",
+   "caption": "ご予約 手順2：カレンダーで日付、続けて開始時刻を選ぶ",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 266325,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime_sp_full.png",
+   "caption": "ご予約 手順2：日時を選ぶ（全体：ヒーラーの選択・空き枠・準備の時間を空けた開始時刻）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4166,
+   "bytes": 272925,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "03_booking/02_book-datetime_sp_view.png",
+   "caption": "ご予約 手順2：カレンダーで日付、続けて開始時刻を選ぶ",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 252256,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/02_book-time-unavailable_pc_view.png",
+   "caption": "選んだ時間が予約できなくなっていたときのご案内",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=03:00",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 280567,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/02_book-time-unavailable_sp_view.png",
+   "caption": "選んだ時間が予約できなくなっていたときのご案内",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=03:00",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 270064,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm-note_sp_view.png",
+   "caption": "ご予約 手順3：ヒーラーへのご要望の入力と「お支払いへ進む」",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=14:00",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 460464,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm-special_pc_view.png",
+   "caption": "特別会員のご予約内容の確認（割引後のお支払い額と延長料金）",
+   "url": "/mypage/book?menu=cba6e3e0-e115-4cd6-8648-c1276641baf9&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-27&time=11:00",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 353642,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm-special_sp_view.png",
+   "caption": "特別会員のご予約内容の確認（割引後のお支払い額と延長料金）",
+   "url": "/mypage/book?menu=cba6e3e0-e115-4cd6-8648-c1276641baf9&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-27&time=11:00",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 261846,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm_pc_full.png",
+   "caption": "ご予約 手順3：ご予約内容の確認（全体：料金・延長料金・キャンセルポリシー・ご要望）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=14:00",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1599,
+   "bytes": 224938,
+   "thumb": {
+    "width": 720,
+    "height": 800
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm_pc_view.png",
+   "caption": "ご予約 手順3：ご予約内容の確認（最初の画面）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=14:00",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 359145,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm_sp_full.png",
+   "caption": "ご予約 手順3：ご予約内容の確認（全体：料金・延長料金・キャンセルポリシー・ご要望）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=14:00",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4550,
+   "bytes": 429485,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "03_booking/03_book-confirm_sp_view.png",
+   "caption": "ご予約 手順3：ご予約内容の確認（最初の画面）",
+   "url": "/mypage/book?menu=f439ba56-76f3-42d5-b19c-4354eaf766ae&healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae&date=2026-10-22&time=14:00",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 252216,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/04_stripe-checkout-filled_pc_view.png",
+   "caption": "Stripe の決済画面：テスト用のカードを入力したところ",
+   "url": "/c/pay/cs_test_a1VkaXVLt7jjXhAohG4xTqSguJY2KwS1u7ztGmqXVqrzVwZi4fxtY1WH8R#fid1d2BpamRhQ2prcSc%2FJ0tqcWolVmRrdiVPVScpJ2dqd2Fgd1ZxfGlgJz8ndnRwZHdgJyknaWpmZGlgJz8nb2QnKSdicyc%2FNSknZHVsTmB8Jz8ndW5acWB2cVowNFBOREtzRmxfZ0d9YmcyYWpPRkBGbTxTdW5PQGMyY01cSHZVcXZHV048QkBzSXFndzB9QndcNHxkPUBJZms8djJqfE59VXI0blVWcmRmM19yb2A1TGhHNTU1SDRoTGpMaHwnKSdjd2poVmB3c2B3Jz9xd3BgKSdnZGZuYndqcGthRmppancnPycmYzBgY2AzJyknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 239999,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/04_stripe-checkout_pc_view.png",
+   "caption": "Stripe の決済画面（テスト環境）：メニュー・日時・ヒーラーと、金額",
+   "url": "/c/pay/cs_test_a1VkaXVLt7jjXhAohG4xTqSguJY2KwS1u7ztGmqXVqrzVwZi4fxtY1WH8R#fid1d2BpamRhQ2prcSc%2FJ0tqcWolVmRrdiVPVScpJ2dqd2Fgd1ZxfGlgJz8ndnRwZHdgJyknaWpmZGlgJz8nb2QnKSdicyc%2FNSknZHVsTmB8Jz8ndW5acWB2cVowNFBOREtzRmxfZ0d9YmcyYWpPRkBGbTxTdW5PQGMyY01cSHZVcXZHV048QkBzSXFndzB9QndcNHxkPUBJZms8djJqfE59VXI0blVWcmRmM19yb2A1TGhHNTU1SDRoTGpMaHwnKSdjd2poVmB3c2B3Jz9xd3BgKSdnZGZuYndqcGthRmppancnPycmYzBgY2AzJyknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 244579,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/04_stripe-checkout_sp_view.png",
+   "caption": "Stripe の決済画面（テスト環境・スマートフォン）",
+   "url": "/c/pay/cs_test_a1VkaXVLt7jjXhAohG4xTqSguJY2KwS1u7ztGmqXVqrzVwZi4fxtY1WH8R#fid1d2BpamRhQ2prcSc%2FJ0tqcWolVmRrdiVPVScpJ2dqd2Fgd1ZxfGlgJz8ndnRwZHdgJyknaWpmZGlgJz8nb2QnKSdicyc%2FNSknZHVsTmB8Jz8ndW5acWB2cVowNFBOREtzRmxfZ0d9YmcyYWpPRkBGbTxTdW5PQGMyY01cSHZVcXZHV048QkBzSXFndzB9QndcNHxkPUBJZms8djJqfE59VXI0blVWcmRmM19yb2A1TGhHNTU1SDRoTGpMaHwnKSdjd2poVmB3c2B3Jz9xd3BgKSdnZGZuYndqcGthRmppancnPycmYzBgY2AzJyknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 158887,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "03_booking/05_booked_pc_view.png",
+   "caption": "お支払いの完了後：ご予約が確定し、今後のご予約に追加される",
+   "url": "/mypage?booked=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 380618,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/06_cancel-refunded_pc_view.png",
+   "caption": "キャンセルを確定すると、キャンセルポリシーに沿って自動で返金",
+   "url": "/mypage?reservation_canceled=7c20c1a0-82aa-43fc-862b-d9ae9ea350e2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 385063,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/07_book-blocked_pc_view.png",
+   "caption": "月会費が未納のため、ご予約を停止しているときの表示",
+   "url": "/mypage/book",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 352285,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "03_booking/07_book-blocked_sp_view.png",
+   "caption": "月会費が未納のため、ご予約を停止しているときの表示",
+   "url": "/mypage/book",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 334039,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/01_room-waiting_pc_view.png",
+   "caption": "セッションのお部屋：開く前のご案内（ヒーラー・PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 155685,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/01_room-waiting_sp_view.png",
+   "caption": "セッションのお部屋：開く前のご案内（開始の10分前から入室できる）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 217823,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/02_lobby-fx_sp_view.png",
+   "caption": "入室前の確認：美肌フィルター（なめらかさ・明るさ・雰囲気）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 429267,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/02_lobby-line_sp_view.png",
+   "caption": "LINE のアプリの中で開いたときの、ブラウザで開くご案内",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 671027,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/02_lobby-settings_sp_view.png",
+   "caption": "入室前の確認：カメラ・マイクの選択",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 361508,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/02_lobby_pc_view.png",
+   "caption": "入室前の確認：映り方とマイクを確かめてから入室（ヒーラー・PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1062036,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/02_lobby_sp_view.png",
+   "caption": "入室前の確認：映り方とマイクを確かめてから入室（スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 561688,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/03_call-layout-sheet_pc_view.png",
+   "caption": "通話中：表示のしかたを選ぶ（自分を大きく・相手を大きく・並べて表示）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 645788,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/03_call-split_pc_view.png",
+   "caption": "通話中：並べて表示（PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1050694,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/03_call_pc_view.png",
+   "caption": "通話中：ヒーラーの画面（ご自身の映り方を大きく・チャットとカルテを横に）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 652536,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/03_call_sp_view.png",
+   "caption": "通話中：お相手を大きく、ご自身を小さく（会員様・スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 309011,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/04_chat-overlay_sp_view.png",
+   "caption": "通話中のチャット：映像の上に透明に重ねて表示（スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 866632,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/04_chat-sent_sp_view.png",
+   "caption": "通話中のチャット：メッセージを送ったところ",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 872755,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/04_chat_pc_view.png",
+   "caption": "通話中のチャット：届いたメッセージ（ヒーラー・PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1064444,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/05_call-karte_pc_view.png",
+   "caption": "通話中のカルテ：このセッションの記録・前回からの申し送り・これまでの記録",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 1055051,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/06_call-fx_pc_view.png",
+   "caption": "通話中の美肌フィルター（ヒーラー・PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 983771,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/06_call-fx_sp_view.png",
+   "caption": "通話中の美肌フィルター（補正は端末の中で行い、補正後の映像を相手に送る）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 251031,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/06_call-layout_sp_view.png",
+   "caption": "通話中：表示のしかたを選ぶ（スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 343540,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/07_fullscreen_sp_view.png",
+   "caption": "全画面：映像をいちばん大きく（残り時間と「元の画面に戻す」「チャット」だけを表示）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 248686,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/08_extension_sp_view.png",
+   "caption": "セッションの延長：延長する時間を選ぶ（ご予約のときのカードで、その場でお支払い）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 267986,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/09_ending_pc_view.png",
+   "caption": "残り5分のお知らせ（ヒーラー・PC）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 823711,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/09_ending_sp_view.png",
+   "caption": "残り5分のお知らせ（会員様・スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 266879,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/10_ended_pc_view.png",
+   "caption": "セッションの終了（ヒーラー：カルテの記入）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 82960,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/10_ended_sp_view.png",
+   "caption": "セッションの終了（ご感想のご案内）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 175068,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/11_connect-failed_sp_view.png",
+   "caption": "ビデオ通話に接続できなかったとき（「もう一度接続する」・チャットは使える）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 608540,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/12_wrong-account_sp_view.png",
+   "caption": "ほかの方のお部屋を開いたとき（ログインし直すご案内）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 199549,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/13_camera-fx_pc_view.png",
+   "caption": "映像の確認：美肌フィルター（なめらかさ・明るさ・雰囲気）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 373419,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/13_camera-fx_sp_view.png",
+   "caption": "映像の確認：美肌フィルター（スマートフォン）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 245279,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "04_session/13_camera-open_pc_view.png",
+   "caption": "映像の確認：カメラ・マイクを選んでプレビュー（相手には送信されない）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 414131,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "04_session/13_camera_pc_view.png",
+   "caption": "ヒーラー画面：映像の確認（セッションの前に映り方を確かめる）",
+   "url": "/session/66608f40-d5ca-4e0b-a3f6-d447ca8882d2",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 221377,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-hours_pc_view.png",
+   "caption": "今後2週間の受付時間（営業時間・定休日・臨時休業日を反映）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 910,
+   "bytes": 104479,
+   "thumb": {
+    "width": 720,
+    "height": 320
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-instant-off_pc_view.png",
+   "caption": "今すぐヒーリング（臨時の受付）：空いた時間に受付を始められる",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 608,
+   "bytes": 139693,
+   "thumb": {
+    "width": 720,
+    "height": 214
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-pending_pc_view.png",
+   "caption": "カルテが未記入のセッション（最近30日間・書き忘れを防ぐ）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 496,
+   "bytes": 78454,
+   "thumb": {
+    "width": 720,
+    "height": 174
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-slots_pc_view.png",
+   "caption": "予約の空き枠（今後7日間・メニューの長さごとに、会員様の予約画面に出る開始時刻を確認）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 1270,
+   "bytes": 138483,
+   "thumb": {
+    "width": 720,
+    "height": 446
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-today_pc_view.png",
+   "caption": "今日のセッション（セッション中・入室のボタン・ご要望）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 664,
+   "bytes": 135426,
+   "thumb": {
+    "width": 720,
+    "height": 233
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-today_sp_view.png",
+   "caption": "今日のセッション（セッション中・入室のボタン・ご要望）",
+   "url": "/healer",
+   "device": "sp",
+   "full": false,
+   "width": 1074,
+   "height": 1629,
+   "bytes": 218423,
+   "thumb": {
+    "width": 360,
+    "height": 546
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home-upcoming_pc_view.png",
+   "caption": "今後のご予約（会員様のお名前・メニュー・ご要望）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 2274,
+   "bytes": 326063,
+   "thumb": {
+    "width": 720,
+    "height": 799
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home_pc_full.png",
+   "caption": "ヒーラー画面のホーム（全体：未記入のカルテ・今日のセッション・今すぐヒーリング・今後のご予約・受付時間・予約の空き枠）",
+   "url": "/healer",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3469,
+   "bytes": 416406,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home_pc_view.png",
+   "caption": "ヒーラー画面のホーム（最初の画面）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 302703,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home_sp_full.png",
+   "caption": "ヒーラー画面のホーム（全体：未記入のカルテ・今日のセッション・今すぐヒーリング・今後のご予約・受付時間・予約の空き枠）",
+   "url": "/healer",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 11288,
+   "bytes": 990741,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/01_healer-home_sp_view.png",
+   "caption": "ヒーラー画面のホーム（最初の画面）",
+   "url": "/healer",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 213845,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/02_healer-instant-active-page_sp_full.png",
+   "caption": "今すぐヒーリングの受付中のホーム（スマートフォン・全体）",
+   "url": "/healer",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 11804,
+   "bytes": 1010108,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/02_healer-instant-active_pc_view.png",
+   "caption": "今すぐヒーリングの受付中（会員様が予約できるメニューと、すぐに始められる時間）",
+   "url": "/healer",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 734,
+   "bytes": 152163,
+   "thumb": {
+    "width": 720,
+    "height": 258
+   }
+  },
+  {
+   "file": "05_healer/03_healer-welcome_pc_view.png",
+   "caption": "ご案内のメールからパスワードを設定した直後のヒーラー画面",
+   "url": "/healer?welcome=1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 282533,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/03_healer-welcome_sp_view.png",
+   "caption": "ご案内のメールからパスワードを設定した直後のヒーラー画面",
+   "url": "/healer?welcome=1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 221449,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/04_healer-closed-dates_pc_view.png",
+   "caption": "臨時休業日の追加と一覧（メモつき・取り消しもワンクリック）",
+   "url": "/healer/schedule",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 780,
+   "bytes": 83311,
+   "thumb": {
+    "width": 720,
+    "height": 274
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule-unsaved_pc_view.png",
+   "caption": "営業時間を変えると「保存していない変更があります」を表示（保存し忘れを防ぐ）",
+   "url": "/healer/schedule",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 2176,
+   "bytes": 189005,
+   "thumb": {
+    "width": 720,
+    "height": 765
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule-unsaved_sp_view.png",
+   "caption": "営業時間を変えると「保存していない変更があります」を表示（保存し忘れを防ぐ）",
+   "url": "/healer/schedule",
+   "device": "sp",
+   "full": false,
+   "width": 1074,
+   "height": 4119,
+   "bytes": 285716,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule-validation_pc_view.png",
+   "caption": "時間帯が重なっていると、その場でお知らせ",
+   "url": "/healer/schedule",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 2238,
+   "bytes": 195819,
+   "thumb": {
+    "width": 720,
+    "height": 787
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule_pc_full.png",
+   "caption": "スケジュール（全体：曜日ごとの営業時間・臨時休業日・今後2週間の受付時間）",
+   "url": "/healer/schedule",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2191,
+   "bytes": 180907,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule_pc_view.png",
+   "caption": "スケジュール（最初の画面）",
+   "url": "/healer/schedule",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 185344,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule_sp_full.png",
+   "caption": "スケジュール（全体：曜日ごとの営業時間・臨時休業日・今後2週間の受付時間）",
+   "url": "/healer/schedule",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6058,
+   "bytes": 426340,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/04_healer-schedule_sp_view.png",
+   "caption": "スケジュール（最初の画面）",
+   "url": "/healer/schedule",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 195209,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records-search_pc_view.png",
+   "caption": "カルテ：ひらがなでもフリガナで検索できる",
+   "url": "/healer/records?q=%E3%81%95%E3%81%A8%E3%81%86",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 131444,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records-search_sp_view.png",
+   "caption": "カルテ：ひらがなでもフリガナで検索できる",
+   "url": "/healer/records?q=%E3%81%95%E3%81%A8%E3%81%86",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 173503,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records_pc_full.png",
+   "caption": "カルテ：担当した会員様の一覧（全体：回数・最終日・次回のご予約・未記入の件数）",
+   "url": "/healer/records",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1153,
+   "bytes": 128265,
+   "thumb": {
+    "width": 720,
+    "height": 577
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records_pc_view.png",
+   "caption": "カルテ：担当した会員様の一覧（最初の画面）",
+   "url": "/healer/records",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 243681,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records_sp_full.png",
+   "caption": "カルテ：担当した会員様の一覧（全体：回数・最終日・次回のご予約・未記入の件数）",
+   "url": "/healer/records",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2872,
+   "bytes": 272068,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/05_healer-records_sp_view.png",
+   "caption": "カルテ：担当した会員様の一覧（最初の画面）",
+   "url": "/healer/records",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 263495,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record-typing_pc_view.png",
+   "caption": "カルテの記入（入力の途中は「保存していない変更があります」を表示）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c#r-8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "pc",
+   "full": false,
+   "width": 1932,
+   "height": 1120,
+   "bytes": 107046,
+   "thumb": {
+    "width": 720,
+    "height": 417
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record-typing_sp_view.png",
+   "caption": "カルテの記入（入力の途中は「保存していない変更があります」を表示）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c#r-8da228e8-fb10-4542-93f5-8829909cc9b2",
+   "device": "sp",
+   "full": false,
+   "width": 948,
+   "height": 1839,
+   "bytes": 174812,
+   "thumb": {
+    "width": 360,
+    "height": 698
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record_pc_full.png",
+   "caption": "会員様ごとのカルテ（全体：ご入会のときのご回答・セッションの履歴・カルテ・ご感想）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 4136,
+   "bytes": 385183,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record_pc_view.png",
+   "caption": "会員様ごとのカルテ（最初の画面：ご入会のときのご回答）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 235527,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record_sp_full.png",
+   "caption": "会員様ごとのカルテ（全体：ご入会のときのご回答・セッションの履歴・カルテ・ご感想）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 9786,
+   "bytes": 887164,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "05_healer/06_healer-record_sp_view.png",
+   "caption": "会員様ごとのカルテ（最初の画面：ご入会のときのご回答）",
+   "url": "/healer/records/2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 253442,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "05_healer/07_healer-account-errors_pc_view.png",
+   "caption": "アカウント：パスワードの変更の入力エラー",
+   "url": "/healer/account",
+   "device": "pc",
+   "full": false,
+   "width": 2048,
+   "height": 1316,
+   "bytes": 103163,
+   "thumb": {
+    "width": 720,
+    "height": 463
+   }
+  },
+  {
+   "file": "05_healer/07_healer-account_pc_view.png",
+   "caption": "アカウント：ログイン用メールアドレスの確認と、パスワードの変更",
+   "url": "/healer/account",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 158116,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "05_healer/07_healer-account_sp_view.png",
+   "caption": "アカウント：ログイン用メールアドレスの確認と、パスワードの変更",
+   "url": "/healer/account",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 184487,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/01_admin-menu_sp_view.png",
+   "caption": "管理画面のメニュー（スマートフォン・≡ から開く）",
+   "url": "/admin/reservations",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 115129,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-canceled_pc_view.png",
+   "caption": "管理画面：キャンセルされたご予約（会員様・サロン都合・返金額）",
+   "url": "/admin/reservations?tab=canceled",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 284273,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-canceled_sp_view.png",
+   "caption": "管理画面：キャンセルされたご予約（会員様・サロン都合・返金額）",
+   "url": "/admin/reservations?tab=canceled",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 204574,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-past_pc_full.png",
+   "caption": "管理画面：終了したセッション（全体）",
+   "url": "/admin/reservations?tab=past",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 4949,
+   "bytes": 672233,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-past_pc_view.png",
+   "caption": "管理画面：終了したセッション（カルテ・ご感想の状況）",
+   "url": "/admin/reservations?tab=past",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 278777,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-past_sp_full.png",
+   "caption": "管理画面：終了したセッション（全体）",
+   "url": "/admin/reservations?tab=past",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 15318,
+   "bytes": 1521182,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-past_sp_view.png",
+   "caption": "管理画面：終了したセッション（カルテ・ご感想の状況）",
+   "url": "/admin/reservations?tab=past",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 204391,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/01_reservations-salon-cancel_pc_view.png",
+   "caption": "管理画面：サロン都合のキャンセル（全額を返金し、会員様とヒーラーにお知らせ）",
+   "url": "/admin/reservations",
+   "device": "pc",
+   "full": false,
+   "width": 2268,
+   "height": 824,
+   "bytes": 105938,
+   "thumb": {
+    "width": 720,
+    "height": 262
+   }
+  },
+  {
+   "file": "06_admin/01_reservations_pc_full.png",
+   "caption": "管理画面：予約（全体）",
+   "url": "/admin/reservations",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2825,
+   "bytes": 323104,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/01_reservations_pc_view.png",
+   "caption": "管理画面：予約（今日のセッションの状況と、今後のご予約）",
+   "url": "/admin/reservations",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 280159,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/01_reservations_sp_full.png",
+   "caption": "管理画面：予約（全体）",
+   "url": "/admin/reservations",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 8120,
+   "bytes": 698686,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/01_reservations_sp_view.png",
+   "caption": "管理画面：予約（今日のセッションの状況と、今後のご予約）",
+   "url": "/admin/reservations",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 203717,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/02_members-payment_pc_view.png",
+   "caption": "管理画面：会員（お支払いが必要な方で絞り込み）",
+   "url": "/admin/members?f=payment",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 273362,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/02_members-payment_sp_view.png",
+   "caption": "管理画面：会員（お支払いが必要な方で絞り込み）",
+   "url": "/admin/members?f=payment",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 261895,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/02_members-search_pc_view.png",
+   "caption": "管理画面：会員（ひらがなでも検索できる）",
+   "url": "/admin/members?q=%E3%81%95%E3%81%A8%E3%81%86",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 200281,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/02_members-search_sp_view.png",
+   "caption": "管理画面：会員（ひらがなでも検索できる）",
+   "url": "/admin/members?q=%E3%81%95%E3%81%A8%E3%81%86",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 228718,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/02_members_pc_full.png",
+   "caption": "管理画面：会員（全体：回数・最終利用・次回のご予約・お支払いの合計）",
+   "url": "/admin/members",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1976,
+   "bytes": 279273,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/02_members_pc_view.png",
+   "caption": "管理画面：会員（一覧・検索・状態での絞り込み）",
+   "url": "/admin/members",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 283171,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/02_members_sp_full.png",
+   "caption": "管理画面：会員（全体：回数・最終利用・次回のご予約・お支払いの合計）",
+   "url": "/admin/members",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 5914,
+   "bytes": 589237,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/02_members_sp_view.png",
+   "caption": "管理画面：会員（一覧・検索・状態での絞り込み）",
+   "url": "/admin/members",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 241139,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail-payment-issue_pc_view.png",
+   "caption": "管理画面：月会費が未納の会員様の詳細",
+   "url": "/admin/applications/ed2a6e72-9689-49d2-99c7-4586a8ce9044?from=members",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 282884,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail-payment-issue_sp_view.png",
+   "caption": "管理画面：月会費が未納の会員様の詳細",
+   "url": "/admin/applications/ed2a6e72-9689-49d2-99c7-4586a8ce9044?from=members",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 159472,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail-special_pc_view.png",
+   "caption": "管理画面：特別会員の詳細",
+   "url": "/admin/applications/49504a3f-1484-408d-876b-08a9852c46d4?from=members",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 261641,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail-special_sp_view.png",
+   "caption": "管理画面：特別会員の詳細",
+   "url": "/admin/applications/49504a3f-1484-408d-876b-08a9852c46d4?from=members",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 151443,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail_pc_full.png",
+   "caption": "管理画面：会員様の詳細（全体：ご利用の状況・履歴・カルテ・ご感想・お支払い・メモ）",
+   "url": "/admin/applications/2072d9e3-77f4-4447-ad2c-6438ccc5d16c?from=members",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 5077,
+   "bytes": 640312,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail_pc_view.png",
+   "caption": "管理画面：会員様の詳細（最初の画面）",
+   "url": "/admin/applications/2072d9e3-77f4-4447-ad2c-6438ccc5d16c?from=members",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 273062,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail_sp_full.png",
+   "caption": "管理画面：会員様の詳細（全体：ご利用の状況・履歴・カルテ・ご感想・お支払い・メモ）",
+   "url": "/admin/applications/2072d9e3-77f4-4447-ad2c-6438ccc5d16c?from=members",
+   "device": "sp",
+   "full": true,
+   "width": 390,
+   "height": 8590,
+   "bytes": 595882,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/03_member-detail_sp_view.png",
+   "caption": "管理画面：会員様の詳細（最初の画面）",
+   "url": "/admin/applications/2072d9e3-77f4-4447-ad2c-6438ccc5d16c?from=members",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 161176,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/04_sales-september_pc_view.png",
+   "caption": "管理画面：売上（月を切り替えて確認）",
+   "url": "/admin/sales?month=2026-09",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 277446,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/04_sales-september_sp_view.png",
+   "caption": "管理画面：売上（月を切り替えて確認）",
+   "url": "/admin/sales?month=2026-09",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 194615,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/04_sales_pc_full.png",
+   "caption": "管理画面：売上（全体：月ごと・ヒーラーごと・明細・CSV）",
+   "url": "/admin/sales",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3023,
+   "bytes": 391617,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/04_sales_pc_view.png",
+   "caption": "管理画面：売上（今月の内訳と、直近12か月の推移）",
+   "url": "/admin/sales",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 263995,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/04_sales_sp_full.png",
+   "caption": "管理画面：売上（全体：月ごと・ヒーラーごと・明細・CSV）",
+   "url": "/admin/sales",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 11324,
+   "bytes": 810607,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/04_sales_sp_view.png",
+   "caption": "管理画面：売上（今月の内訳と、直近12か月の推移）",
+   "url": "/admin/sales",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 196715,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/05_test-call-active_pc_view.png",
+   "caption": "管理画面：通話テストの実施中（残り時間・お部屋の URL・終了する）",
+   "url": "/admin/test-call",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 347686,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/05_test-call-active_sp_view.png",
+   "caption": "管理画面：通話テストの実施中（スマートフォン）",
+   "url": "/admin/test-call",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 321545,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/05_test-call_pc_full.png",
+   "caption": "管理画面：通話テスト（全体）",
+   "url": "/admin/test-call",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 926,
+   "bytes": 126068,
+   "thumb": {
+    "width": 720,
+    "height": 463
+   }
+  },
+  {
+   "file": "06_admin/05_test-call_pc_view.png",
+   "caption": "管理画面：通話テスト（ヒーラーと会員様の確認用のビデオ通話を、すぐに始められる）",
+   "url": "/admin/test-call",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 309903,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/05_test-call_sp_full.png",
+   "caption": "管理画面：通話テスト（全体）",
+   "url": "/admin/test-call",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2522,
+   "bytes": 255987,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/05_test-call_sp_view.png",
+   "caption": "管理画面：通話テスト（ヒーラーと会員様の確認用のビデオ通話を、すぐに始められる）",
+   "url": "/admin/test-call",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 240930,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/06_applications-all_pc_view.png",
+   "caption": "管理画面：入会審査（すべてのお申し込み）",
+   "url": "/admin/applications?status=all",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 273262,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/06_applications-all_sp_view.png",
+   "caption": "管理画面：入会審査（すべてのお申し込み）",
+   "url": "/admin/applications?status=all",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 202855,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/06_applications_pc_full.png",
+   "caption": "管理画面：入会審査（全体）",
+   "url": "/admin/applications",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 900,
+   "bytes": 66469,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/06_applications_pc_view.png",
+   "caption": "管理画面：入会審査（審査待ち・重複の可能性の表示）",
+   "url": "/admin/applications",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 157993,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/06_applications_sp_full.png",
+   "caption": "管理画面：入会審査（全体）",
+   "url": "/admin/applications",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 1688,
+   "bytes": 92619,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/06_applications_sp_view.png",
+   "caption": "管理画面：入会審査（審査待ち・重複の可能性の表示）",
+   "url": "/admin/applications",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 146236,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/07_application-detail_pc_full.png",
+   "caption": "管理画面：お申し込みの詳細（全体：ご回答・承認／見送り）",
+   "url": "/admin/applications/c8787bf6-e7ce-4d93-a95a-cc15961ffa5b",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1959,
+   "bytes": 237632,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/07_application-detail_pc_view.png",
+   "caption": "管理画面：お申し込みの詳細（最初の画面）",
+   "url": "/admin/applications/c8787bf6-e7ce-4d93-a95a-cc15961ffa5b",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 279829,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/07_application-detail_sp_full.png",
+   "caption": "管理画面：お申し込みの詳細（全体：ご回答・承認／見送り）",
+   "url": "/admin/applications/c8787bf6-e7ce-4d93-a95a-cc15961ffa5b",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7482,
+   "bytes": 516678,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/07_application-detail_sp_view.png",
+   "caption": "管理画面：お申し込みの詳細（最初の画面）",
+   "url": "/admin/applications/c8787bf6-e7ce-4d93-a95a-cc15961ffa5b",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 156415,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/07_application-duplicate_pc_full.png",
+   "caption": "管理画面：重複の可能性があるお申し込み（全体）",
+   "url": "/admin/applications/827c266e-1d36-42d0-a553-80af3fa9f0b1",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1936,
+   "bytes": 239138,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/07_application-duplicate_pc_view.png",
+   "caption": "管理画面：重複の可能性があるお申し込み（同じ電話番号・フリガナと生年月日）",
+   "url": "/admin/applications/827c266e-1d36-42d0-a553-80af3fa9f0b1",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 293100,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/07_application-duplicate_sp_full.png",
+   "caption": "管理画面：重複の可能性があるお申し込み（全体）",
+   "url": "/admin/applications/827c266e-1d36-42d0-a553-80af3fa9f0b1",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7774,
+   "bytes": 517788,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/07_application-duplicate_sp_view.png",
+   "caption": "管理画面：重複の可能性があるお申し込み（同じ電話番号・フリガナと生年月日）",
+   "url": "/admin/applications/827c266e-1d36-42d0-a553-80af3fa9f0b1",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 153672,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/08_special-members_pc_full.png",
+   "caption": "管理画面：特別会員（全体）",
+   "url": "/admin/special-members",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1273,
+   "bytes": 128096,
+   "thumb": {
+    "width": 720,
+    "height": 637
+   }
+  },
+  {
+   "file": "06_admin/08_special-members_pc_view.png",
+   "caption": "管理画面：特別会員（登録と、パスワード設定のご案内の状況）",
+   "url": "/admin/special-members",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 241517,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/08_special-members_sp_full.png",
+   "caption": "管理画面：特別会員（全体）",
+   "url": "/admin/special-members",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3070,
+   "bytes": 247906,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/08_special-members_sp_view.png",
+   "caption": "管理画面：特別会員（登録と、パスワード設定のご案内の状況）",
+   "url": "/admin/special-members",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 200353,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/09_post-edit_pc_full.png",
+   "caption": "管理画面：記事の編集（全体：アイキャッチ・本文・会員限定・公開とメールでのお知らせ）",
+   "url": "/admin/posts/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1255,
+   "bytes": 217764,
+   "thumb": {
+    "width": 720,
+    "height": 628
+   }
+  },
+  {
+   "file": "06_admin/09_post-edit_pc_view.png",
+   "caption": "管理画面：記事の編集（最初の画面）",
+   "url": "/admin/posts/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 412765,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/09_post-edit_sp_full.png",
+   "caption": "管理画面：記事の編集（全体：アイキャッチ・本文・会員限定・公開とメールでのお知らせ）",
+   "url": "/admin/posts/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 4348,
+   "bytes": 400150,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/09_post-edit_sp_view.png",
+   "caption": "管理画面：記事の編集（最初の画面）",
+   "url": "/admin/posts/4e613f6a-da80-41ed-9ddd-52181c8edba3",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 207649,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/09_post-new_pc_view.png",
+   "caption": "管理画面：コラムを書く",
+   "url": "/admin/posts/new?kind=column",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 231241,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/09_post-new_sp_view.png",
+   "caption": "管理画面：コラムを書く",
+   "url": "/admin/posts/new?kind=column",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 96272,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/09_posts_pc_full.png",
+   "caption": "管理画面：記事（全体）",
+   "url": "/admin/posts",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1101,
+   "bytes": 160953,
+   "thumb": {
+    "width": 720,
+    "height": 551
+   }
+  },
+  {
+   "file": "06_admin/09_posts_pc_view.png",
+   "caption": "管理画面：記事（お知らせ・コラムの一覧・下書き・会員限定）",
+   "url": "/admin/posts",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 319268,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/09_posts_sp_full.png",
+   "caption": "管理画面：記事（全体）",
+   "url": "/admin/posts",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3512,
+   "bytes": 314382,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/09_posts_sp_view.png",
+   "caption": "管理画面：記事（お知らせ・コラムの一覧・下書き・会員限定）",
+   "url": "/admin/posts",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 243700,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/10_mail-campaign_pc_full.png",
+   "caption": "管理画面：メールの送信の状況（全体）",
+   "url": "/admin/mail/221f5438-03d0-4583-8654-0a88a59071b4",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 1017,
+   "bytes": 121993,
+   "thumb": {
+    "width": 720,
+    "height": 509
+   }
+  },
+  {
+   "file": "06_admin/10_mail-campaign_pc_view.png",
+   "caption": "管理画面：メールの送信の状況（送信先ごとの結果・送れなかった方への再送）",
+   "url": "/admin/mail/221f5438-03d0-4583-8654-0a88a59071b4",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 274457,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/10_mail-campaign_sp_full.png",
+   "caption": "管理画面：メールの送信の状況（全体）",
+   "url": "/admin/mail/221f5438-03d0-4583-8654-0a88a59071b4",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 3120,
+   "bytes": 233567,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/10_mail-campaign_sp_view.png",
+   "caption": "管理画面：メールの送信の状況（送信先ごとの結果・送れなかった方への再送）",
+   "url": "/admin/mail/221f5438-03d0-4583-8654-0a88a59071b4",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 198271,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/10_mail-to-member_pc_view.png",
+   "caption": "管理画面：会員様を選んでメールを送る（会員様の詳細から開いたところ）",
+   "url": "/admin/mail?to=2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 273080,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/10_mail-to-member_sp_view.png",
+   "caption": "管理画面：会員様を選んでメールを送る（会員様の詳細から開いたところ）",
+   "url": "/admin/mail?to=2072d9e3-77f4-4447-ad2c-6438ccc5d16c",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 247327,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/10_mail_pc_full.png",
+   "caption": "管理画面：メール（全体：作成・送信の履歴・お問い合わせへの返信）",
+   "url": "/admin/mail",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3264,
+   "bytes": 264281,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/10_mail_pc_view.png",
+   "caption": "管理画面：メール（会員様へのメールの作成）",
+   "url": "/admin/mail",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 196754,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/10_mail_sp_full.png",
+   "caption": "管理画面：メール（全体：作成・送信の履歴・お問い合わせへの返信）",
+   "url": "/admin/mail",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 8330,
+   "bytes": 559514,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/10_mail_sp_view.png",
+   "caption": "管理画面：メール（会員様へのメールの作成）",
+   "url": "/admin/mail",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 217760,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/11_menus_pc_full.png",
+   "caption": "管理画面：メニュー（全体）",
+   "url": "/admin/menus",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2837,
+   "bytes": 296141,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/11_menus_pc_view.png",
+   "caption": "管理画面：メニュー（カテゴリーの説明・料金・延長料金・公開）",
+   "url": "/admin/menus",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 270270,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/11_menus_sp_full.png",
+   "caption": "管理画面：メニュー（全体）",
+   "url": "/admin/menus",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 7682,
+   "bytes": 630158,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/11_menus_sp_view.png",
+   "caption": "管理画面：メニュー（カテゴリーの説明・料金・延長料金・公開）",
+   "url": "/admin/menus",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 253252,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/12_schedule_pc_full.png",
+   "caption": "管理画面：スケジュール（全体）",
+   "url": "/admin/schedule?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 3221,
+   "bytes": 314440,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/12_schedule_pc_view.png",
+   "caption": "管理画面：スケジュール（ヒーラーごとの営業時間・臨時休業日・今すぐヒーリング）",
+   "url": "/admin/schedule?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 308567,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/12_schedule_sp_full.png",
+   "caption": "管理画面：スケジュール（全体）",
+   "url": "/admin/schedule?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 9622,
+   "bytes": 741309,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/12_schedule_sp_view.png",
+   "caption": "管理画面：スケジュール（ヒーラーごとの営業時間・臨時休業日・今すぐヒーリング）",
+   "url": "/admin/schedule?healer=6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 334820,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/13_healer-detail_pc_full.png",
+   "caption": "管理画面：ヒーラーの詳細（全体）",
+   "url": "/admin/healers/6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2442,
+   "bytes": 274113,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/13_healer-detail_pc_view.png",
+   "caption": "管理画面：ヒーラーの詳細（お名前・ログイン情報・紹介・写真）",
+   "url": "/admin/healers/6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 233644,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/13_healer-detail_sp_full.png",
+   "caption": "管理画面：ヒーラーの詳細（全体）",
+   "url": "/admin/healers/6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6296,
+   "bytes": 571151,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/13_healer-detail_sp_view.png",
+   "caption": "管理画面：ヒーラーの詳細（お名前・ログイン情報・紹介・写真）",
+   "url": "/admin/healers/6ef97be4-88e5-4b51-bd0f-dc1c166ec2ae",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 239133,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/13_healers_pc_full.png",
+   "caption": "管理画面：ヒーラー（全体）",
+   "url": "/admin/healers",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 909,
+   "bytes": 117583,
+   "thumb": {
+    "width": 720,
+    "height": 455
+   }
+  },
+  {
+   "file": "06_admin/13_healers_pc_view.png",
+   "caption": "管理画面：ヒーラー（一覧と追加）",
+   "url": "/admin/healers",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 290015,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/13_healers_sp_full.png",
+   "caption": "管理画面：ヒーラー（全体）",
+   "url": "/admin/healers",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 2448,
+   "bytes": 229920,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/13_healers_sp_view.png",
+   "caption": "管理画面：ヒーラー（一覧と追加）",
+   "url": "/admin/healers",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 248970,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  },
+  {
+   "file": "06_admin/14_settings_pc_full.png",
+   "caption": "管理画面：料金設定（全体：予約・キャンセルのきまり）",
+   "url": "/admin/settings",
+   "device": "pc",
+   "full": true,
+   "width": 1440,
+   "height": 2394,
+   "bytes": 289815,
+   "thumb": {
+    "width": 720,
+    "height": 900
+   }
+  },
+  {
+   "file": "06_admin/14_settings_pc_view.png",
+   "caption": "管理画面：料金設定（入会金・月会費・延長料金・特別会員の割引率）",
+   "url": "/admin/settings",
+   "device": "pc",
+   "full": false,
+   "width": 2880,
+   "height": 1800,
+   "bytes": 293296,
+   "thumb": {
+    "width": 720,
+    "height": 450
+   }
+  },
+  {
+   "file": "06_admin/14_settings_sp_full.png",
+   "caption": "管理画面：料金設定（全体：予約・キャンセルのきまり）",
+   "url": "/admin/settings",
+   "device": "sp",
+   "full": true,
+   "width": 780,
+   "height": 6998,
+   "bytes": 652848,
+   "thumb": {
+    "width": 360,
+    "height": 780
+   }
+  },
+  {
+   "file": "06_admin/14_settings_sp_view.png",
+   "caption": "管理画面：料金設定（入会金・月会費・延長料金・特別会員の割引率）",
+   "url": "/admin/settings",
+   "device": "sp",
+   "full": false,
+   "width": 1170,
+   "height": 2532,
+   "bytes": 233076,
+   "thumb": {
+    "width": 360,
+    "height": 779
+   }
+  }
+ ]
+}

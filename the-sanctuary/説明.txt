@@ -1,0 +1,21 @@
+THE SANCTUARY（the-sanctuary.jp）主な画面（PC・18枚）
+ログイン後の画面のデータは、架空の見本データです。
+
+01_top.png　トップページ
+02_menu.png　メニュー・料金
+03_apply.png　入会のお申し込み（3つの手順の入力フォーム）
+04_mypage.png　マイページ（ご予約・ご感想のお願い・お知らせ）
+05_booking-menu.png　ご予約 手順1：メニューを選ぶ
+06_booking-datetime.png　ご予約 手順2：ヒーラーと日時を選ぶ（空き枠のカレンダー）
+07_booking-confirm.png　ご予約 手順3：内容の確認（料金・キャンセルポリシー）→ お支払いへ
+08_stripe-checkout.png　Stripe の決済画面（テスト環境）
+09_stripe-card.png　Stripe の決済画面：カード情報を入力（テスト用のカード）
+10_booking-confirmed.png　お支払いの完了後：ご予約が確定
+11_cancel-refund.png　キャンセル：キャンセルポリシーに沿って Stripe で自動で返金
+12_session-lobby.png　セッションのお部屋：入室前の確認（カメラ・マイク）
+13_session-call.png　ビデオ通話とチャット（並べて表示）
+14_beauty-filter.png　美肌フィルター（なめらかさ・明るさ・雰囲気）
+15_healer-home.png　ヒーラー画面：今日のセッション・未記入のカルテ
+16_healer-karte.png　ヒーラー画面：会員様ごとのカルテ
+17_admin-reservations.png　管理画面：予約の状況
+18_admin-sales.png　管理画面：売上（月ごと・ヒーラーごと・明細）

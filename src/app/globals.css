@@ -1,0 +1,426 @@
+/*
+ * 色・文字・余白の決まり（THE SANCTUARY の画面と同じ色合い：ベージュ・ブラウンをベースに、ゴールドと黒をアクセントに）。
+ * 色は役割で名前を付けています。値を変えれば、サイト全体の色合いが変わります。
+ * 各部品の見た目は、それぞれの *.module.css に書き、ここには全体で共通のものだけを置きます。
+ */
+:root {
+  /* 背景 */
+  --canvas: #f5efe6; /* ページの背景（ベージュ） */
+  --canvas-2: #ece2d2; /* 区切りの帯（少し濃いベージュ） */
+  --panel: #fcf9f4; /* パネル・カード */
+  --field: #fffdf9; /* 入力欄 */
+  --line: #d9c9b2;
+  --line-soft: #e7dccb;
+
+  /* 文字 */
+  --fg: #2b231b; /* 本文（こげ茶に近い黒） */
+  --fg-2: #5a4a3a; /* 補足の文章 */
+  --muted: #74624f; /* ラベル・注記 */
+
+  /* ゴールド */
+  --gold: #b8925a; /* 線・飾り */
+  --gold-light: #e3cc9c; /* 黒の上で使うゴールド */
+  --accent: #815f2c; /* 文字で使うゴールド（ベージュの上でも読める濃さ） */
+  --gold-band: linear-gradient(120deg, #dcc08a 0%, #c4a064 50%, #a88246 100%);
+  --gold-button: linear-gradient(120deg, #dcc08a 0%, #c29c5e 52%, #a47c42 100%);
+  --gold-text: linear-gradient(120deg, #a47b40 0%, #815f2c 50%, #b08a52 100%);
+  --gold-text-light: linear-gradient(120deg, #f1ddb3 0%, #d4b173 50%, #b8925a 100%);
+
+  /* 黒（アクセント） */
+  --noir: #1f1a15;
+  --noir-2: #2c251e;
+  --noir-line: rgb(227 204 156 / 0.18);
+  --cream: #f3eadc; /* 黒の上の文字 */
+  --cream-2: #cdbfa9; /* 黒の上の補足 */
+  --brown: #5c4330; /* 濃い茶色のボタン */
+
+  /* 文字の種類 */
+  --font-sans: var(--font-zen), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --font-serif: var(--font-shippori), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-display: var(--font-cormorant), var(--font-shippori), "Times New Roman", serif;
+
+  /* 文字の大きさ（画面の幅に合わせて少しずつ変わる） */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.8125rem; /* 13px */
+  --text-base: 0.9375rem; /* 15px */
+  --text-md: 1.0625rem; /* 17px */
+  --text-lg: clamp(1.1875rem, 1.05rem + 0.5vw, 1.375rem);
+  --text-xl: clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem);
+  --text-2xl: clamp(1.625rem, 1.25rem + 1.5vw, 2.375rem);
+  --text-3xl: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+
+  /* 余白・幅 */
+  --container: 1200px;
+  --container-wide: 1440px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-gap: clamp(64px, 9vw, 120px);
+  --header-h: 64px;
+
+  /* 角・影・動き */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px rgb(43 35 27 / 0.06);
+  --shadow: 0 1px 2px rgb(43 35 27 / 0.05), 0 12px 32px -16px rgb(43 35 27 / 0.28);
+  --shadow-lg: 0 2px 6px rgb(43 35 27 / 0.06), 0 32px 64px -28px rgb(43 35 27 / 0.42);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 0.2s;
+
+  /* 重なりの順 */
+  --z-header: 40;
+  --z-menu: 60;
+  --z-viewer: 100;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--canvas);
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--canvas);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 行頭に「ー」や小さい「ゃ」などが来ないようにする */
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  overflow-wrap: normal;
+  word-break: auto-phrase;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+summary {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+::selection {
+  background: rgb(184 146 90 / 0.3);
+}
+
+/* ---------- 共通の小さな部品 ---------- */
+
+/** ページの幅をそろえる枠 */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: calc(var(--container-wide) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/** 画面には見せず、読み上げだけに使う文字 */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/** 見出しの上に添える英字（例：PUBLIC PAGES） */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.display {
+  font-family: var(--font-display);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/** ゴールドのグラデーションの文字（ベージュの上・黒の上） */
+.gold-text {
+  background: var(--gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-text-light {
+  background: var(--gold-text-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- ボタン（<a> にも <button> にも使える） ---------- */
+
+.btn {
+  --btn-h: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: var(--btn-h);
+  padding: 0 1.4em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration) ease,
+    border-color var(--duration) ease,
+    color var(--duration) ease,
+    box-shadow var(--duration) ease,
+    filter var(--duration) ease,
+    transform var(--duration) ease;
+}
+
+.btn svg {
+  width: 1.15em;
+  height: 1.15em;
+  flex-shrink: 0;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-sm {
+  --btn-h: 36px;
+  padding: 0 1.1em;
+  font-size: var(--text-xs);
+}
+
+.btn-lg {
+  --btn-h: 54px;
+  padding: 0 2em;
+  font-size: var(--text-base);
+}
+
+/** ゴールド（いちばん目立たせたいボタン） */
+.btn-gold {
+  background: var(--gold-button);
+  color: var(--noir);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.35),
+    0 10px 24px -14px rgb(129 95 44 / 0.75);
+}
+
+.btn-gold:hover {
+  filter: brightness(1.06) saturate(1.05);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.4),
+    0 14px 28px -14px rgb(129 95 44 / 0.85);
+}
+
+/** 枠線だけ（ベージュの上） */
+.btn-outline {
+  border-color: var(--fg-2);
+  background: transparent;
+  color: var(--fg);
+}
+
+.btn-outline:hover {
+  background: var(--noir);
+  border-color: var(--noir);
+  color: var(--cream);
+}
+
+/** 枠線だけ（黒の上） */
+.btn-outline-light {
+  border-color: rgb(227 204 156 / 0.55);
+  background: transparent;
+  color: var(--cream);
+}
+
+.btn-outline-light:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: var(--noir);
+}
+
+/** 黒 */
+.btn-noir {
+  background: var(--noir);
+  color: var(--cream);
+}
+
+.btn-noir:hover {
+  background: var(--noir-2);
+  color: var(--gold-light);
+}
+
+/** 文字だけ（控えめな操作） */
+.btn-ghost {
+  background: transparent;
+  color: var(--fg-2);
+}
+
+.btn-ghost:hover {
+  background: rgb(43 35 27 / 0.06);
+  color: var(--fg);
+}
+
+/* ---------- 小さなラベル（PC・最初の画面 など） ---------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.1em 0.6em;
+  border: 1px solid rgb(129 95 44 / 0.45);
+  border-radius: var(--radius-xs);
+  color: var(--accent);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.tag-solid {
+  border-color: transparent;
+  background: rgb(184 146 90 / 0.16);
+}
+
+/* ---------- 下線のリンク ---------- */
+
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgb(129 95 44 / 0.4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color var(--duration) ease;
+}
+
+.link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* ---------- 動きを減らす設定の方 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  :root {
+    --canvas: #fff;
+    --panel: #fff;
+  }
+
+  body {
+    background: #fff;
+  }
+}
+
+/* ---------- 本文へ移動（キーボードで操作する方のためのリンク） ---------- */
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--noir);
+  color: var(--cream);
+  font-size: var(--text-sm);
+  transform: translateY(-160%);
+  transition: transform var(--duration) ease;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main:focus {
+  outline: none;
+}

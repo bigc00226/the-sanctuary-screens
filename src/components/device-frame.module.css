@@ -1,0 +1,101 @@
+/* ---------- PC（ブラウザの窓） ---------- */
+
+.browser {
+  overflow: hidden;
+  border: 1px solid rgb(43 35 27 / 0.12);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 34px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--line-soft);
+  background: linear-gradient(to bottom, #fbf8f3, #f2ebdf);
+}
+
+.dots {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9cbb6;
+}
+
+.dots span:first-child {
+  background: #d8a48f;
+}
+
+.dots span:nth-child(2) {
+  background: #dcc08a;
+}
+
+.address {
+  overflow: hidden;
+  flex: 1;
+  max-width: 420px;
+  margin-inline: auto;
+  padding: 2px 12px;
+  border-radius: 99px;
+  background: rgb(255 255 255 / 0.75);
+  color: var(--muted);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browserScreen {
+  display: block;
+}
+
+.browserScreen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- スマートフォン ---------- */
+
+.phone {
+  position: relative;
+  padding: 10px;
+  border-radius: 38px;
+  background: linear-gradient(145deg, #2f2721, #17130f);
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.08),
+    var(--shadow);
+}
+
+.phoneScreen {
+  overflow: hidden;
+  border-radius: 29px;
+  background: var(--canvas);
+}
+
+.phoneScreen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+.phone.elevated {
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.08),
+    var(--shadow-lg);
+}
