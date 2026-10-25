@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { addressOf, DeviceFrame } from "@/components/device-frame";
-import { Emblem } from "@/components/emblem";
-import { ShotImage } from "@/components/shot-image";
+import { addressOf, DeviceFrame } from "@/components/ui/device-frame";
+import { Emblem } from "@/components/ui/emblem";
+import { ShotImage } from "@/components/shots/shot-image";
 import { site } from "@/data/site";
 import type { Shot } from "@/lib/shots";
 import { Thumb } from "./thumb";

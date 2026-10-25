@@ -25,6 +25,3 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# 画面の画像（scripts/prepare-media.mjs が、元のフォルダ 01_public〜06_admin・_thumbs・一覧.pdf から用意する）
-/public/media/

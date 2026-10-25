@@ -2,7 +2,7 @@ import { ArrowUpRight, FileDown } from "lucide-react";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { formatBytes } from "@/lib/shots";
-import { Emblem, EmblemMark } from "./emblem";
+import { Emblem, EmblemMark } from "@/components/ui/emblem";
 import type { NavSection } from "./site-header";
 import styles from "./site-footer.module.css";
 

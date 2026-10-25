@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { SectionHeading } from "@/components/section-heading";
-import { ShotCard } from "@/components/shot-card";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { ShotCard } from "@/components/shots/shot-card";
 import { DEVICE_LABEL, type Device, type Shot } from "@/lib/shots";
 import styles from "./related-shots.module.css";
 

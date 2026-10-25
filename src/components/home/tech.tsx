@@ -1,5 +1,5 @@
-import { Emblem } from "@/components/emblem";
-import { SectionHeading } from "@/components/section-heading";
+import { Emblem } from "@/components/ui/emblem";
+import { SectionHeading } from "@/components/ui/section-heading";
 import type { Tech } from "@/data/features";
 import styles from "./tech.module.css";
 

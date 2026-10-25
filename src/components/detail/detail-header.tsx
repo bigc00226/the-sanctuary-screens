@@ -1,6 +1,6 @@
 import { Link2 } from "lucide-react";
-import { Breadcrumbs } from "@/components/breadcrumbs";
-import { Emblem } from "@/components/emblem";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { Emblem } from "@/components/ui/emblem";
 import { CAPTURE_LABEL, DEVICE_LABEL, sectionHref, type Shot } from "@/lib/shots";
 import type { SectionData } from "@/data/sections";
 import { VariantTabs } from "./variant-tabs";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SectionHeading } from "@/components/section-heading";
+import { SectionHeading } from "@/components/ui/section-heading";
 import type { FeatureIcon } from "@/data/features";
 import type { Capture, Shot } from "@/lib/shots";
 import { FEATURE_ICONS } from "./icons";

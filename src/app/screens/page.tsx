@@ -5,7 +5,7 @@ import { toPageMeta, toSectionMeta } from "@/components/gallery/meta";
 import { toShotRows } from "@/components/gallery/rows";
 import { ShotBrowser } from "@/components/gallery/shot-browser";
 import { StatChips } from "@/components/gallery/stat-chips";
-import { PageIntro } from "@/components/page-intro";
+import { PageIntro } from "@/components/ui/page-intro";
 import { HIGHLIGHTS } from "@/data/highlights";
 import { site } from "@/data/site";
 import { getPages, getPdf, getSections, getShots, getStats } from "@/lib/catalog";

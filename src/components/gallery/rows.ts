@@ -16,7 +16,7 @@ const VARIANTS: Array<{ device: Device; capture: Capture }> = DEVICES.flatMap((d
 
 /** 決まった形の画像の URL（src/lib/catalog.ts と同じ形） */
 function mediaOf(folder: string, slug: string) {
-  return { src: `/media/shots/${folder}/${slug}.png`, thumb: `/media/thumbs/${folder}__${slug}.jpg` };
+  return { src: `/media/shots/${folder}/${slug}.png`, thumb: `/media/thumbs/${folder}/${slug}.jpg` };
 }
 
 /** 画像の名前（例：05_apply-errors_pc_full）から、状態の名前（apply-errors）を取り出す */

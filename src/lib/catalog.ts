@@ -1,6 +1,6 @@
 /*
  * 画面の一覧のデータ（サーバー側だけで使う）。
- * 元のデータは src/data/shots.json（scripts/prepare-media.mjs が manifest.json から作る）です。
+ * 元のデータは src/data/shots.json（scripts/build-catalog.mjs が src/data/manifest.json と public/media の画像から作る）です。
  * ブラウザ側の部品には、ここで作った Shot を props で渡してください（一覧の全体をブラウザに送らないため）。
  */
 import "server-only";
@@ -129,7 +129,7 @@ function build(): Shot[] {
       bytes: raw.bytes,
       scale: scaleOf(device, capture, raw.width),
       src: `/media/shots/${raw.file}`,
-      thumb: { src: `/media/thumbs/${folder}__${slug}.jpg`, width: raw.thumb.width, height: raw.thumb.height, cropped: thumbCropped },
+      thumb: { src: `/media/thumbs/${folder}/${slug}.jpg`, width: raw.thumb.width, height: raw.thumb.height, cropped: thumbCropped },
       href: shotHref(section.id, slug),
       order: 0,
     };
@@ -280,7 +280,7 @@ export function getStats() {
   };
 }
 
-/** 画面の一覧の PDF（元のフォルダの 一覧.pdf） */
+/** 画面の一覧の PDF（public/media/the-sanctuary-screens.pdf） */
 export function getPdf(): { href: string; bytes: number; downloadName: string } | null {
   return data.pdf ? { href: `/media/${data.pdf.file}`, bytes: data.pdf.bytes, downloadName: "THE SANCTUARY 画面一覧.pdf" } : null;
 }

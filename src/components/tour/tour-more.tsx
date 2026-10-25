@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Emblem } from "@/components/emblem";
+import { Emblem } from "@/components/ui/emblem";
 import styles from "./tour-more.module.css";
 
 export type TourArea = {

@@ -44,41 +44,39 @@ npm start           # ビルドしたものを配信
 npm run lint        # コードの確認
 npm run typecheck   # 型の確認
 npm run fonts       # 日本語の文字のファイルを作り直す（文章を変えて、新しい漢字が増えたとき。下の「文字の種類」）
+npm run catalog     # 画面の一覧のデータを作り直す（dev・build の前にも自動で実行されます）
 ```
 
-`npm run dev`・`npm run build` の前には、`scripts/prepare-media.mjs` が自動で実行されます（次の「画面の画像のしくみ」）。
-
-## 画面の画像のしくみ
-
-元の画像は、このフォルダにあるものをそのまま使います。サイトのために動かしたり、書き換えたりはしません。
+## 画面の画像とデータ
 
 | 場所 | 内容 |
 | --- | --- |
-| `01_public/` 〜 `06_admin/` | 画面の画像（PNG・422枚） |
-| `_thumbs/` | 一覧で使う縮小画像（JPEG） |
-| `manifest.json` | 画面ごとの説明・アドレス・端末・撮影の範囲・大きさ |
-| `一覧.pdf` | すべての画面の一覧（ダウンロード用に配信します） |
+| `public/media/shots/<フォルダ>/` | 画面の画像（PNG・422枚。フォルダは `01_public` 〜 `06_admin`） |
+| `public/media/thumbs/<フォルダ>/` | 一覧で使う縮小画像（JPEG。画像と同じ名前で、拡張子だけ `.jpg`） |
+| `public/media/the-sanctuary-screens.pdf` | すべての画面の一覧（ダウンロード用） |
+| `src/data/manifest.json` | 画面ごとの説明・アドレス・端末・撮影の範囲・大きさ |
+| `src/data/shots.json` | 画面の一覧のデータ（自動で作るため、手で直さないでください） |
 
-`scripts/prepare-media.mjs` が、次のことを行います。
+`public/` に置いたファイルは、そのままのアドレスで配信されます（例：`/media/shots/01_public/01_top_pc_view.png`）。
 
-1. 画像・縮小画像・PDF を `public/media/` に用意します。「ハードリンク」という、同じファイルをもう一つの名前で指す方法を使うため、容量は増えません（リンクを作れない環境では、コピーします）。
-2. `manifest.json` から、画面の一覧のデータ `src/data/shots.json` を作ります。ファイルの大きさと縮小画像の大きさは、ファイルから読み取ります。
-3. 画像がない、画像の大きさが `manifest.json` と違う、縮小画像がない、といった場合は、内容を表示して止まります。
+`npm run dev`・`npm run build` の前には、`scripts/build-catalog.mjs`（`npm run catalog`）が自動で実行され、次のことを行います。
 
-`public/media/` は毎回自動で作るため、Git には入れていません。
+1. `src/data/manifest.json` と画像・縮小画像から、画面の一覧のデータ `src/data/shots.json` を作ります。ファイルの大きさと縮小画像の大きさは、ファイルから読み取ります。
+2. 画像がない、画像の大きさが `manifest.json` と違う、縮小画像がない、といった場合は、内容を表示して止まります。
+3. `manifest.json` に書かれていない画像があるときや、日本語の文字のファイルに入っていない文字が増えたときは、お知らせします。
 
 ## 画面を追加・差し替えるとき
 
-1. 画像を、領域のフォルダ（`01_public/` など）に置きます。名前は `番号_名前[-状態]_端末_範囲.png` の形にします。
+1. 画像を `public/media/shots/<フォルダ>/` に置きます。名前は `番号_名前[-状態]_端末_範囲.png` の形にします。
    - 番号：ページの番号（2桁）。同じ番号の画像は、同じページとしてまとめて表示します
    - 端末：`pc`（幅 1,440px の画面で撮影）・`sp`（幅 390px の画面で撮影）
    - 範囲：`view`（開いたときに見える範囲・画面の一部）・`full`（ページ全体）
-   - 例：`05_apply-errors_pc_full.png`
-2. 縮小画像を `_thumbs/<フォルダ>__<名前>.jpg` に置きます（例：`_thumbs/01_public__05_apply-errors_pc_full.jpg`）。
+   - 例：`public/media/shots/01_public/05_apply-errors_pc_full.png`
+2. 縮小画像を、同じ名前（拡張子は `.jpg`）で `public/media/thumbs/<フォルダ>/` に置きます（例：`public/media/thumbs/01_public/05_apply-errors_pc_full.jpg`）。
    幅は PC が 720px、スマートフォンが 360px です。縦に長い画像は、上の部分を PC は 720×900、スマートフォンは 360×780 で切り出します。
-3. `manifest.json` に1件追加します（`file`・`section`・`caption`・`url`・`kind`・`full`・`width`・`height`）。
+3. `src/data/manifest.json` に1件追加します（`file`・`section`・`caption`・`url`・`kind`・`full`・`width`・`height`。`file` は `01_public/05_apply-errors_pc_full.png` の形）。
 4. 新しい番号のページの場合は、`src/data/pages.ts` にページの名前を追加します。
-5. `npm run prepare-media`（または `npm run dev`）を実行します。
+5. `npm run catalog`（または `npm run dev`）を実行します。
 
 「最初の画面」と「画面の一部」は、画像の大きさで見分けています。PC の 2880×1800・1440×900、スマートフォンの 1170×2532・390×844 が
 「最初の画面」で、それ以外の `view` の画像は「画面の一部」として表示します（`src/lib/catalog.ts`）。
@@ -94,7 +92,7 @@ npm run fonts       # 日本語の文字のファイルを作り直す（文章�
 | `src/data/pages.ts` | ページの名前（領域ごと・番号ごと） |
 | `src/data/highlights.ts` | 主な画面（18枚）の選び方と説明 |
 | `src/data/features.ts` | トップページの「できること」と「使用技術」 |
-| `manifest.json` | 画面ごとの説明（`caption`） |
+| `src/data/manifest.json` | 画面ごとの説明（`caption`） |
 
 ## 公開する前に
 
@@ -131,17 +129,17 @@ STATIC_EXPORT=1 npm run build   # out/ に書き出します
 ## 画像の変換と保存
 
 - 大きく表示する画像は、見ている端末に合った大きさの WebP に変換して配信します（画質 90）。変換した画像は31日間保存します。
-- 一覧の縮小画像（`_thumbs` の JPEG）も、表示する幅に合わせた WebP に変換して配信します。
+- 一覧の縮小画像（`public/media/thumbs` の JPEG）も、表示する幅に合わせた WebP に変換して配信します。
 - 画像・縮小画像・PDF（`/media/…`）は、ブラウザに1日保存してもらいます。
 - 縦に非常に長い画像（高さ 16,000px を超えるもの）は、WebP の大きさの上限を超えるため、元の PNG をそのまま配信します。
 
 ## 文字の種類
 
 THE SANCTUARY の画面と同じく、見出しに「しっぽり明朝 B1」、本文に「Zen 角ゴシック New」、英字の見出しに「Cormorant Garamond」を
-使っています（いずれも SIL Open Font License。`src/app/fonts/OFL-*.txt`）。
+使っています（いずれも SIL Open Font License。`src/fonts/OFL-*.txt`）。
 
 日本語の文字のファイルは、そのままでは1つ数 MB あるため、サイトで使う文字（約 960 文字。ひらがな・カタカナ・英数字・記号は
-すべて）だけに絞ったもの（1つ約 90〜180KB）を `src/app/fonts/` に置いています。文章を変えて新しい漢字が増えたときは、
+すべて）だけに絞ったもの（1つ約 90〜180KB）を `src/fonts/` に置いています。文章を変えて新しい漢字が増えたときは、
 `npm run build` のときに「日本語の文字のファイルに入っていない文字があります」と表示されます。次のように作り直してください
 （作り直すまでの間も、その文字だけ端末にある文字の種類で表示されるため、読めなくなることはありません）。
 
@@ -168,27 +166,46 @@ node scripts/make-og-image.mjs
 
 ## そのほかのファイル
 
-`index.html`（以前の一覧のページ）・`一覧.pdf`・`the-sanctuary/`（主な画面18枚と説明）は、以前のまま残しています。
-主な画面の選び方と説明は、`the-sanctuary/説明.txt` をもとにしています。
+`docs/highlights/` には、主な画面18枚の画像と、その説明（`説明.txt`）を置いています（サイトの表示には使いません。
+ポートフォリオの登録などに使う資料です）。サイトの「主な画面」（`/tour`・`src/data/highlights.ts`）は、この説明をもとにしています。
 
 ## フォルダの構成
 
+Next.js の標準の構成（`src/` にアプリのコード、`public/` に配信するファイル、いちばん上に設定のファイル）です。
+
 ```
-├── 01_public/ … 06_admin/   画面の画像（元のデータ）
-├── _thumbs/                  縮小画像（元のデータ）
-├── manifest.json             画面の説明（元のデータ）
-├── index.html・一覧.pdf・the-sanctuary/   以前の一覧（そのまま）
+├── docs/
+│   └── highlights/           主な画面18枚と説明（資料。サイトでは使いません）
+├── public/                   そのまま配信するファイル
+│   ├── emblem.svg            飾りの図形（円と星。すべてのページで使い回す）
+│   └── media/
+│       ├── shots/            画面の画像（01_public 〜 06_admin・PNG）
+│       ├── thumbs/           縮小画像（同じフォルダ分け・JPEG）
+│       └── the-sanctuary-screens.pdf   すべての画面の一覧（PDF）
 ├── scripts/
-│   ├── prepare-media.mjs     画像の用意と、画面の一覧のデータの作成（dev・build の前に自動で実行）
+│   ├── build-catalog.mjs     画面の一覧のデータの作成（npm run catalog。dev・build の前に自動で実行）
 │   ├── subset-fonts.mjs      日本語の文字のファイルの作成（npm run fonts）
 │   ├── font-chars.mjs        サイトで使う文字の一覧（上の2つで使う）
 │   └── make-og-image.mjs     共有したときの画像の作成
-├── public/
-│   ├── emblem.svg            飾りの図形（円と星。すべてのページで使い回す）
-│   └── media/                （自動で作成）配信する画像・縮小画像・PDF
-└── src/
-    ├── app/                  ページ（/・/tour・/screens・/screens/<領域>・/screens/<領域>/<画像の名前>）と、fonts/（文字のファイル）
-    ├── components/           部品（gallery：一覧と拡大表示・detail：1枚ごとのページ・home：トップページ・tour：主な画面）
-    ├── data/                 文章と設定・画面の一覧のデータ（shots.json は自動で作成）
-    └── lib/                  画面のデータの読み込み・並べ替え・表示の名前
+├── src/
+│   ├── app/                  ページ（URL と同じ形のフォルダ）・全体のレイアウト・CSS・アイコン・共有したときの画像
+│   │   ├── page.tsx          /（トップページ）
+│   │   ├── tour/             /tour（主な画面）
+│   │   ├── screens/          /screens・/screens/<領域>・/screens/<領域>/<画像の名前>
+│   │   ├── not-found.tsx     ページが見つからないとき
+│   │   ├── robots.ts・sitemap.ts
+│   │   └── layout.tsx・globals.css
+│   ├── components/
+│   │   ├── layout/           サイトの上部・下部
+│   │   ├── ui/               見出しの帯・パンくずリスト・飾りの図形・端末の枠などの共通の部品
+│   │   ├── shots/            画面のカード・画面の画像
+│   │   ├── home/             トップページの部品
+│   │   ├── tour/             主な画面のページの部品
+│   │   ├── gallery/          一覧・絞り込み・拡大表示
+│   │   └── detail/           1枚ごとのページの部品
+│   ├── data/                 文章と設定・画面の説明（manifest.json）・画面の一覧のデータ（shots.json は自動で作成）
+│   ├── fonts/                文字のファイルとライセンス
+│   └── lib/                  画面のデータの読み込み・並べ替え・表示の名前
+├── next.config.ts・tsconfig.json・eslint.config.mjs・package.json
+└── README.md・AGENTS.md・CLAUDE.md・.env.example
 ```

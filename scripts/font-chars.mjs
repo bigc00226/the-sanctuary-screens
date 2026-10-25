@@ -1,8 +1,8 @@
 /*
  * サイトで使う文字の一覧（日本語の文字のファイルを、使う文字だけに絞るため）。
- * scripts/subset-fonts.mjs（文字のファイルを作る）と scripts/prepare-media.mjs（足りない文字がないか確かめる）で使います。
+ * scripts/subset-fonts.mjs（文字のファイルを作る）と scripts/build-catalog.mjs（足りない文字がないか確かめる）で使います。
  *
- * ・サイトの文章（src の .ts・.tsx・.json・.css）と、画面の説明（manifest.json）に出てくる文字
+ * ・サイトの文章と画面の説明（src の .ts・.tsx・.json・.css。src/data/manifest.json を含む）に出てくる文字
  * ・あとから文章を少し変えても困らないように、ひらがな・カタカナ・英数字・記号はすべて
  */
 import fs from "node:fs";
@@ -11,7 +11,6 @@ import path from "node:path";
 /** 文字を集めるファイル（プロジェクトのフォルダからの場所） */
 const SOURCE_DIR = "src";
 const SOURCE_EXTENSIONS = new Set([".ts", ".tsx", ".json", ".css"]);
-const EXTRA_FILES = ["manifest.json"];
 
 /** いつも入れておく文字の範囲 */
 const RANGES = [
@@ -39,7 +38,7 @@ function walk(dir, out) {
 /** 使う文字を、文字コードの順に並べた文字列で返す */
 export function collectChars(root) {
   const chars = new Set();
-  const files = [...walk(path.join(root, SOURCE_DIR), []), ...EXTRA_FILES.map((f) => path.join(root, f))];
+  const files = walk(path.join(root, SOURCE_DIR), []);
   for (const file of files) {
     if (!fs.existsSync(file)) continue;
     for (const ch of fs.readFileSync(file, "utf8")) chars.add(ch);

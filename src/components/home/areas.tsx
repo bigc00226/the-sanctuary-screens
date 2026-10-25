@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { SectionHeading } from "@/components/section-heading";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { sectionHref, type SectionId, type Shot } from "@/lib/shots";
 import { Thumb } from "./thumb";
 import styles from "./areas.module.css";

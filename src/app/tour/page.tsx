@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageIntro } from "@/components/page-intro";
+import { PageIntro } from "@/components/ui/page-intro";
 import { ChapterNav } from "@/components/tour/chapter-nav";
 import { TourChapter } from "@/components/tour/tour-chapter";
 import { TourItem, type TourItemData } from "@/components/tour/tour-item";

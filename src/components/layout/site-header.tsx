@@ -4,7 +4,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
-import { EmblemMark } from "./emblem";
+import { EmblemMark } from "@/components/ui/emblem";
 import styles from "./site-header.module.css";
 
 export type NavSection = { id: string; no: string; title: string; en: string; count: number };

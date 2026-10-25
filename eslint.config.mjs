@@ -12,8 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // 画面の画像（scripts/prepare-media.mjs が元のフォルダから用意する）
-    "public/media/**",
   ]),
 ]);
 

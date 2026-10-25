@@ -1,7 +1,7 @@
 /*
  * 日本語の文字のファイル（しっぽり明朝 B1・Zen 角ゴシック New）を、サイトで使う文字だけに絞って作ります。
- *   src/app/fonts/zen-kaku-gothic-new-400.woff2 など（src/app/layout.tsx で読み込みます）
- *   src/app/fonts/subset-chars.txt（絞り込んだ文字の一覧。足りない文字がないかの確認に使います）
+ *   src/fonts/zen-kaku-gothic-new-400.woff2 など（src/app/layout.tsx で読み込みます）
+ *   src/fonts/subset-chars.txt（絞り込んだ文字の一覧。足りない文字がないかの確認に使います）
  *
  * 日本語の文字のファイルは、そのままだと1つ数 MB あり、Google Fonts の形（文字の範囲ごとに百数十個に分けたもの）でも
  * 各ページで約 200KB の CSS を先に読み込む必要がありました。使う文字だけ（約 1,000 文字）に絞ると、1つ約 100〜200KB になり、
@@ -24,7 +24,7 @@ import { fileURLToPath } from "node:url";
 import { collectChars } from "./font-chars.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT_DIR = path.join(ROOT, "src", "app", "fonts");
+const OUT_DIR = path.join(ROOT, "src", "fonts");
 const CACHE_DIR = path.join(os.tmpdir(), "sanctuary-font-sources");
 const PYTHON = process.env.PYTHON || "python3";
 const REPO = "https://raw.githubusercontent.com/google/fonts/main/ofl";
@@ -94,7 +94,7 @@ async function main() {
     await download(`${REPO}/${license.family}/OFL.txt`, file);
     fs.copyFileSync(file, path.join(OUT_DIR, license.out));
   }
-  console.log("[fonts] できました。src/app/fonts/ の変更を確認してください。");
+  console.log("[fonts] できました。src/fonts/ の変更を確認してください。");
 }
 
 main().catch((error) => {

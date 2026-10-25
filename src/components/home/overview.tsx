@@ -1,6 +1,6 @@
 import { ArrowRight, Settings, Sparkles, UserRound, type LucideIcon } from "lucide-react";
 import Link from "next/link";
-import { SectionHeading } from "@/components/section-heading";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { sectionHref, type SectionId } from "@/lib/shots";
 import styles from "./overview.module.css";
 

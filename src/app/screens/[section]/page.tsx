@@ -6,7 +6,7 @@ import { toShotRows } from "@/components/gallery/rows";
 import { SectionNav, type SectionNavItem } from "@/components/gallery/section-nav";
 import { ShotBrowser } from "@/components/gallery/shot-browser";
 import { StatChips } from "@/components/gallery/stat-chips";
-import { PageIntro } from "@/components/page-intro";
+import { PageIntro } from "@/components/ui/page-intro";
 import { site } from "@/data/site";
 import { getSection, getSections, getShots, sectionNeighborsOf, type Section } from "@/lib/catalog";
 import { sectionHref } from "@/lib/shots";

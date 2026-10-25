@@ -1,8 +1,8 @@
 import { ArrowDown, ArrowUp, Maximize2, MoveVertical } from "lucide-react";
 import type { CSSProperties } from "react";
-import { DeviceFrame, addressOf } from "@/components/device-frame";
-import { Emblem } from "@/components/emblem";
-import { ShotImage } from "@/components/shot-image";
+import { DeviceFrame, addressOf } from "@/components/ui/device-frame";
+import { Emblem } from "@/components/ui/emblem";
+import { ShotImage } from "@/components/shots/shot-image";
 import { cssHeightOf, cssWidthOf, type Shot } from "@/lib/shots";
 import styles from "./shot-viewer.module.css";
 

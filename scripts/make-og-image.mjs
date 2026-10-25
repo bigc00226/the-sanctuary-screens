@@ -26,11 +26,11 @@ const HEIGHT = 630;
 
 const ALT = "THE SANCTUARY 画面一覧：完全会員制のオンラインヒーリングサロンの Web システムの画面（422枚・PC とスマートフォン）";
 
-/** 画面の画像（元のフォルダの PNG） */
+/** 画面の画像（public/media/shots の PNG） */
 const SHOTS = {
-  front: "01_public/01_top_pc_view.png",
-  back: "06_admin/04_sales_pc_view.png",
-  phone: "04_session/03_call_sp_view.png",
+  front: "public/media/shots/01_public/01_top_pc_view.png",
+  back: "public/media/shots/06_admin/04_sales_pc_view.png",
+  phone: "public/media/shots/04_session/03_call_sp_view.png",
 };
 
 function loadPlaywright() {
@@ -62,7 +62,7 @@ function findChrome() {
   return candidates.find((p) => fs.existsSync(p));
 }
 
-/* ---------- ロゴの図形（src/components/emblem.tsx と同じ形） ---------- */
+/* ---------- ロゴの図形（public/emblem.svg・src/components/ui/emblem.tsx と同じ形） ---------- */
 
 const C = 200;
 const r2 = (n) => Math.round(n * 100) / 100;
@@ -123,13 +123,13 @@ function html() {
 <style>
   @font-face {
     font-family: "Cormorant";
-    src: url("${file("src/app/fonts/cormorant-garamond-latin.woff2")}") format("woff2");
+    src: url("${file("src/fonts/cormorant-garamond-latin.woff2")}") format("woff2");
     font-weight: 300 700;
     font-style: normal;
   }
   @font-face {
     font-family: "Cormorant";
-    src: url("${file("src/app/fonts/cormorant-garamond-latin-italic.woff2")}") format("woff2");
+    src: url("${file("src/fonts/cormorant-garamond-latin-italic.woff2")}") format("woff2");
     font-weight: 300 700;
     font-style: italic;
   }

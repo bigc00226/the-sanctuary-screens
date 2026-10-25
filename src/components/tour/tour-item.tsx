@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { DeviceFrame, addressOf } from "@/components/device-frame";
-import { ShotImage } from "@/components/shot-image";
+import { DeviceFrame, addressOf } from "@/components/ui/device-frame";
+import { ShotImage } from "@/components/shots/shot-image";
 import type { Shot } from "@/lib/shots";
 import styles from "./tour-item.module.css";
 

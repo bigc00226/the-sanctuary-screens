@@ -13,7 +13,7 @@ import {
   useState,
   type CSSProperties,
 } from "react";
-import { ShotCard } from "@/components/shot-card";
+import { ShotCard } from "@/components/shots/shot-card";
 import { DEVICE_LABEL, type Device, type Shot } from "@/lib/shots";
 import { FilterBar, type FacetCounts } from "./filter-bar";
 import { countActiveFacets, orderParams, readFilters, type Facet, type Filters } from "./filters";

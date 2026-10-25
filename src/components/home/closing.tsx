@@ -1,6 +1,6 @@
 import { ArrowRight, FileDown } from "lucide-react";
 import Link from "next/link";
-import { Emblem } from "@/components/emblem";
+import { Emblem } from "@/components/ui/emblem";
 import { formatBytes } from "@/lib/shots";
 import styles from "./closing.module.css";
 

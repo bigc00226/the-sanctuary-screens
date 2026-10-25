@@ -4,7 +4,7 @@ import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, ExternalLink, X } fro
 import { getImageProps } from "next/image";
 import Link from "next/link";
 import { useEffect, useEffectEvent, useId, useLayoutEffect, useRef, type PointerEvent } from "react";
-import { ShotImage } from "@/components/shot-image";
+import { ShotImage } from "@/components/shots/shot-image";
 import { CAPTURE_LABEL, DEVICE_LABEL, cssHeightOf, cssWidthOf, type Device, type Shot } from "@/lib/shots";
 import type { PageMeta, SectionMeta } from "./types";
 import styles from "./lightbox.module.css";
