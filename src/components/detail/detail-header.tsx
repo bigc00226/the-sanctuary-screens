@@ -24,20 +24,18 @@ export function DetailHeader({ shot, section, pageTitle, pageHref, variants, id 
     <header id={id} className={styles.band}>
       <Emblem className={styles.emblem} />
       <div className={`container ${styles.inner}`}>
-        <div className={styles.crumbs}>
-          <Breadcrumbs
-            items={[
-              { label: "トップ", href: "/" },
-              { label: "すべての画面", href: "/screens" },
-              { label: section.title, href: sectionHref(section.id) },
-              { label: pageTitle, href: pageHref },
-              { label: shot.caption },
-            ]}
-          />
-        </div>
+        <Breadcrumbs
+          items={[
+            { label: "トップ", href: "/" },
+            { label: "すべての画面", href: "/screens" },
+            { label: section.title, href: sectionHref(section.id) },
+            { label: pageTitle, href: pageHref },
+            { label: shot.caption },
+          ]}
+        />
 
         <div className={styles.heading}>
-          <p className={`eyebrow ${styles.eyebrow}`}>
+          <p className="eyebrow">
             {section.no} · {section.en}
           </p>
           <h1 id="shot-title" className={styles.title}>

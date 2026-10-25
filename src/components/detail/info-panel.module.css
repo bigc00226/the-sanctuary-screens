@@ -111,13 +111,26 @@
   }
 }
 
+/* 幅の狭いスマートフォン：内容の幅を広く取れるよう、項目の見出しを内容の上に */
+@media (max-width: 399px) {
+  .item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
+
 /* ---------- 画像の横に置くとき（幅 1024px 以上）：項目の見出しを内容の上に ---------- */
 
 @media (min-width: 1024px) {
+  .panel[data-layout="split"] {
+    gap: 16px;
+    padding: 24px;
+  }
+
   .panel[data-layout="split"] .item {
     grid-template-columns: minmax(0, 1fr);
     gap: 2px;
-    padding-block: 12px;
+    padding-block: 10px;
   }
 
   .panel[data-layout="split"] .item:first-child {
@@ -126,6 +139,21 @@
 
   .panel[data-layout="split"] .actions {
     padding-top: 2px;
+  }
+}
+
+/*
+ * 画面の高さが十分にあるときは、画像をスクロールしても説明が見える位置に（サイトの上部の下）。
+ * 文字を大きくしている場合などで画面の高さに収まらないときは、下のボタンまで届くよう、説明の中だけをスクロールできるようにします
+ */
+@media (min-width: 1024px) and (min-height: 45em) {
+  .panel[data-layout="split"] {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    max-height: calc(100svh - var(--header-h) - 48px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
   }
 }
 
@@ -178,6 +206,12 @@
 }
 
 @media print {
+  .panel[data-layout="split"] {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
   .actions {
     display: none;
   }

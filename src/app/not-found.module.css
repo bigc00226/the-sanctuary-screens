@@ -114,7 +114,7 @@
   font-size: 1.0625rem;
   font-weight: 600;
   font-variant-numeric: lining-nums;
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .name {

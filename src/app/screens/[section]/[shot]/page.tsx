@@ -103,7 +103,9 @@ export default async function ShotPage(props: Props) {
         )}
       </article>
 
-      {others.length > 0 && <RelatedShots shots={others} pageTitle={page.title} pageHref={pageHref} pageCount={page.shots.length} />}
+      {others.length > 0 && (
+        <RelatedShots shots={others} device={shot.device} pageTitle={page.title} pageHref={pageHref} pageCount={page.shots.length} />
+      )}
 
       <ShotPager prev={neighbor(prev)} next={neighbor(next)} order={shot.order} total={getShots().length} />
       <KeyNav prev={prev?.href} next={next?.href} />

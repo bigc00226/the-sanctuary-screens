@@ -483,8 +483,11 @@
 /* ---------- 印刷 ---------- */
 
 @media print {
-  .results {
-    padding: 0;
+  /* 左右の余白（.container）は残し、ページの最初の帯とそろえる */
+  .results,
+  .browser[data-mode="section"] .results {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .clearAll,

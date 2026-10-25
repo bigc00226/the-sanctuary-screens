@@ -4,7 +4,6 @@ import { DeviceFrame, addressOf } from "@/components/device-frame";
 import { Emblem } from "@/components/emblem";
 import { ShotImage } from "@/components/shot-image";
 import { cssHeightOf, cssWidthOf, type Shot } from "@/lib/shots";
-import { FullShotImage } from "./full-shot-image";
 import styles from "./shot-viewer.module.css";
 
 /**
@@ -58,14 +57,22 @@ type Props = {
 export function ShotViewer({ shot, layout, topId }: Props) {
   const sizes = sizesOf(shot, layout);
   const vars = { "--shot-w": `${cssWidthOf(shot)}px` } as CSSProperties;
+  const full = shot.capture === "full";
+  const img = (
+    <ShotImage shot={shot} sizes={sizes} preload={!full} loading={full ? "eager" : undefined} fit={shot.capture === "view" ? "fill" : "natural"} />
+  );
 
-  // ページ全体は縦に非常に長いもの（最大 2.8 万 px）があるため、先読み（preload）せずに、すぐ読み込むだけにする
   const image = (
     <a href={shot.src} target="_blank" rel="noopener" className={styles.zoom}>
-      {shot.capture === "full" ? (
-        <FullShotImage shot={shot} sizes={sizes} />
+      {full ? (
+        /*
+         * ページ全体は縦に非常に長いもの（最大 2.8 万 px・2.9MB）があるため、<head> での先読み（preload）はせず、
+         * ページを開いたらすぐに読み込むだけにします。React は、読み込みを遅らせない画像を自動で先読みしますが、
+         * <picture> の中の画像は先読みしないため、<picture> で包んでいます
+         */
+        <picture className={styles.picture}>{img}</picture>
       ) : (
-        <ShotImage shot={shot} sizes={sizes} preload fit={shot.capture === "view" ? "fill" : "natural"} />
+        img
       )}
       <span className="visually-hidden">（元の画像を新しいタブで開く）</span>
       <span className={styles.zoomHint} aria-hidden>

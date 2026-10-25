@@ -3,9 +3,10 @@
   top: 0;
   z-index: var(--z-header);
   border-bottom: 1px solid var(--line-soft);
-  background: rgb(245 239 230 / 0.86);
-  -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  backdrop-filter: saturate(1.4) blur(14px);
+  /* 下に流れる文字が透けて読みにくくならないよう、ほぼ不透明にして、少しぼかす */
+  background: rgb(245 239 230 / 0.94);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px);
+  backdrop-filter: saturate(1.4) blur(16px);
 }
 
 .bar {
@@ -186,7 +187,8 @@
   font-family: var(--font-display);
   font-size: 1.0625rem;
   font-weight: 600;
-  color: var(--gold);
+  /* 明るい背景の上で読める濃さのゴールド（--gold では薄すぎるため） */
+  color: var(--accent);
   font-variant-numeric: lining-nums;
 }
 

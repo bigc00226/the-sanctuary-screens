@@ -14,6 +14,7 @@ export function toSectionMeta(section: Section): SectionMeta {
     en: section.en,
     lead: section.lead,
     href: sectionHref(section.id),
+    folder: section.folder,
   };
 }
 

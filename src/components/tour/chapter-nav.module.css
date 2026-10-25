@@ -1,0 +1,148 @@
+/* ---------- 章の一覧の帯（サイトの上部のすぐ下に固定） ---------- */
+
+.nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: calc(var(--z-header) - 10);
+  /* 高さは、章・画面へ移動したときの位置の計算にも使う（src/app/tour/page.module.css の --tour-bar-h） */
+  height: var(--tour-bar-h, 53px);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgb(245 239 230 / 0.9);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+}
+
+.inner {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  height: 100%;
+  margin-inline: auto;
+  /* 項目の左右の余白（14px）の分だけ狭くして、文字の位置をページの本文とそろえる */
+  padding-inline: max(0px, calc(var(--gutter) - 14px));
+}
+
+.list {
+  position: relative;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* 入りきらないときは、帯の中だけを横にスクロールする */
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  display: flex;
+  flex: none;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 14px;
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: color var(--duration) ease;
+}
+
+/* 今の章の下線 */
+.link::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  left: 14px;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: var(--gold-band);
+  transform: scaleX(0);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.link[aria-current="true"] {
+  color: var(--fg);
+}
+
+.link[aria-current="true"]::after {
+  transform: scaleX(1);
+}
+
+/* 帯は横にスクロールする枠のため、枠の外に出る線は切れてしまう。枠の内側に表示する */
+.link:focus-visible {
+  outline-offset: -4px;
+}
+
+.no {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.title {
+  font-weight: 500;
+}
+
+/* 章の画面の数は、6つの章が1行に収まる広い画面でだけ表示する（章の見出しにも表示しています） */
+.count {
+  display: none;
+  color: var(--muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* PC：6つの章を、本文の幅いっぱいに並べる */
+@media (min-width: 1024px) {
+  .list {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .count {
+    display: inline;
+  }
+}
+
+/* スマートフォン・タブレット：続きがあることが分かるように、右の端をうすくする */
+@media (max-width: 1023px) {
+  .list {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 36px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 36px), transparent 100%);
+  }
+}
+
+/* ハイコントラストの設定（Windows）では、今の章に下線を引く */
+@media (forced-colors: active) {
+  .link[aria-current="true"] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+}
+
+@media print {
+  .nav {
+    display: none;
+  }
+}

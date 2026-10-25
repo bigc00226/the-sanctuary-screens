@@ -1,0 +1,13 @@
+/*
+ * 主な画面のページ。章の一覧の帯の高さ（下の線を含む）を、帯の部品と、章・画面へ移動したときの位置の計算の両方で使う
+ * （サイトの上部の高さと html の scroll-padding-top は globals.css）
+ */
+.tour {
+  --tour-bar-h: 53px;
+}
+
+@media (max-width: 639px) {
+  .tour {
+    --tour-bar-h: 49px;
+  }
+}

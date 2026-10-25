@@ -95,8 +95,18 @@
   }
 }
 
-/* ---------- スマートフォン：2列に並べ、端末と範囲を2行に分ける ---------- */
+/* ---------- 幅 1023px まで：端末と範囲を2行に分けて、切り替えの幅をそろえる ---------- */
 
+/* タブレット：1行に同じ幅で並べる */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .list {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+}
+
+/* スマートフォン：2列に並べる（3つのときは、3つ目を1行に） */
 @media (max-width: 639px) {
   .nav {
     display: grid;
@@ -109,6 +119,12 @@
     width: 100%;
   }
 
+  .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1023px) {
   .link {
     justify-content: flex-start;
     gap: 10px;

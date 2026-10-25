@@ -20,8 +20,9 @@ type Props = {
 
 type Direction = "prev" | "next";
 
+/* 端の画面の文は「1枚目」と書く（「最初の画面」は、開いたときに見える範囲の撮影を表す言葉のため） */
 const DIRECTION = {
-  prev: { label: "前の画面", key: "ArrowLeft", end: "最初の画面です", sectionLabel: "前の領域" },
+  prev: { label: "前の画面", key: "ArrowLeft", end: "1枚目の画面です", sectionLabel: "前の領域" },
   next: { label: "次の画面", key: "ArrowRight", end: "最後の画面です", sectionLabel: "次の領域" },
 } as const;
 

@@ -28,8 +28,7 @@ export function PageIndex({ pages }: { pages: PageIndexItem[] }) {
             {pages.map((page) => (
               <li key={page.no} className={styles.item}>
                 <a href={`#p-${page.no}`} className={styles.link}>
-                  <span className={styles.no}>{page.no}</span>
-                  <span className={styles.title}>{page.title}</span>
+                  <span className={styles.no}>{page.no}</span> <span className={styles.title}>{page.title}</span>{" "}
                   <span className={styles.count}>{page.count}枚</span>
                 </a>
               </li>

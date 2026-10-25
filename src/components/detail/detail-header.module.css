@@ -22,8 +22,10 @@
   pointer-events: none;
 }
 
+/* 列の幅は枠の幅に固定（現在の位置の長い画面名などで、幅の狭い画面からはみ出さないように） */
 .inner {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   justify-items: start;
   padding-top: clamp(20px, 3.4vw, 36px);
@@ -36,14 +38,10 @@
 
 .heading {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 8px;
   justify-items: start;
   margin-top: 4px;
-}
-
-/* 「01」の数字の高さをそろえる（Cormorant は数字の高さが不ぞろいの書体のため） */
-.eyebrow {
-  font-variant-numeric: lining-nums;
 }
 
 .title {
@@ -52,7 +50,6 @@
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.08em;
-  text-wrap: balance;
 }
 
 /* ---------- 領域とページ・端末と範囲・アドレス ---------- */
@@ -77,16 +74,6 @@
   display: inline-flex;
   flex-wrap: wrap;
   gap: 4px;
-}
-
-/* 帯の色（下に向かって少し濃くなる）の上でも読みやすいよう、ラベルの文字を少しだけ濃く（4.5:1 以上） */
-.tags :global(.tag) {
-  color: #6f5126;
-}
-
-/* 現在の位置が折り返したときに、行と行の間を少し空けて押しやすく */
-.crumbs :global(ol) {
-  row-gap: 6px;
 }
 
 .path {

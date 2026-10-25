@@ -2,6 +2,7 @@ import { ArrowRight, FileDown } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { toPageMeta, toSectionMeta } from "@/components/gallery/meta";
+import { toShotRows } from "@/components/gallery/rows";
 import { ShotBrowser } from "@/components/gallery/shot-browser";
 import { StatChips } from "@/components/gallery/stat-chips";
 import { PageIntro } from "@/components/page-intro";
@@ -13,14 +14,36 @@ import styles from "./page.module.css";
 
 const stats = getStats();
 
+const title = "すべての画面";
+const description = `${site.productTagline}「${site.product}」の Web システムの画面、${stats.total}枚の一覧です。公開ページ・マイページ・ご予約・セッションのお部屋・ヒーラー画面・管理画面の${stats.sections}つの領域を、PC とスマートフォンで収録しています。領域・端末・範囲で絞り込んだり、言葉で探したりできます。`;
+/** 共有したときに表示する画像（最初の領域の代表の画面：トップページの最初の画面。主な画面・領域のページと同じ考え方） */
+const cover = getSections()[0].cover;
+const shareImage = { url: cover.src, width: cover.width, height: cover.height, alt: cover.caption };
+
 export const metadata: Metadata = {
-  title: "すべての画面",
-  description: `${site.productTagline}「${site.product}」の Web システムの画面、${stats.total}枚の一覧です。公開ページ・マイページ・ご予約・セッションのお部屋・ヒーラー画面・管理画面の${stats.sections}つの領域を、PC とスマートフォンで収録しています。領域・端末・範囲で絞り込んだり、言葉で探したりできます。`,
+  title,
+  description,
   alternates: { canonical: "/screens" },
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    locale: "ja_JP",
+    url: "/screens",
+    title: `${title}｜${site.name}`,
+    description,
+    images: [shareImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${title}｜${site.name}`,
+    description,
+    images: [{ url: shareImage.url, alt: shareImage.alt }],
+  },
 };
 
 export default function ScreensPage() {
-  const sections = getSections();
+  const sections = getSections().map(toSectionMeta);
+  const pages = getPages().map(toPageMeta);
   const pdf = getPdf();
 
   return (
@@ -36,7 +59,7 @@ export default function ScreensPage() {
               {stats.sections}つの領域を、PC とスマートフォンで撮影しました。開いたときに見える「最初の画面」、一部分を切り出した「画面の一部」、上から下までの「ページ全体」があります。
             </p>
             <p>
-              領域・端末・範囲で絞り込めるほか、言葉でも探せます（ひらがな・カタカナのどちらでも探せます）。画像を押すと大きく表示し、← → キー（スマートフォンでは左右へのスワイプ）で前後の画面へ移動できます。
+              領域・端末・範囲で絞り込めるほか、言葉でも探せます（ひらがなでもカタカナでも見つかります）。画像を押すと大きく表示し、← → キー（スマートフォンでは左右へのスワイプ）で前後の画面へ移動できます。
             </p>
           </>
         }
@@ -65,7 +88,7 @@ export default function ScreensPage() {
         </div>
       </PageIntro>
 
-      <ShotBrowser mode="all" shots={getShots()} sections={sections.map(toSectionMeta)} pages={getPages().map(toPageMeta)} />
+      <ShotBrowser mode="all" rows={toShotRows(getShots(), pages, sections)} sections={sections} pages={pages} />
     </>
   );
 }

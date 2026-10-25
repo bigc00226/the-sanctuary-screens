@@ -8,6 +8,8 @@ import styles from "./related-shots.module.css";
 type Props = {
   /** 同じページのほかの状態（状態ごとに1枚） */
   shots: Shot[];
+  /** 今の画面の端末（その端末の列を先に並べる） */
+  device: Device;
   pageTitle: string;
   /** 領域のページの中の、このページの位置（例：/screens/public#p-01） */
   pageHref: string;
@@ -16,9 +18,10 @@ type Props = {
 };
 
 /** 「同じページのほかの画面」：同じページのほかの状態の画面のカード（状態ごとに1枚・PC とスマートフォンで分けて並べる） */
-export function RelatedShots({ shots, pageTitle, pageHref, pageCount }: Props) {
-  const lanes = (["pc", "sp"] as Device[])
-    .map((device) => ({ device, shots: shots.filter((shot) => shot.device === device) }))
+export function RelatedShots({ shots, device, pageTitle, pageHref, pageCount }: Props) {
+  const order: Device[] = device === "sp" ? ["sp", "pc"] : ["pc", "sp"];
+  const lanes = order
+    .map((laneDevice) => ({ device: laneDevice, shots: shots.filter((shot) => shot.device === laneDevice) }))
     .filter((lane) => lane.shots.length > 0);
   const labelled = lanes.length > 1;
 

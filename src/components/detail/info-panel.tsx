@@ -70,7 +70,8 @@ export function InfoPanel({ shot, section, page, pageHref, layout }: Props) {
           <dt className={styles.term}>画像</dt>
           <dd className={styles.value}>
             <span className={styles.nowrap}>{formatSize(shot.width, shot.height)}</span>・
-            <span className={styles.nowrap}>{formatBytes(shot.bytes)}</span>・<span className={styles.nowrap}>{resolution}</span>
+            <span className={styles.nowrap}>{formatBytes(shot.bytes)}</span>
+            <span className={styles.note}>{resolution}</span>
           </dd>
         </div>
       </dl>

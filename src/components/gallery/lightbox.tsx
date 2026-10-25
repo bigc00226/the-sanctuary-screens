@@ -5,7 +5,7 @@ import { getImageProps } from "next/image";
 import Link from "next/link";
 import { useEffect, useEffectEvent, useId, useLayoutEffect, useRef, type PointerEvent } from "react";
 import { ShotImage } from "@/components/shot-image";
-import { CAPTURE_LABEL, DEVICE_LABEL, cssHeightOf, cssWidthOf, type Shot } from "@/lib/shots";
+import { CAPTURE_LABEL, DEVICE_LABEL, cssHeightOf, cssWidthOf, type Device, type Shot } from "@/lib/shots";
 import type { PageMeta, SectionMeta } from "./types";
 import styles from "./lightbox.module.css";
 
@@ -13,6 +13,11 @@ import styles from "./lightbox.module.css";
 const MAX_OPTIMIZED_HEIGHT = 16000;
 /** ページ全体（PC）を表示する幅の上限。文字が読める大きさを保ちつつ、上下にスクロールして見る */
 const FULL_PC_MAX_WIDTH = 1000;
+/**
+ * 撮影した端末の画面の高さ（CSS の px）。これより縦に長い「画面の一部」は、画面に収めると文字が読めないほど小さくなるため、
+ * ページ全体と同じく、読める幅のまま上下にスクロールして表示する
+ */
+const SCREEN_HEIGHT: Record<Device, number> = { pc: 900, sp: 844 };
 /** 横に指を動かしたとみなす距離（px） */
 const SWIPE_DISTANCE = 48;
 
@@ -28,12 +33,21 @@ type Props = {
   onClosed: () => void;
 };
 
+/** 上下にスクロールして見る画像（ページ全体と、縦に長い画面の一部） */
+function isScrollable(shot: Shot): boolean {
+  return shot.capture === "full" || cssHeightOf(shot) > SCREEN_HEIGHT[shot.device];
+}
+
+/** スクロールして見る画像を表示する幅（PC は上限まで、スマートフォンは撮影したときの幅） */
+function readableWidthOf(shot: Shot): number {
+  const width = cssWidthOf(shot);
+  return shot.device === "pc" ? Math.min(width, FULL_PC_MAX_WIDTH) : width;
+}
+
 /** 表示する幅（img の sizes）。画面の幅と、撮影したときの幅のうち小さいほう */
 function sizesFor(shot: Shot): string {
   const width = cssWidthOf(shot);
-  if (shot.capture === "full") {
-    return `min(${shot.device === "pc" ? Math.min(width, FULL_PC_MAX_WIDTH) : width}px, 100vw)`;
-  }
+  if (isScrollable(shot)) return `min(${readableWidthOf(shot)}px, 100vw)`;
   // 横長の画面は、高さに合わせて縮むため、画面の高さからも上限を見積もる
   const ratio = (shot.width / shot.height).toFixed(4);
   return `min(${width}px, 100vw, calc((100vh - 180px) * ${ratio}))`;
@@ -69,6 +83,7 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
   const next = index < list.length - 1 ? list[index + 1] : null;
   const section = sections.get(shot.section);
   const page = pages.get(shot.pageKey);
+  const scrollable = isScrollable(shot);
   const isFull = shot.capture === "full";
   const width = cssWidthOf(shot);
   const height = cssHeightOf(shot);
@@ -123,13 +138,17 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
   const close = () => dialogRef.current?.close();
 
   const onKeyDown = useEffectEvent((e: KeyboardEvent) => {
+    // 閉じたあと（アドレスが元に戻るまでの間）は何もしない
+    if (!dialogRef.current?.open) return;
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
     const target = e.target instanceof Element ? e.target : null;
     if (target?.closest("input, textarea, select, [contenteditable]")) return;
+    // 縦に長い画像を見ている間（画像の場所にフォーカスがあるとき）は、Home・End でいちばん上・下へスクロールする（ブラウザの標準の動き）
+    const scrolling = scrollable && target === stageRef.current;
     if (e.key === "ArrowLeft") goTo(prev);
     else if (e.key === "ArrowRight") goTo(next);
-    else if (e.key === "Home") goTo(list[0]);
-    else if (e.key === "End") goTo(list[list.length - 1]);
+    else if (e.key === "Home" && !scrolling) goTo(list[0]);
+    else if (e.key === "End" && !scrolling) goTo(list[list.length - 1]);
     else return;
     e.preventDefault();
   });
@@ -226,10 +245,10 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
         <div
           ref={stageRef}
           className={styles.stage}
-          data-full={isFull || undefined}
-          tabIndex={isFull ? 0 : -1}
-          role={isFull ? "region" : undefined}
-          aria-label={isFull ? "ページ全体の画像（上下にスクロールできます）" : undefined}
+          data-scroll={scrollable || undefined}
+          tabIndex={scrollable ? 0 : -1}
+          role={scrollable ? "region" : undefined}
+          aria-label={scrollable ? `${isFull ? "ページ全体" : "縦に長い画面"}の画像（上下にスクロールできます）` : undefined}
           onPointerDown={onPointerDown}
           onPointerUp={onPointerUp}
           onPointerCancel={() => {
@@ -241,21 +260,23 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
               swipedRef.current = false;
               return;
             }
-            if (e.target === e.currentTarget && !isFull) close();
+            if (e.target === e.currentTarget && !scrollable) close();
           }}
         >
-          {isFull ? (
+          {scrollable ? (
             <div className={styles.fullWrap}>
               <p className={styles.fullHint}>
                 <ArrowDown aria-hidden />
-                ページ全体：スクロールすると下までご覧いただけます
+                {isFull ? "ページ全体" : "縦に長い画面"}：スクロールすると下までご覧いただけます
               </p>
               <ShotImage
                 key={shot.slug}
                 shot={shot}
                 sizes={sizesFor(shot)}
+                loading="eager"
+                fetchPriority="high"
                 className={styles.image}
-                style={{ maxWidth: shot.device === "pc" ? Math.min(width, FULL_PC_MAX_WIDTH) : width }}
+                style={{ maxWidth: readableWidthOf(shot) }}
               />
             </div>
           ) : (
@@ -263,6 +284,8 @@ export function Lightbox({ list, index, sections, pages, onNavigate, onClosed }:
               key={shot.slug}
               shot={shot}
               sizes={sizesFor(shot)}
+              loading="eager"
+              fetchPriority="high"
               className={styles.image}
               style={{ width: `min(${width}px, 100cqw, calc(100cqh * ${(width / height).toFixed(4)}))` }}
             />

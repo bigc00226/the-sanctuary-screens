@@ -23,6 +23,8 @@
 
 .inner {
   display: grid;
+  /* 長いパンくずリストでも、帯が画面の幅を超えないように */
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
   justify-items: start;
   padding-top: clamp(28px, 5vw, 56px);

@@ -18,15 +18,16 @@ import { DEVICE_LABEL, type Device, type Shot } from "@/lib/shots";
 import { FilterBar, type FacetCounts } from "./filter-bar";
 import { countActiveFacets, orderParams, readFilters, type Facet, type Filters } from "./filters";
 import { Lightbox } from "./lightbox";
+import { fromShotRows } from "./rows";
 import { buildHaystack, matchesTerms, parseQuery } from "./search";
-import type { BrowserMode, PageMeta, SectionMeta } from "./types";
+import type { BrowserMode, PageMeta, SectionMeta, ShotRow } from "./types";
 import { currentParams, isViewerEntry, useLocationSearch, writeSearch } from "./use-url-state";
 import styles from "./shot-browser.module.css";
 
 type Props = {
   mode: BrowserMode;
-  /** 表示の順（領域 → ページ → 状態 → 端末 → 範囲）に並んだ画面 */
-  shots: Shot[];
+  /** 表示の順（領域 → ページ → 状態 → 端末 → 範囲）に並んだ画面（送る量を減らした形。rows.ts の toShotRows で作る） */
+  rows: ShotRow[];
   /** 見出しに使う領域（mode が section のときは、その領域だけ） */
   sections: SectionMeta[];
   /** 見出しに使うページ */
@@ -113,7 +114,8 @@ function applyFilters(entries: Entry[], filters: Filters) {
  * 画面の一覧（絞り込み・言葉で探す・拡大表示）。
  * 条件と拡大表示している画面はアドレスに保存するため、そのまま共有したり、ブラウザの「戻る」で元に戻したりできます。
  */
-export function ShotBrowser({ mode, shots, sections, pages }: Props) {
+export function ShotBrowser({ mode, rows, sections, pages }: Props) {
+  const shots = useMemo(() => fromShotRows(rows, pages, sections), [rows, pages, sections]);
   const search = useLocationSearch();
   const params = useMemo(() => new URLSearchParams(search), [search]);
   // 絞り込みの条件だけを取り出す（拡大表示の画面が変わっても、一覧は描き直さない）
@@ -162,16 +164,19 @@ export function ShotBrowser({ mode, shots, sections, pages }: Props) {
   const barHasFilter = activeFacets > 0 || now.terms.length > 0;
   const listHasFilter = countActiveFacets(listFilters) > 0 || terms.length > 0;
 
-  // 拡大表示：表示中の一覧にあればその中で、絞り込みで外れている画面なら、すべての画面の中で前後に移動する
+  // 拡大表示：表示中の一覧にあればその中で、絞り込みで外れている画面（共有されたアドレスなど）なら、すべての画面の中で前後に移動する。
+  // すべての画面の中で移動し始めたら、閉じるまではそのまま（一覧にある画面に来ても、途中で数え方を変えない）
+  const [wideSlug, setWideSlug] = useState<string | null>(null);
   const viewerSlug = params.get("shot");
   const viewer = useMemo(() => {
     const shot = viewerSlug ? bySlug.get(viewerSlug) : undefined;
     if (!shot) return null;
-    const index = ordered.indexOf(shot);
-    if (index >= 0) return { list: ordered, index };
-    return { list: allOrdered, index: allOrdered.indexOf(shot) };
-  }, [viewerSlug, bySlug, ordered, allOrdered]);
+    const index = viewerSlug === wideSlug ? -1 : ordered.indexOf(shot);
+    if (index >= 0) return { list: ordered, index, wide: false };
+    return { list: allOrdered, index: allOrdered.indexOf(shot), wide: true };
+  }, [viewerSlug, wideSlug, bySlug, ordered, allOrdered]);
   const openSlug = viewer ? viewer.list[viewer.index].slug : null;
+  const viewerWide = viewer?.wide ?? false;
 
   const rootRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
@@ -282,19 +287,25 @@ export function ShotBrowser({ mode, shots, sections, pages }: Props) {
 
   const openShot = useCallback((shot: Shot) => {
     openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setWideSlug(null);
     const params = currentParams();
     params.set("shot", shot.slug);
     // 開くときは履歴を積む（ブラウザの「戻る」で閉じられるように）
     writeSearch(orderParams(params), { push: true });
   }, []);
 
-  const showShot = useCallback((shot: Shot) => {
-    const params = currentParams();
-    params.set("shot", shot.slug);
-    writeSearch(orderParams(params));
-  }, []);
+  const showShot = useCallback(
+    (shot: Shot) => {
+      setWideSlug(viewerWide ? shot.slug : null);
+      const params = currentParams();
+      params.set("shot", shot.slug);
+      writeSearch(orderParams(params));
+    },
+    [viewerWide],
+  );
 
   const onViewerClosed = useCallback(() => {
+    setWideSlug(null);
     const params = currentParams();
     if (!params.has("shot")) return;
     // 開いたときに積んだ履歴なら「戻る」で閉じる（ブラウザの「進む」で、もう一度開けるように）
@@ -437,8 +448,7 @@ const SectionBlock = memo(function SectionBlock({ group, onOpen, eager }: BlockP
         <div className={styles.sectionText}>
           <p className={`eyebrow ${styles.sectionEn}`}>{section.en}</p>
           <h2 id={titleId} className={styles.sectionTitle}>
-            <span className={styles.sectionNo}>{section.no}</span>
-            <span>{section.title}</span>
+            <span className={styles.sectionNo}>{section.no}</span> <span>{section.title}</span>
           </h2>
           <p className={styles.sectionLead}>{section.lead}</p>
         </div>
@@ -476,8 +486,7 @@ const PageBlock = memo(function PageBlock({
     <section className={styles.page} id={anchor ? `p-${page.no}` : undefined} data-level={level} style={estimate}>
       <header className={styles.pageHead}>
         <Heading className={styles.pageTitle}>
-          <span className={styles.pageNo}>{page.no}</span>
-          <span className={styles.pageName}>{page.title}</span>
+          <span className={styles.pageNo}>{page.no}</span> <span className={styles.pageName}>{page.title}</span>
         </Heading>
         <p className={styles.pageMeta}>
           {page.path && <code className={styles.path}>{page.path}</code>}

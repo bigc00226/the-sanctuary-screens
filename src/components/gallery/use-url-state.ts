@@ -18,6 +18,13 @@ const CHANGE_EVENT = "sanctuary:locationchange";
 /** 拡大表示を開いたときに積んだ履歴の目印（history.state に入れる）。閉じるときに「戻る」でよいかの判断に使う */
 const VIEWER_ENTRY = "sanctuaryViewer";
 
+/**
+ * このページを開いている間だけ使う目印の値。再読み込みすると変わります。
+ * 再読み込みの前に積んだ履歴に「戻る」と、ブラウザによってはページ全体を読み込み直すため、
+ * 今のページで積んだ履歴だけを「戻る」で閉じ、それ以外はアドレスを書き換えて閉じます。
+ */
+const SESSION = Math.random().toString(36).slice(2, 10);
+
 function subscribe(onChange: () => void) {
   window.addEventListener("popstate", onChange);
   window.addEventListener(CHANGE_EVENT, onChange);
@@ -40,10 +47,10 @@ export function useLocationSearch(): string {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
 
-/** いまの履歴が、拡大表示を開いたときに積んだものかどうか */
+/** いまの履歴が、このページで拡大表示を開いたときに積んだものかどうか */
 export function isViewerEntry(): boolean {
   const state: unknown = window.history.state;
-  return typeof state === "object" && state !== null && (state as Record<string, unknown>)[VIEWER_ENTRY] === true;
+  return typeof state === "object" && state !== null && (state as Record<string, unknown>)[VIEWER_ENTRY] === SESSION;
 }
 
 type WriteOptions = {
@@ -59,7 +66,7 @@ export function writeSearch(params: URLSearchParams, { push = false }: WriteOpti
   const search = params.toString();
   const url = `${window.location.pathname}${search ? `?${search}` : ""}${window.location.hash}`;
   const mark = push || isViewerEntry();
-  const state = mark ? { [VIEWER_ENTRY]: true } : null;
+  const state = mark ? { [VIEWER_ENTRY]: SESSION } : null;
   if (push) window.history.pushState(state, "", url);
   else window.history.replaceState(state, "", url);
   window.dispatchEvent(new Event(CHANGE_EVENT));

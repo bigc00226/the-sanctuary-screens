@@ -1,7 +1,11 @@
 import { Monitor, Smartphone } from "lucide-react";
 import Link from "next/link";
 import { CAPTURE_LABEL, DEVICE_LABEL, type Shot } from "@/lib/shots";
+import { VariantFocus } from "./variant-focus";
 import styles from "./variant-tabs.module.css";
+
+/** 切り替えの一覧の id（移動したあとに、ピントを今の切り替えに戻すため） */
+const NAV_ID = "shot-variants";
 
 type Props = {
   /** 今の画面 */
@@ -12,15 +16,15 @@ type Props = {
 
 /**
  * 同じ画面の、ほかの端末・範囲の撮影への切り替え（PC・最初の画面／スマートフォン・ページ全体 など）。
- * 押すと、その撮影の詳しいページへ移動します。今のページの位置（スクロール）はそのままにします。
+ * 押すと、その撮影の詳しいページへ移動します。今のページの位置（スクロール）と、切り替えのピントはそのままにします。
  */
 export function VariantTabs({ current, variants }: Props) {
   return (
-    <nav aria-label="同じ画面のほかの撮影" className={styles.nav}>
+    <nav id={NAV_ID} aria-label="同じ画面のほかの撮影" className={styles.nav}>
       <p className={styles.label} aria-hidden>
         同じ画面のほかの撮影
       </p>
-      <ul className={styles.list} data-count={variants.length}>
+      <ul className={styles.list}>
         {variants.map((variant) => {
           const Icon = variant.device === "pc" ? Monitor : Smartphone;
           const isCurrent = variant.slug === current.slug;
@@ -38,6 +42,7 @@ export function VariantTabs({ current, variants }: Props) {
           );
         })}
       </ul>
+      <VariantFocus navId={NAV_ID} />
     </nav>
   );
 }

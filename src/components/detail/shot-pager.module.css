@@ -106,7 +106,7 @@
 .endMark {
   position: relative;
   flex-shrink: 0;
-  width: clamp(88px, 22vw, 120px);
+  width: clamp(72px, 22vw, 120px);
   aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid var(--line-soft);
@@ -207,6 +207,7 @@
   color: var(--muted);
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
+  word-break: auto-phrase;
 }
 
 .section {

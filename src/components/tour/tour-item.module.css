@@ -1,0 +1,249 @@
+/* ---------- 主な画面の1枚（スマートフォン：番号と見出し → 画像 → 説明 の順に縦に並べる） ---------- */
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "head"
+    "media"
+    "body";
+  /* ページの中のリンク（#h-1 など）で移動したとき、上部の章の帯に隠れないように */
+  scroll-margin-top: var(--tour-bar-h, 53px);
+}
+
+/* ---------- 番号・見出し ---------- */
+
+.head {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  margin-bottom: 24px;
+}
+
+.no {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 2.4rem + 2.4vw, 4.75rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  font-variant-numeric: lining-nums;
+}
+
+/* 番号の右の細い金の線 */
+.no::after {
+  content: "";
+  flex: 0 0 56px;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), rgb(184 146 90 / 0));
+}
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.07em;
+  text-wrap: pretty;
+}
+
+/* 見出しの「：」より前（どの画面の話か）。「：」は読み上げとコピーのときだけ使う */
+.kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+}
+
+/* 見出しの補足（かっこの中）。かっこは読み上げとコピーのときだけ使う */
+.note {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- 画像（押すと、その画面のくわしいページへ） ---------- */
+
+.media {
+  grid-area: media;
+  min-width: 0;
+}
+
+.mediaLink {
+  display: block;
+  border-radius: 10px;
+}
+
+.frame {
+  transition:
+    border-color var(--duration) ease,
+    box-shadow 0.45s var(--ease-out),
+    translate 0.45s var(--ease-out);
+}
+
+.mediaLink:hover .frame {
+  border-color: rgb(184 146 90 / 0.55);
+  box-shadow: var(--shadow-lg);
+  translate: 0 -4px;
+}
+
+.mediaLink:focus-visible {
+  outline: none;
+}
+
+.mediaLink:focus-visible .frame {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ---------- 説明・リンク ---------- */
+
+.body {
+  grid-area: body;
+  min-width: 0;
+  margin-top: 28px;
+}
+
+.description {
+  max-width: 36em;
+  color: var(--fg-2);
+  line-height: 2.05;
+  /* 「15分」「1対1」などの言葉の途中で改行しないように（対応しているブラウザ） */
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
+
+.links {
+  max-width: 36em;
+  margin: 26px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--fg);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  transition: color var(--duration) ease;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: translate 0.3s var(--ease-out);
+}
+
+.link:hover .arrow {
+  translate: 4px 0;
+}
+
+/* ---------- PC：画像（7/12）と文章（5/12）を左右に並べ、1枚ごとに入れ替える ---------- */
+
+@media (min-width: 1024px) {
+  .item {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    /* 上下の 1fr で、文章を画像の高さの中央にそろえる */
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+      "media ."
+      "media head"
+      "media body"
+      "media .";
+    column-gap: clamp(48px, 5vw, 80px);
+  }
+
+  .item[data-side="right"] {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas:
+      ". media"
+      "head media"
+      "body media"
+      ". media";
+  }
+
+  .media {
+    align-self: center;
+  }
+
+  .head {
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * スクロールに合わせて、ふわりと表示する（対応しているブラウザだけ。動きを減らす設定の方・印刷では行わない）。
+ * 画面の下の端から少し入ったところで表示し終わります。スクロールの位置だけで決まるため、表示されないまま残ることはありません。
+ */
+@media screen and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .item[data-reveal] .media {
+      animation: reveal-media linear both;
+      animation-timeline: view();
+      animation-range: entry 0px entry 220px;
+    }
+
+    .item[data-reveal] .head,
+    .item[data-reveal] .body {
+      animation: reveal-text linear both;
+      animation-timeline: view();
+      animation-range: entry 0px entry 140px;
+    }
+  }
+}
+
+@keyframes reveal-media {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+@keyframes reveal-text {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+  }
+
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+@media print {
+  .item {
+    break-inside: avoid;
+  }
+}

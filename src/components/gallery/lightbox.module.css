@@ -317,17 +317,17 @@
   touch-action: pan-y pinch-zoom;
 }
 
-/* 画像の場所は、開いたときにフォーカスを置くだけの場所（ページ全体のときだけ、キーでスクロールできるよう Tab で選べる） */
+/* 画像の場所は、開いたときにフォーカスを置くだけの場所（縦に長い画像のときだけ、キーでスクロールできるよう Tab で選べる） */
 .stage:focus,
 .stage:focus-visible {
   outline: none;
 }
 
-.stage[data-full]:focus-visible {
+.stage[data-scroll]:focus-visible {
   box-shadow: inset 0 0 0 1px rgb(227 204 156 / 0.4);
 }
 
-.stage[data-full] {
+.stage[data-scroll] {
   place-items: start center;
   padding: 0;
   overflow-x: hidden;

@@ -1,6 +1,0 @@
-/* 領域のページ（各部分の見た目は、src/components/gallery/ の各ファイルにあります） */
-
-/* 英字の書体（Cormorant）の数字は、そのままだと高さがふぞろいな形になるため、高さのそろった形にする */
-.eyebrowNo {
-  font-variant-numeric: lining-nums;
-}

@@ -1,16 +1,24 @@
 .section {
+  /* 下の .all の幅の上限（100cqi）を、この枠の幅で決めるため */
+  container-type: inline-size;
   margin-top: clamp(64px, 9vw, 112px);
+}
+
+/* 画面の名前（h1）より目立たないよう、見出しを一段小さく */
+.section h2 {
+  font-size: var(--text-xl);
 }
 
 /*
  * 見出しの右（スマートフォンでは下）のリンク。ページの名前が長いときは折り返す
- * （置き場所の枠が縮まない作りのため、画面の幅から余白を引いた幅までに抑える）
+ * （置き場所の枠が縮まない作りのため、この章の枠の幅までに抑える。100cqi が使えないブラウザーでは、画面の幅から余白を引いた幅）
  */
 .all {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   max-width: calc(100vw - 2 * var(--gutter));
+  max-width: 100cqi;
   min-height: 44px;
   padding-block: 6px;
   line-height: 1.7;
@@ -90,11 +98,6 @@
 .cell {
   display: flex;
   min-width: 0;
-}
-
-/* カードの「最初の画面」などの塗りのラベル：文字を少しだけ濃くして、4.5:1 以上に */
-.cell :global(.tag-solid) {
-  color: #74552a;
 }
 
 .cell > * {

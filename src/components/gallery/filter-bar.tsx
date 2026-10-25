@@ -104,7 +104,7 @@ export function FilterBar({
       >
         <div className={styles.search}>
           <label htmlFor={inputId} className="visually-hidden">
-            言葉で探す（ひらがな・カタカナのどちらでも探せます）
+            言葉で探す（ひらがなでもカタカナでも見つかります）
           </label>
           <Search aria-hidden className={styles.searchIcon} />
           <input
@@ -153,7 +153,7 @@ export function FilterBar({
           {activeFacets > 0 && (
             <span className={styles.badge}>
               {activeFacets}
-              <span className="visually-hidden">件の条件を選んでいます</span>
+              <span className="visually-hidden">つの条件を選んでいます</span>
             </span>
           )}
         </button>

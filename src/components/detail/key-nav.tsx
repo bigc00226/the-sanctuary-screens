@@ -54,8 +54,8 @@ export function KeyNav({ prev, next }: Props) {
       const href = event.key === "ArrowLeft" ? prev : event.key === "ArrowRight" ? next : undefined;
       if (!href) return;
       if (keepsArrowKeys(event.target) || keepsArrowKeys(document.activeElement)) return;
-      // メニューなどのダイアログが開いているときは、移動しない
-      if (document.querySelector("dialog[open]")) return;
+      // メニューなどのダイアログや、サイトの上部の「領域ごとに見る」の一覧が開いているときは、移動しない
+      if (document.querySelector('dialog[open], [aria-expanded="true"]')) return;
       event.preventDefault();
       router.push(href);
     };

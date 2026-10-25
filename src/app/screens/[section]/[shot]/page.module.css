@@ -16,25 +16,15 @@
   padding-top: clamp(24px, 4vw, 48px);
 }
 
+/* 説明の列（画像の列と同じ高さまで伸ばし、その中で説明を画面の上部に留める：info-panel.module.css） */
 .aside {
   min-width: 0;
 }
 
-/* 幅 1024px 以上：画像を左、説明を右に（説明はスクロールしても見える位置に） */
+/* 幅 1024px 以上：画像を左、説明を右に */
 @media (min-width: 1024px) {
   .split {
     grid-template-columns: minmax(0, 1fr) 340px;
     gap: 56px;
-  }
-
-  .aside {
-    align-self: start;
-  }
-}
-
-@media (min-width: 1024px) and (min-height: 640px) {
-  .aside {
-    position: sticky;
-    top: calc(var(--header-h) + 24px);
   }
 }

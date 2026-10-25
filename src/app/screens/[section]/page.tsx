@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { toPageMeta, toSectionMeta } from "@/components/gallery/meta";
 import { PageIndex } from "@/components/gallery/page-index";
+import { toShotRows } from "@/components/gallery/rows";
 import { SectionNav, type SectionNavItem } from "@/components/gallery/section-nav";
 import { ShotBrowser } from "@/components/gallery/shot-browser";
 import { StatChips } from "@/components/gallery/stat-chips";
@@ -9,7 +10,6 @@ import { PageIntro } from "@/components/page-intro";
 import { site } from "@/data/site";
 import { getSection, getSections, getShots, sectionNeighborsOf, type Section } from "@/lib/catalog";
 import { sectionHref } from "@/lib/shots";
-import styles from "./page.module.css";
 
 /** 6つの領域のページだけを、あらかじめ作っておく（それ以外のアドレスは「ページが見つかりません」） */
 export const dynamicParams = false;
@@ -56,7 +56,7 @@ function toNavItem(section: Section): SectionNavItem {
     title: section.title,
     count: section.counts.total,
     pages: section.pages.length,
-    cover: section.cover,
+    cover: section.cover.thumb,
   };
 }
 
@@ -67,15 +67,13 @@ export default async function SectionPage(props: PageProps<"/screens/[section]">
 
   const { prev, next } = sectionNeighborsOf(section.id);
   const shots = getShots().filter((shot) => shot.section === section.id);
+  const sectionMeta = toSectionMeta(section);
+  const pages = section.pages.map(toPageMeta);
 
   return (
     <>
       <PageIntro
-        eyebrow={
-          <>
-            <span className={styles.eyebrowNo}>{section.no}</span> · {section.en}
-          </>
-        }
+        eyebrow={`${section.no} · ${section.en}`}
         title={section.title}
         crumbs={[{ label: "トップ", href: "/" }, { label: "すべての画面", href: "/screens" }, { label: section.title }]}
         lead={
@@ -98,7 +96,7 @@ export default async function SectionPage(props: PageProps<"/screens/[section]">
 
       <PageIndex pages={section.pages.map((page) => ({ no: page.no, title: page.title, count: page.shots.length }))} />
 
-      <ShotBrowser mode="section" shots={shots} sections={[toSectionMeta(section)]} pages={section.pages.map(toPageMeta)} />
+      <ShotBrowser mode="section" rows={toShotRows(shots, pages, [sectionMeta])} sections={[sectionMeta]} pages={pages} />
 
       <SectionNav prev={prev ? toNavItem(prev) : null} next={next ? toNavItem(next) : null} />
     </>

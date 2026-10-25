@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, LayoutGrid } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { ShotImage } from "@/components/shot-image";
 import type { Shot } from "@/lib/shots";
 import styles from "./section-nav.module.css";
 
@@ -11,7 +11,8 @@ export type SectionNavItem = {
   title: string;
   count: number;
   pages: number;
-  cover: Shot;
+  /** 領域の代表の画面の縮小画像 */
+  cover: Shot["thumb"];
 };
 
 /** 領域のページの下部：前後の領域へのリンクと、すべての画面へ戻るリンク */
@@ -39,7 +40,11 @@ function SectionCard({ item, direction }: { item: SectionNavItem; direction: "pr
   return (
     <Link href={item.href} className={styles.card} data-direction={direction}>
       <span className={styles.thumb}>
-        <ShotImage shot={item.cover} sizes="(min-width: 900px) 240px, 38vw" fit="fill" alt="" />
+        {/*
+          表示は最大 240px のため、一覧のカードと同じ縮小画像（幅 720px の JPEG）をそのまま使う。
+          ShotImage は元の画像から作るため、静的なファイルとして書き出したときは、元の PNG（約1MB）を読み込んでしまいます
+        */}
+        <Image src={item.cover.src} width={item.cover.width} height={item.cover.height} alt="" unoptimized />
       </span>
       <span className={styles.text}>
         <span className={styles.direction}>

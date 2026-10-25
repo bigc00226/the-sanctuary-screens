@@ -10,7 +10,8 @@
   cursor: zoom-in;
 }
 
-.zoom img {
+.zoom img,
+.picture {
   display: block;
 }
 
